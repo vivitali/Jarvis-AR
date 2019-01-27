@@ -6,9 +6,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
-    Linking,
-    Button
+  View
 } from 'react-native';
 import { WebBrowser } from 'expo';
 
