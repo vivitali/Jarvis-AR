@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import ScannerScreen from '../screens/ScannerScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -53,8 +54,26 @@ SettingsStack.navigationOptions = {
   ),
 };
 
+/**
+ *
+ */
+const ScannerStack = createStackNavigator({
+  Settings: ScannerScreen,
+});
+
+ScannerStack.navigationOptions = {
+  tabBarLabel: 'Scanner',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name='ios-camera'
+    />
+  ),
+};
+
 export default createBottomTabNavigator({
   HomeStack,
   LinksStack,
   SettingsStack,
+  ScannerStack
 });

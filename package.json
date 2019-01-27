@@ -7,7 +7,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll",
+    "prettier": "./node_modules/.bin/prettier 'containers/**/*.{js,scss}' --write"
   },
   "jest": {
     "preset": "jest-expo"
@@ -15,9 +16,15 @@
   "dependencies": {
     "@expo/samples": "2.1.1",
     "expo": "^31.0.2",
+    "prettier": "^1.16.1",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
-    "react-navigation": "^2.18.2"
+    "react-native-json-tree": "^1.2.0",
+    "react-navigation": "^2.18.2",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^1.0.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
