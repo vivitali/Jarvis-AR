@@ -58,35 +58,6 @@ export default class HomeScreen extends React.Component {
         <View style={styles.tabBarInfoContainer}>
           <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
 
-          <Button
-              onPress={() => {
-				  const tel = 'tel:+380506443111';
-				  Linking.canOpenURL(tel).then(supported => {
-					  if (!supported) {
-						  console.log('Can\'t handle url: ' + tel);
-					  } else {
-						  return Linking.openURL(tel);
-					  }
-				  }).catch(err => {console.error('An error occurred', err)});
-			  }}
-              title="Press Me, Call to Vasinkevich via phone"
-          />
-
-          <Button
-              onPress={() => {
-				  const skypeUser = 'vasinkevych';
-				  const skype = `skype:${skypeUser}`;
-				  Linking.canOpenURL(skype).then(supported => {
-					  if (!supported) {
-						  console.log('Can\'t handle url: ' + skype);
-					  } else {
-						  return Linking.openURL(skype);
-					  }
-				  }).catch(err => {console.error('An error occurred', err)});
-			  }}
-              title="Press Me, Call to Vasinkevich via skype"
-          />
-
           <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
             <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
           </View>
