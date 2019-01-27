@@ -24,11 +24,10 @@ export default class App extends React.Component {
       return (
         <Provider store={store}>
           <PersistGate persistor={persistor}>
-
-        <View style={styles.container}>
-          {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
-          <AppNavigator />
-        </View>
+            <View style={styles.container}>
+              {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
+              <AppNavigator />
+            </View>
           </PersistGate>
         </Provider>
       );
