@@ -22,7 +22,7 @@ export default class ProfileScreen extends React.Component {
   };
 
   handlePressPhoneBtn = () => {
-      const tel = 'tel:+380978113160';
+      const tel = 'tel:+380506443111';
       Linking.canOpenURL(tel).then(supported => {
           if (!supported) {
               console.log('Can\'t handle url: ' + tel);
