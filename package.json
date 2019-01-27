@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "eject": "expo eject",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
-    "prettier": "./node_modules/.bin/prettier 'containers/**/*.{js,scss}' --write"
+    "prettier": "./node_modules/.bin/prettier './src/**/*.{js,scss}' --write"
   },
   "jest": {
     "preset": "jest-expo"
