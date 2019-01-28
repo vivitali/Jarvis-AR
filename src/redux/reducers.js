@@ -1,4 +1,4 @@
-import { reducer as scanner } from '../containers/scanner/redux';
+import { reducer as scanner } from "../containers/scanner/redux";
 
 export default {
   scanner
