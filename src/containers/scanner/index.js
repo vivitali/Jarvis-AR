@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { View, Text } from "react-native";
-import JSONTree from 'react-native-json-tree'
+import JSONTree from "react-native-json-tree";
 import { actions, selectors } from "./redux";
 import { connect } from "react-redux";
 
@@ -16,6 +16,7 @@ class Scanner extends Component {
 
   render() {
     const { loading, data } = this.props;
+
     return (
       <View style={styles.container}>
         <Text>Scanner container</Text>
