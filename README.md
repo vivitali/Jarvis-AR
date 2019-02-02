@@ -13,7 +13,6 @@
     │           |   actions.js
     │           |   constants.js
     │           |   reducer.js
-    │           |   reducer.js
     │           |   saga.js
     │           |   selectors.js
     │           └── index.js
@@ -22,12 +21,11 @@
     │    |   actions.js
     │    |   constants.js
     │    |   reducer.js
-    │    |   reducer.js
     │    |   saga.js
     │    |   selectors.js
     │    |   createStore.js
     │    └── index.js
-    ├── router
+    ├── navigation
     ├── services
     └── index.js
 
