@@ -6,7 +6,7 @@ cache:
     - node_modules
 script:
   - npm flow
-  - npm test
+# - npm test
 # deploy:
 #   provider: surge
 #   skip_cleanup: true
