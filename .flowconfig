@@ -1,0 +1,21 @@
+[libs]
+flow-typed
+
+[include]
+node_modules
+
+[options]
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=./src
+; module.system.node.resolve_dirname=node_modules
+; module.name_mapper='.*\.css' -> 'empty/object'
+
+[ignore]
+.*/node_modules/react-native
+.*/node_modules/styled-components/.*\.flow
+.*/node_modules/redux-persist/.*\.flow
+
+# Parse errors in JSON files are not ignored. See https://github.com/facebook/flow/issues/2364
+.*/node_modules/devtools-timeline-model/.*\.json
+.*/node_modules/config-chain/.*\.json
+.*/node_modules/npm/.*\.json

@@ -7,11 +7,11 @@ import createSagaMiddleware from "redux-saga";
 
 import saga from "./saga";
 import { logger } from "./middleware";
+import reducers from "./reducers";
 
 const sagaMiddleware = createSagaMiddleware();
 
 /* REDUCERS */
-import reducers from "./reducers";
 const rootReducer = combineReducers(reducers);
 
 /* REDUX PERSIST */

@@ -9,7 +9,7 @@ import { connect } from "react-redux";
 
 import styles from "./styles";
 
-class Scanner extends Component {
+class Scanner extends Component<*, *> {
   componentDidMount() {
     this.props.loadScanData();
   }
