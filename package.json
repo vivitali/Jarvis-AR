@@ -8,7 +8,10 @@
     "ios": "expo start --ios",
     "eject": "expo eject",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
-    "prettier": "./node_modules/.bin/prettier './src/**/*.{js,scss}' --write"
+    "prettier": "./node_modules/.bin/prettier './src/**/*.{js,scss}' --write",
+    "flow": "flow",
+    "glow": "glow",
+    "glow:watch": "glow --watch"
   },
   "jest": {
     "preset": "jest-expo"
@@ -28,6 +31,9 @@
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.92.0",
+    "glow": "^1.2.2",
     "jest-expo": "^31.0.0"
   }
 }
