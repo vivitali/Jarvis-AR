@@ -9,7 +9,7 @@ import {
 import type { ScannerData } from "./types";
 
 export const loadScanData = () => ({
-  type: LOAD_SCAN_PENDING
+  type: LOAD_SCANNER
 });
 
 export const loadScanPending = () => ({
