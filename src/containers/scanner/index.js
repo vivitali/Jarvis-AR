@@ -8,6 +8,7 @@ import { actions, selectors } from "./redux";
 import { connect } from "react-redux";
 
 import styles from "./styles";
+import Test from "./Test";
 
 class Scanner extends Component {
   componentDidMount() {
@@ -22,6 +23,7 @@ class Scanner extends Component {
         <Text>Scanner container</Text>
         {loading && <Text>Scanner loading</Text>}
         {!loading && <JSONTree data={data} />}
+        <Test />
       </View>
     );
   }
