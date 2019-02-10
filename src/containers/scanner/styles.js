@@ -1,9 +1,4 @@
-/**
- *
- * Styles for CameraRedemption Screen
- *
- */
-
+// @flow
 import { StyleSheet } from "react-native";
 
 import Colors from "./theme/Colors";

@@ -1,17 +1,23 @@
+// @flow
+
 import {
   LOAD_SCAN_FAILURE,
   LOAD_SCAN_PENDING,
   LOAD_SCAN_SUCCESS
 } from "./constants";
+import type { ScannerState, Action } from "./types";
 
-export const initialState = {
+export const initialState: ScannerState = {
   data: null,
   loading: false,
   loaded: false,
-  error: false
+  error: null
 };
 
-export default function reducer(state = initialState, action) {
+export default function reducer(
+  state: ScannerState = initialState,
+  action: Action
+) {
   switch (action.type) {
     case LOAD_SCAN_PENDING:
       return {

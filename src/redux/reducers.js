@@ -1,3 +1,5 @@
+// @flow
+
 import { reducer as scanner } from "../containers/scanner/redux";
 
 export default {

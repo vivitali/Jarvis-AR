@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+script:
+  - npm run flow
+# - npm run test
+# deploy:
+#   provider: surge
+#   skip_cleanup: true
+#   domain: <my_name_here>.surge.sh
+#   project: ./build/
+# on:
+#   branch: master
+notifications:
+  webhooks:
+    urls:
+      - "https://www.travisbuddy.com/"
+    on_success: never
+    on_failure: always
+    on_start: never
+    on_cancel: never
+    on_error: never

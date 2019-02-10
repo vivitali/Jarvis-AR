@@ -8,7 +8,10 @@
     "ios": "expo start --ios",
     "eject": "expo eject",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
-    "prettier": "./node_modules/.bin/prettier './src/**/*.{js,scss}' --write"
+    "prettier": "./node_modules/.bin/prettier './src/**/*.{js,scss}' --write",
+    "flow": "flow",
+    "glow": "glow",
+    "glow:watch": "glow --watch"
   },
   "jest": {
     "preset": "jest-expo"
@@ -21,8 +24,8 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
     "react-native-camera": "^1.9.2",
     "react-native-json-tree": "^1.2.0",
+    "react-navigation": "^3.1.2",
     "react-native-text-detector": "^0.0.6",
-    "react-navigation": "^2.18.2",
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
     "redux-persist": "^5.10.0",
@@ -30,6 +33,9 @@
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.92.0",
+    "glow": "^1.2.2",
     "jest-expo": "^31.0.0"
   }
 }
