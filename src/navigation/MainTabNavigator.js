@@ -1,7 +1,6 @@
 // @flow
 
 import React from "react";
-import { Platform } from "react-native";
 import {
   createStackNavigator,
   createBottomTabNavigator
@@ -21,7 +20,7 @@ SettingsStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === "ios" ? "ios-options" : "md-options"}
+      name="cog"
     />
   )
 };
@@ -35,7 +34,7 @@ ProfileStack.navigationOptions = {
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === "ios" ? "ios-options" : "md-options"}
+      name="user"
     />
   )
 };
@@ -50,7 +49,7 @@ const ScannerStack = createStackNavigator({
 ScannerStack.navigationOptions = {
   tabBarLabel: "Scanner",
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name="ios-camera" />
+    <TabBarIcon focused={focused} name="camera" />
   )
 };
 

@@ -6,8 +6,8 @@
 
 import React, { Component } from "react";
 import { TouchableOpacity, View, ImageBackground, Text } from "react-native";
-import { Camera, Permissions } from 'expo';
-import RNTextDetector from "react-native-text-detector";
+import { RNCamera } from "react-native-camera";
+// import RNTextDetector from "react-native-text-detector";
 
 import style, { screenHeight, screenWidth } from "./styles";
 
@@ -126,7 +126,6 @@ export default class App extends React.Component {
     } catch (e) {
       console.log("error", e);
     }
-
   };
 
   /**
@@ -164,48 +163,57 @@ export default class App extends React.Component {
    * @memberof App
    */
   render() {
-
     return (
       <View style={{ flex: 1 }}>
         <TouchableOpacity
           style={{
             flex: 0.1,
-            alignSelf: 'flex-end',
-            alignItems: 'center',
+            alignSelf: "flex-end",
+            alignItems: "center"
           }}
-          onPress={this.snap}>
-          <Text
-            style={{ fontSize: 18, marginBottom: 10, color: 'red' }}>
-            {' '}snap{' '}
+          onPress={this.snap}
+        >
+          <Text style={{ fontSize: 18, marginBottom: 10, color: "red" }}>
+            {" "}
+            snap{" "}
           </Text>
         </TouchableOpacity>
-        <Camera ref={ref => { this.camera = ref; }} style={{ flex: 1 }} type={this.state.type}>
+        <RNCamera
+          ref={ref => {
+            this.camera = ref;
+          }}
+          style={{ flex: 1 }}
+          type={this.state.type}
+        >
           <View
             style={{
               flex: 1,
-              backgroundColor: 'transparent',
-              flexDirection: 'row',
-            }}>
+              backgroundColor: "transparent",
+              flexDirection: "row"
+            }}
+          >
             <TouchableOpacity
               style={{
                 flex: 0.1,
-                alignSelf: 'flex-end',
-                alignItems: 'center',
+                alignSelf: "flex-end",
+                alignItems: "center"
               }}
               onPress={() => {
                 this.setState({
-                  type: this.state.type === Camera.Constants.Type.back
-                    ? Camera.Constants.Type.front
-                    : Camera.Constants.Type.back,
+                  type:
+                    this.state.type === RNCamera.Constants.Type.back
+                      ? RNCamera.Constants.Type.front
+                      : RNCamera.Constants.Type.back
                 });
-              }}>
-              <Text
-                style={{ fontSize: 18, marginBottom: 10, color: 'white' }}>
-                {' '}Flip{' '}
+              }}
+            >
+              <Text style={{ fontSize: 18, marginBottom: 10, color: "white" }}>
+                {" "}
+                Flip{" "}
               </Text>
             </TouchableOpacity>
           </View>
-        </Camera>
+        </RNCamera>
         {this.state.image ? (
           <ImageBackground
             source={{ uri: this.state.image }}

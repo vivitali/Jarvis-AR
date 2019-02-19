@@ -1,7 +1,13 @@
 import React from "react";
-import { Platform, StyleSheet, Text, View, Linking } from "react-native";
-import Touchable from "react-native-platform-touchable";
-import { Ionicons } from "@expo/vector-icons";
+import {
+  Platform,
+  StyleSheet,
+  Text,
+  View,
+  Linking,
+  TouchableOpacity
+} from "react-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 export default class ProfileScreen extends React.Component {
   static navigationOptions = {
@@ -29,35 +35,30 @@ export default class ProfileScreen extends React.Component {
   render() {
     return (
       <View style={styles.profileContainer}>
-        <Touchable
+        <TouchableOpacity
           style={styles.option}
-          background={Touchable.Ripple("#ccc", false)}
           onPress={this.handlePressPhoneBtn}
         >
           <View style={{ flexDirection: "row" }}>
             <View style={styles.optionIconContainer}>
-              <Ionicons name="md-phone-portrait" size={22} color="#ccc" />
+              <Icon name="phone" size={22} color="#ccc" />
             </View>
             <View style={styles.optionTextContainer}>
               <Text style={styles.optionText}>call on mobile phone</Text>
             </View>
           </View>
-        </Touchable>
+        </TouchableOpacity>
 
-        <Touchable
-          style={styles.option}
-          background={Touchable.Ripple("#ccc", false)}
-          onPress={this.handleSkypeBtn}
-        >
+        <TouchableOpacity style={styles.option} onPress={this.handleSkypeBtn}>
           <View style={{ flexDirection: "row" }}>
             <View style={styles.optionIconContainer}>
-              <Ionicons name="logo-skype" size={22} color="#ccc" />
+              <Icon name="skype" size={22} color="#ccc" />
             </View>
             <View style={styles.optionTextContainer}>
               <Text style={styles.optionText}>call on skype</Text>
             </View>
           </View>
-        </Touchable>
+        </TouchableOpacity>
       </View>
     );
   }
