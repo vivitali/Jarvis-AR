@@ -1,8 +1,9 @@
 {
   "name": "my-new-project",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native start",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
@@ -11,11 +12,8 @@
     "glow": "glow",
     "glow:watch": "glow --watch"
   },
-  "jest": {
-    "preset": "react-native"
-  },
   "dependencies": {
-    "react": "16.8.2",
+    "react": "16.6.3",
     "react-native": "0.58.5",
     "react-native-camera": "1.11.2",
     "react-native-gesture-handler": "1.0.15",
@@ -23,21 +21,22 @@
     "react-native-vector-icons": "6.3.0",
     "react-navigation": "3.3.0",
     "react-redux": "6.0.0",
-    "redu": "1.0.1",
     "redux": "4.0.1",
     "redux-persist": "5.10.0",
     "redux-saga": "1.0.1",
     "reselect": "4.0.0"
   },
   "devDependencies": {
-    "babel-core": "7.0.0-bridge.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "24.1.0",
-    "babel-preset-flow": "6.23.0",
-    "flow-bin": "0.93.0",
-    "glow": "1.2.2",
     "jest": "24.1.0",
     "metro-react-native-babel-preset": "0.52.0",
-    "prettier": "1.16.4",
-    "react-test-renderer": "16.8.2"
+    "react-test-renderer": "16.6.3",
+    "flow-bin": "0.93.0",
+    "glow": "1.2.2",
+    "prettier": "1.16.4"
+  },
+  "jest": {
+    "preset": "react-native"
   }
 }
