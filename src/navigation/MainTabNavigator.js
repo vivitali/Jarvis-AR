@@ -7,23 +7,8 @@ import {
 } from "react-navigation";
 
 import TabBarIcon from "../components/TabBarIcon";
-import SettingsScreen from "../screens/SettingsScreen";
 import ScannerScreen from "../screens/ScannerScreen";
 import ProfileScreen from "../screens/ProfileScreen";
-
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen
-});
-
-SettingsStack.navigationOptions = {
-  tabBarLabel: "Settings",
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name="cog"
-    />
-  )
-};
 
 const ProfileStack = createStackNavigator({
   Settings: ProfileScreen
@@ -56,5 +41,4 @@ ScannerStack.navigationOptions = {
 export default createBottomTabNavigator({
   ProfileStack,
   ScannerStack,
-  SettingsStack
 });
