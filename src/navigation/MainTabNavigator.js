@@ -16,12 +16,7 @@ const ProfileStack = createStackNavigator({
 
 ProfileStack.navigationOptions = {
   tabBarLabel: "Profile",
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name="user"
-    />
-  )
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="user" />
 };
 
 /**
@@ -33,12 +28,10 @@ const ScannerStack = createStackNavigator({
 
 ScannerStack.navigationOptions = {
   tabBarLabel: "Scanner",
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name="camera" />
-  )
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="camera" />
 };
 
 export default createBottomTabNavigator({
   ProfileStack,
-  ScannerStack,
+  ScannerStack
 });
