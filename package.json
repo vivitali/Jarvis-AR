@@ -10,7 +10,9 @@
     "prettier": "./node_modules/.bin/prettier './src/**/*.{js,scss}' --write",
     "flow": "flow",
     "glow": "glow",
-    "glow:watch": "glow --watch"
+    "glow:watch": "glow --watch",
+    "deploy:android": "cd android && fastlane playstore",
+    "predeploy:android": "node dev/fastlane"
   },
   "dependencies": {
     "react": "16.6.3",
@@ -29,12 +31,13 @@
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "24.1.0",
-    "jest": "24.1.0",
-    "metro-react-native-babel-preset": "0.52.0",
-    "react-test-renderer": "16.6.3",
+    "dotenv": "^6.2.0",
     "flow-bin": "0.93.0",
     "glow": "1.2.2",
-    "prettier": "1.16.4"
+    "jest": "24.1.0",
+    "metro-react-native-babel-preset": "0.52.0",
+    "prettier": "1.16.4",
+    "react-test-renderer": "16.6.3"
   },
   "jest": {
     "preset": "react-native"

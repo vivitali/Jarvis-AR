@@ -1,4 +1,4 @@
-package com.reactnativeapp;
+package com.ssar.app;
 
 import android.app.Application;
 

@@ -1,4 +1,4 @@
-package com.reactnativeapp;
+package com.ssar.app;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "ReactNativeApp";
+        return "SSAR";
     }
 }

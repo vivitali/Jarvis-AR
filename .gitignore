@@ -7,3 +7,8 @@ npm-debug.*
 *.mobileprovision
 .idea
 .vscode
+.env
+
+./android/gradle.properties
+./android/app/key.keystore
+./android/fastlane/api.json
