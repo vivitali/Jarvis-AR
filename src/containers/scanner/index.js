@@ -9,6 +9,7 @@ import { actions, selectors } from "./redux";
 import { type Props } from "./types";
 
 import styles from "./styles";
+import Test from "./Test";
 
 class Scanner extends Component<Props, *> {
   componentDidMount() {
@@ -23,6 +24,7 @@ class Scanner extends Component<Props, *> {
         <Text>Scanner container</Text>
         {loading && <Text>Scanner loading</Text>}
         {!loading && <JSONTree data={data} />}
+        <Test />
       </View>
     );
   }
