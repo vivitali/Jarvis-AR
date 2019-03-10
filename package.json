@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "react": "16.6.3",
-    "react-native": "0.58.5",
+    "react-native": "0.58.6",
     "react-native-camera": "1.11.2",
     "react-native-gesture-handler": "1.0.15",
     "react-native-json-tree": "1.2.0",
