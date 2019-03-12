@@ -12,7 +12,8 @@
     "glow": "glow",
     "glow:watch": "glow --watch",
     "deploy:android": "cd android && fastlane playstore",
-    "predeploy:android": "node dev/fastlane"
+    "predeploy:android": "node dev/fastlane",
+    "postdeploy:android": "node dev/fastlane/post"
   },
   "dependencies": {
     "react": "16.6.3",
