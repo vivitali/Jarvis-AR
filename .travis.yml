@@ -12,7 +12,7 @@ before_install:
 script:
   - npm run flow
   - ./dev/fastlane/deploy.sh
-  - fastlane playstore
+  - npm run deploy:android
 
 # - npm run test
 # deploy:
