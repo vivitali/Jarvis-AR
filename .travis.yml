@@ -6,6 +6,7 @@ cache:
     - node_modules
 script:
   - npm run flow
+  - ./dev/fastlane/deploy.sh
 # - npm run test
 # deploy:
 #   provider: surge
