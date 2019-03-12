@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ "$TRAVIS_BRANCH" == "publish" ]; then
+if [ "$TRAVIS_BRANCH" == "master" ]; then
   node dev/fastlane
   alias mycd='android'
   mycd
