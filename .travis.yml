@@ -6,7 +6,7 @@ cache:
     - node_modules
 
 before_install:
-  - chmod +x ./dev/fastlane/deploy.shh
+  - chmod +x ./dev/fastlane/deploy.sh
 
 script:
   - npm run flow
