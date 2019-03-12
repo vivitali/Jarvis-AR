@@ -6,7 +6,6 @@ cache:
     - node_modules
 
 before_install:
-  - npm install -g fastlane
   - chmod +x ./dev/fastlane/deploy.sh
 
 script:
