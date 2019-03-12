@@ -4,6 +4,10 @@ node_js:
 cache:
   directories:
     - node_modules
+
+before_install:
+  - chmod +x ./dev/fastlane/deploy.shh
+
 script:
   - npm run flow
   - ./dev/fastlane/deploy.sh
