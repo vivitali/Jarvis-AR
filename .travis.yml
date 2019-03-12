@@ -11,6 +11,8 @@ before_install:
 script:
   - npm run flow
   - ./dev/fastlane/deploy.sh
+  - fastlane playstore
+
 # - npm run test
 # deploy:
 #   provider: surge
