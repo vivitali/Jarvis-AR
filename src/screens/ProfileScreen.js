@@ -58,7 +58,10 @@ export default class ProfileScreen extends React.Component {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.option} onPress={() => this.handleSkypeBtn(user.skype)}>
+        <TouchableOpacity
+          style={styles.option}
+          onPress={() => this.handleSkypeBtn(user.skype)}
+        >
           <View style={{ flexDirection: "row" }}>
             <View style={styles.optionIconContainer}>
               <Icon name="skype" size={22} color="#ccc" />

@@ -3,8 +3,9 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View } from "react-native";
 import { actions, selectors } from "./redux";
+// $FlowFixMe
 import RNTextDetector from "react-native-text-detector";
 
 import { type Props } from "./types";
@@ -14,7 +15,7 @@ import { Camera } from "../../components";
 
 // temporary solution until BE changes
 const cars = {
-  5656: {
+  "5656": {
     name: "Rostyslav",
     tel: "+380978875041",
     skype: "burn_8_8_8"
@@ -22,8 +23,7 @@ const cars = {
 };
 
 class Scanner extends Component<Props, *> {
-
-  processResult = (data) => {
+  processResult = data => {
     if (!Array.isArray(data)) {
       return { text: "no data" };
     }
@@ -38,7 +38,7 @@ class Scanner extends Component<Props, *> {
     return numbers.map(number => cars[number]);
   };
 
-  processImage = async (uri) => {
+  processImage = async uri => {
     this.props.loadScanPending();
 
     try {
@@ -61,10 +61,7 @@ class Scanner extends Component<Props, *> {
   };
 
   snap = data => {
-    this.processImage(data.uri, {
-      height: data.height,
-      width: data.width
-    });
+    this.processImage(data.uri);
   };
 
   componentDidMount() {
@@ -83,8 +80,7 @@ class Scanner extends Component<Props, *> {
 }
 
 const mapStateToProps = state => ({
-  loading: selectors.isLoading(state),
-  data: selectors.getData(state)
+  loading: selectors.isLoading(state)
 });
 
 const mapDispatchToProps = dispatch =>
