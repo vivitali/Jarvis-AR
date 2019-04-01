@@ -27,12 +27,3 @@ export const getError = createSelector(
   getScannerReducer,
   scanner => !scanner.loading && scanner.error
 );
-
-/**
- * Selector for getting data
- * @return {*}
- */
-export const getData = createSelector(
-  getScannerReducer,
-  scanner => scanner.data
-);

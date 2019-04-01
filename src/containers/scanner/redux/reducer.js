@@ -3,7 +3,8 @@
 import {
   LOAD_SCAN_FAILURE,
   LOAD_SCAN_PENDING,
-  LOAD_SCAN_SUCCESS
+  LOAD_SCAN_SUCCESS,
+  RESET_SCAN_DATA
 } from "./constants";
 import type { ScannerState, Action } from "./types";
 
@@ -39,6 +40,8 @@ export default function reducer(
         loading: false,
         loaded: false
       };
+    case RESET_SCAN_DATA:
+      return initialState;
     default:
       return state;
   }

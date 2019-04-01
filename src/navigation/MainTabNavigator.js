@@ -11,7 +11,7 @@ import ScannerScreen from "../screens/ScannerScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 
 const ProfileStack = createStackNavigator({
-  Settings: ProfileScreen
+  Profile: ProfileScreen
 });
 
 ProfileStack.navigationOptions = {
@@ -23,7 +23,7 @@ ProfileStack.navigationOptions = {
  *
  */
 const ScannerStack = createStackNavigator({
-  Settings: ScannerScreen
+  Scanner: ScannerScreen
 });
 
 ScannerStack.navigationOptions = {

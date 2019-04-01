@@ -101,7 +101,7 @@ android {
         applicationId "com.ssar.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 39
+        versionCode 66
         versionName "1.0"
     }
     signingConfigs {
@@ -129,6 +129,11 @@ android {
             signingConfig signingConfigs.release
         }
     }
+     // Temporary fix until alpha10
+        packagingOptions {
+            exclude 'META-INF/androidx.exifinterface_exifinterface.version'
+            exclude 'META-INF/proguard/androidx-annotations.pro'
+        }
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
@@ -145,6 +150,11 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.firebase:firebase-core:16.0.1'
+    implementation 'com.google.firebase:firebase-ml-vision:17.0.0'
+    implementation (project(':react-native-text-detector')) {
+        exclude group: 'com.google.firebase'
+    }
     implementation project(':react-native-camera')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-gesture-handler')
@@ -159,3 +169,6 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+
+apply plugin: 'com.google.gms.google-services'
+com.google.gms.googleservices.GoogleServicesPlugin.config.disableVersionCheck = true

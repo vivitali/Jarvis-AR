@@ -27,3 +27,4 @@ replace('./dev/fastlane/api.json', './android/fastlane/api.json');
 replace('./dev/fastlane/gradle.properties', './android/gradle.properties');
 // replace('./dev/fastlane/key.keystore', './android/app/key.keystore');
 fs.createReadStream('./dev/fastlane/key.keystore').pipe(fs.createWriteStream('./android/app/key.keystore'));
+fs.createReadStream('./dev/fastlane/google-services.json').pipe(fs.createWriteStream('./android/app/google-services.json'));

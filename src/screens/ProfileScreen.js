@@ -14,14 +14,13 @@ export default class ProfileScreen extends React.Component {
     title: "Profile"
   };
 
-  handlePressPhoneBtn = () => {
-    const tel = "tel:+380506443111";
-    Linking.canOpenURL(tel)
+  handlePressPhoneBtn = (tel = "+380506443111") => {
+    Linking.canOpenURL(`tel:${tel}`)
       .then(supported => {
         if (!supported) {
           console.log("Can't handle url: " + tel);
         } else {
-          return Linking.openURL(tel);
+          return Linking.openURL(`tel:${tel}`);
         }
       })
       .catch(err => {
@@ -30,14 +29,24 @@ export default class ProfileScreen extends React.Component {
   };
 
   // TODO...
-  handleSkypeBtn = () => {};
+  handleSkypeBtn = (user = "burn_8_8_8") => {
+    try {
+      Linking.openURL(`skype:${user}`);
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   render() {
+    const data = this.props.navigation.getParam("user", {});
+    const user = data[0] || {};
+
     return (
       <View style={styles.profileContainer}>
+        <Text style={styles.optionText}>{user.name}</Text>
         <TouchableOpacity
           style={styles.option}
-          onPress={this.handlePressPhoneBtn}
+          onPress={() => this.handlePressPhoneBtn(user.tel)}
         >
           <View style={{ flexDirection: "row" }}>
             <View style={styles.optionIconContainer}>
@@ -49,7 +58,10 @@ export default class ProfileScreen extends React.Component {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.option} onPress={this.handleSkypeBtn}>
+        <TouchableOpacity
+          style={styles.option}
+          onPress={() => this.handleSkypeBtn(user.skype)}
+        >
           <View style={{ flexDirection: "row" }}>
             <View style={styles.optionIconContainer}>
               <Icon name="skype" size={22} color="#ccc" />
