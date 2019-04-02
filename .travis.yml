@@ -16,7 +16,8 @@ before_install:
 - cd android/
 - chmod +x gradlew
 - gem update --system
-- pkg install node
+- curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
+- apt-get install -y nodejs
 - gem install fastlane
 - pip install --user awscli
 
