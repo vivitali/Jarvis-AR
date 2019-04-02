@@ -21,7 +21,7 @@ before_install:
 - chmod +x gradlew
 - gem update --system
 - gem install fastlane
-- yes | sdkmanager --licenses
+# - yes | sdkmanager --licenses
 - pip install --user awscli
 
 # script:
