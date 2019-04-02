@@ -17,6 +17,7 @@ before_install:
 - sudo apt-get install nodejs
 - sudo apt-get install ant
 - npm i
+- npm run predeploy:android
 - cd android/
 - chmod +x gradlew
 - gem update --system
