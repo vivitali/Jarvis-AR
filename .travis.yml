@@ -16,10 +16,9 @@ before_install:
 - cd android/
 - chmod +x gradlew
 - gem update --system
+- pkg install node
 - gem install fastlane
 - pip install --user awscli
-- pip install nodejs
-
 
 # script:
 # - ./gradlew test
