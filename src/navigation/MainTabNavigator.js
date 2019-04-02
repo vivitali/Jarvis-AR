@@ -6,7 +6,7 @@ import {
   createBottomTabNavigator
 } from "react-navigation";
 
-import TabBarIcon from "../components/TabBarIcon";
+import { TabBarIcon } from "../components";
 import ScannerScreen from "../screens/ScannerScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 
