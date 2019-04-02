@@ -16,7 +16,7 @@ before_install:
 - cd android/
 - chmod +x gradlew
 - gem update --system
-- sudo apt-get install nodejs
+- sudo apt-get install nodejs npm
 - cd ../
 - npm i
 - gem install fastlane
