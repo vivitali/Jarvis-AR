@@ -16,6 +16,7 @@ before_install:
 - cd android/
 - chmod +x gradlew
 - gem update --system
+- curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 - sudo apt-get install nodejs npm
 - cd ../
 - npm i
