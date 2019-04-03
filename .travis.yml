@@ -21,11 +21,20 @@ before_install:
 - cd android/
 - chmod +x gradlew
 - gem update --system
-- gem install fastlane
-# - yes | sdkmanager --licenses
+- gem install fastlane -NV
 - pip install --user awscli
 
-# script:
+script:
+- npm run flow
+
+deploy:
+  provider: script
+  script:
+   - npm run deploy:android
+  on:
+    branch: master
+
+
 # - ./gradlew test
 # - './configure_aws.sh
 #    aws s3 cp s3://<S3  Bucket>/keystore.jks keystore.jks;
