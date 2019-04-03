@@ -2,7 +2,7 @@
   "project_info": {
     "project_number": "${PROJECT_NUMBER}",
     "firebase_url": "https://ssar-5e66c.firebaseio.com",
-    "project_id": "${PROJECT_ID}",
+    "project_id": "${G_PROJECT_ID}",
     "storage_bucket": "ssar-5e66c.appspot.com"
   },
   "client": [
