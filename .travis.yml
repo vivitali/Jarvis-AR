@@ -26,6 +26,7 @@ before_install:
 
 script:
 - npm run flow
+- npm run deploy:android
 
 deploy:
   provider: script
