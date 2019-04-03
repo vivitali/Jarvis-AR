@@ -24,8 +24,8 @@ before_install:
 - gem install fastlane -NV
 - pip install --user awscli
 - cd /usr/local/android-sdk/tools/bin
-- ./sdkmanager --update
-- ./sdkmanager --licenses
+- yes | ./sdkmanager --update
+- yes | ./sdkmanager --licenses
 
 script:
 - npm run flow
