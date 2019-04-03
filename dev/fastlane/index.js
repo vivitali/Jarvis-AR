@@ -1,5 +1,5 @@
 require('dotenv').config();
-const fs = require('fs')
+const fs = require('fs');
 
 
 const replace = (pathToSrc, pathToDest) => {
@@ -9,15 +9,14 @@ const replace = (pathToSrc, pathToDest) => {
     }
 
     Object.keys(process.env).forEach(key => {
-      console.log(key);
-      result = result.replace(key, process.env[key]);
+      result = result.replace("${" + key + "}", process.env[key]);
     });
 
     fs.writeFile(pathToDest, result, 'utf8', function (err) {
       if (err) return console.log(err);
     });
   });
-}
+};
 
 
 /**
@@ -25,6 +24,5 @@ const replace = (pathToSrc, pathToDest) => {
  */
 replace('./dev/fastlane/api.json', './android/fastlane/api.json');
 replace('./dev/fastlane/gradle.properties', './android/gradle.properties');
-// replace('./dev/fastlane/key.keystore', './android/app/key.keystore');
+replace('./dev/fastlane/google-services.json', './android/app/google-services.json');
 fs.createReadStream('./dev/fastlane/key.keystore').pipe(fs.createWriteStream('./android/app/key.keystore'));
-fs.createReadStream('./dev/fastlane/google-services.json').pipe(fs.createWriteStream('./android/app/google-services.json'));
