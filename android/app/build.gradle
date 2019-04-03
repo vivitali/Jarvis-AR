@@ -101,7 +101,7 @@ android {
         applicationId "com.ssar.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 76
+        versionCode 78
         versionName "1.0"
     }
     signingConfigs {
