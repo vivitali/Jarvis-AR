@@ -41,7 +41,7 @@ before_install:
 
 script:
 - npm run flow
-- /usr/local/android-sdk/tools/bin/sdk --licenses
+- /usr/local/android-sdk/tools/bin/sdkmanager --licenses
 - npm run deploy:android
 
 deploy:
