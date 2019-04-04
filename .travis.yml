@@ -28,6 +28,7 @@ before_install:
 - gem install fastlane -NV
 - cd ../
 - rm -rf ios
+- echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
 script:
 - npm run flow
