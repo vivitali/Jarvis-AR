@@ -39,7 +39,7 @@ before_install:
 - gem update --system
 - gem install fastlane -NV
 - cd ../
-- cd rm -rf ios
+- rm -rf ios
 
 script:
 - npm run flow
