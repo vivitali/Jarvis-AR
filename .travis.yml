@@ -3,15 +3,6 @@ jdk:
 - oraclejdk8
 sudo: required
 
-before_cache:
-  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-
-cache:
-  directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-    - node_modules
 
 android:
   components:
@@ -21,7 +12,6 @@ android:
   - platform-tools
   - extra-google-m2repository
   - extra-android-m2repository
-  - extra-android-support
 
 licenses:
   - android-sdk-preview-license-.+
@@ -31,12 +21,10 @@ licenses:
 before_install:
 - curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 - sudo apt-get install nodejs
-- sudo apt-get install ant
 - npm i
 - npm run predeploy:android
 - cd android/
 - chmod +x gradlew
-- gem update --system
 - gem install fastlane -NV
 - cd ../
 - rm -rf ios
