@@ -4,7 +4,9 @@ const paths = [
   './android/gradle.properties',
   './android/app/key.keystore',
   './android/fastlane/api.json',
-  './android/app/google-services.json'
+  './android/app/google-services.json',
+  './android/app/src/debug/google-services.json',
+  './android/app/src/release/google-services.json'
 ];
 
 paths.forEach(path => fs.unlink(path, (err) => {

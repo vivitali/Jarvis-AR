@@ -25,4 +25,6 @@ const replace = (pathToSrc, pathToDest) => {
 replace('./dev/fastlane/api.json', './android/fastlane/api.json');
 replace('./dev/fastlane/gradle.properties', './android/gradle.properties');
 replace('./dev/fastlane/google-services.json', './android/app/google-services.json');
+replace('./dev/fastlane/google-services.json', './android/app/src/debug/google-services.json');
+replace('./dev/fastlane/google-services.json', './android/app/src/release/google-services.json');
 fs.createReadStream('./dev/fastlane/key.keystore').pipe(fs.createWriteStream('./android/app/key.keystore'));
