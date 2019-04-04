@@ -38,6 +38,8 @@ before_install:
 - chmod +x gradlew
 - gem update --system
 - gem install fastlane -NV
+- cd ../
+- cd rm -rf ios
 
 script:
 - npm run flow
