@@ -41,11 +41,7 @@ before_install:
 
 script:
 - npm run flow
-# - /usr/local/android-sdk/tools/bin/sdkmanager --licenses
 - yes | /usr/local/android-sdk/tools/bin/sdkmanager "build-tools;28.0.3"
-
-
-- npm run deploy:android
 
 deploy:
   provider: script
@@ -54,11 +50,12 @@ deploy:
   on:
     branch: master
 
-
-# - ./gradlew test
-# - './configure_aws.sh
-#    aws s3 cp s3://<S3  Bucket>/keystore.jks keystore.jks;
-#    aws s3 cp s3://<S3  Bucket>/keystore.properties keystore.properties;
-#    ls;
-#    fastlane deploy KEYSTORE_ALIAS:$KEYSTORE_ALIAS  KEYSTORE_PASSWORD:$KEYSTORE_PASSWORD KEYSTORE_ALIAS_PASSWORD:$KEYSTORE_ALIAS_PASSWORD;
-#   fi'
+notifications:
+  webhooks:
+    urls:
+      - "https://www.travisbuddy.com/"
+    on_success: never
+    on_failure: always
+    on_start: never
+    on_cancel: never
+    on_error: never
