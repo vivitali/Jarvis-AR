@@ -38,7 +38,7 @@ before_install:
 - chmod +x gradlew
 - gem update --system
 - gem install fastlane -NV
-- ~/usr/local/android-sdk/tools/bin/sdk --licenses
+- /usr/local/android-sdk/tools/bin/sdk --licenses
 
 script:
 - npm run flow
