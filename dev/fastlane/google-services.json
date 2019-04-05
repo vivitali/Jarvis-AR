@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "${PROJECT_NUMBER}",
+    "firebase_url": "https://ssar-5e66c.firebaseio.com",
+    "project_id": "${G_PROJECT_ID}",
+    "storage_bucket": "ssar-5e66c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "${MOBILESDK_APP_ID}",
+        "android_client_info": {
+          "package_name": "com.ssar.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "${CLIENT_ID_1}",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ssar.app",
+            "certificate_hash": "${CERTIFICATE_HASH}"
+          }
+        },
+        {
+          "client_id": "${CLIENT_ID_2}",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "${CURRENT_KEY}"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "${CLIENT_ID_3}",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

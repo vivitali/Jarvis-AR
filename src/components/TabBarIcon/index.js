@@ -1,8 +1,8 @@
 import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
-import Colors from "../constants/Colors";
+import Colors from "../../constants/Colors";
 
-export default class TabBarIcon extends React.Component {
+export default class Index extends React.Component {
   render() {
     return (
       <Icon
