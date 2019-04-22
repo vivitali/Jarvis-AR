@@ -150,6 +150,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-auth0')
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-ml-vision:17.0.0'
     implementation (project(':react-native-text-detector')) {

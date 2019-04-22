@@ -3,6 +3,7 @@ package com.ssar.app;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.auth0.react.A0Auth0Package;
 import com.fetchsky.RNTextDetector.RNTextDetectorPackage;
 import org.reactnative.camera.RNCameraPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -27,6 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new A0Auth0Package(),
             new RNTextDetectorPackage(),
             new RNCameraPackage(),
             new VectorIconsPackage(),
