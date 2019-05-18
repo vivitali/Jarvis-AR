@@ -16,11 +16,11 @@
     "postdeploy:android": "node dev/fastlane/post"
   },
   "dependencies": {
-    "env-cmd": "^8.0.2",
     "react": "16.6.3",
     "react-native": "0.58.6",
-    "react-native-auth0": "^1.4.0",
+    "react-native-auth0": "1.4.0",
     "react-native-camera": "1.11.2",
+    "react-native-config": "^0.11.7",
     "react-native-gesture-handler": "1.0.15",
     "react-native-json-tree": "1.2.0",
     "react-native-text-detector": "0.0.6",

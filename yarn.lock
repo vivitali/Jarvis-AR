@@ -1422,7 +1422,7 @@ cross-spawn@^5.0.1, cross-spawn@^5.1.0:
     shebang-command "^1.2.0"
     which "^1.2.9"
 
-cross-spawn@^6.0.0, cross-spawn@^6.0.5:
+cross-spawn@^6.0.0:
   version "6.0.5"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
   dependencies:
@@ -1600,12 +1600,6 @@ end-of-stream@^1.1.0:
   resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.4.1.tgz#ed29634d19baba463b6ce6b80a37213eab71ec43"
   dependencies:
     once "^1.4.0"
-
-env-cmd@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/env-cmd/-/env-cmd-8.0.2.tgz#e3bf53b8e4676781bdc3a0b1a2f7612cbcda4da4"
-  dependencies:
-    cross-spawn "^6.0.5"
 
 envinfo@^5.7.0:
   version "5.12.1"
@@ -4312,7 +4306,7 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
-react-native-auth0@^1.4.0:
+react-native-auth0@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/react-native-auth0/-/react-native-auth0-1.4.0.tgz#7d49b828e24a2fca1792a2f9e3a46a7732280721"
   dependencies:
@@ -4324,6 +4318,10 @@ react-native-camera@1.11.2:
   resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-1.11.2.tgz#d5361d1817090ed89f283d23c5d2e68c52044e2b"
   dependencies:
     prop-types "^15.6.2"
+
+react-native-config@^0.11.7:
+  version "0.11.7"
+  resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-0.11.7.tgz#a2b323f2ecd76a4df88cbb6bc86eaa2ef9febee7"
 
 react-native-gesture-handler@1.0.15, react-native-gesture-handler@~1.0.14:
   version "1.0.15"

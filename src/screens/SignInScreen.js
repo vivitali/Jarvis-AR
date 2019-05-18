@@ -1,10 +1,11 @@
 import React from "react";
 import { View, Button, AsyncStorage, TextInput } from "react-native";
 import Auth0 from "react-native-auth0";
+import config from "react-native-config";
 
 const auth0 = new Auth0({
-  domain: process.env.AUTH0_DOMAIN,
-  clientId: process.env.AUTH0_CLIENT_ID
+  domain: config.AUTH0_DOMAIN,
+  clientId: config.AUTH0_CLIENT_ID
 });
 
 class SignInScreen extends React.Component {
@@ -26,6 +27,8 @@ class SignInScreen extends React.Component {
           style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
           onChangeText={password => this.setState({ password })}
           placeholder="password"
+          textContentType="password"
+          secureTextEntry={true}
         />
         <Button title="Sign in!" onPress={this._signInAsync} />
       </View>
@@ -42,7 +45,6 @@ class SignInScreen extends React.Component {
         realm: "Username-Password-Authentication"
       })
       .then(async data => {
-        console.log(data);
         await AsyncStorage.setItem("userToken", JSON.stringify(data));
         this.props.navigation.navigate("Scanner");
       })
