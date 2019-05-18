@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "preandroid": "npm run predeploy:android",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
@@ -35,7 +36,7 @@
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "24.1.0",
-    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+    "babel-preset-react-native": "5.0.2",
     "dotenv": "6.2.0",
     "flow-bin": "0.93.0",
     "glow": "1.2.2",
