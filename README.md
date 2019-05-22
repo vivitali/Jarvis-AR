@@ -31,3 +31,16 @@
 
 ## Description
 TBD
+
+## Development
+
+# Running application in dev mode
+- check if you have .env file in the root (PLEASE, DO NOT COMMIT THAT FILE)
+- run npm run start
+- run npm run android (or npm run ios - which is not supported for now)
+
+## Useful tools
+
+### React Native Debugger
+
+Follow instructions from https://github.com/jhen0409/react-native-debugger
