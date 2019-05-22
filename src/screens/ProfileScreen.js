@@ -5,7 +5,8 @@ import {
   Text,
   View,
   Linking,
-  TouchableOpacity
+  TouchableOpacity,
+  AsyncStorage
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
@@ -35,6 +36,11 @@ export default class ProfileScreen extends React.Component {
     } catch (e) {
       console.log(e);
     }
+  };
+
+  _signOutAsync = async () => {
+    await AsyncStorage.clear();
+    this.props.navigation.navigate("Auth");
   };
 
   render() {
@@ -68,6 +74,20 @@ export default class ProfileScreen extends React.Component {
             </View>
             <View style={styles.optionTextContainer}>
               <Text style={styles.optionText}>call on skype</Text>
+            </View>
+          </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.option}
+          onPress={() => this._signOutAsync()}
+        >
+          <View style={{ flexDirection: "row" }}>
+            <View style={styles.optionIconContainer}>
+              <Icon name="sign-out" size={22} color="#ccc" />
+            </View>
+            <View style={styles.optionTextContainer}>
+              <Text style={styles.optionText}>Sign Out</Text>
             </View>
           </View>
         </TouchableOpacity>

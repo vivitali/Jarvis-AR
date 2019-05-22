@@ -9,6 +9,12 @@ npm-debug.*
 .vscode
 .env
 
-./android/gradle.properties
-./android/app/key.keystore
-./android/fastlane/api.json
+android/.gradle/*
+android/app/build/*
+android/gradle.properties
+android/app/key.keystore
+android/app/google-services.json
+android/app/src/release/google-services.json
+android/app/src/release/google-services.json
+
+ios/build/*
