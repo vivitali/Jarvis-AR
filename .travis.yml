@@ -45,8 +45,8 @@ script:
 
 deploy:
   provider: script
-  script: bash dev/ci/pre-build.sh
   script:
+   - bash dev/ci/pre-build.sh
    - npm run deploy:android
   on:
     branch: master
