@@ -23,7 +23,6 @@ const replace = (pathToSrc, pathToDest) => {
  * GOOGLE API
  */
 replace('./dev/fastlane/api.json', './android/fastlane/api.json');
-replace('./dev/fastlane/gradle.properties', './android/gradle.properties');
 replace('./dev/fastlane/google-services.json', './android/app/google-services.json');
 replace('./dev/fastlane/google-services.json', './android/app/src/debug/google-services.json');
 replace('./dev/fastlane/google-services.json', './android/app/src/release/google-services.json');

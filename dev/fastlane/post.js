@@ -1,7 +1,6 @@
 const fs = require('fs');
 
 const paths = [
-  './android/gradle.properties',
   './android/app/key.keystore',
   './android/fastlane/api.json',
   './android/app/google-services.json',
