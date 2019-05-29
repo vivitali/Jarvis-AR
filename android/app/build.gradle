@@ -102,16 +102,20 @@ android {
         applicationId "com.ssar.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 96
+        versionCode 103
         versionName "1.0"
     }
     signingConfigs {
         release {
-            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
-                storeFile file(MYAPP_RELEASE_STORE_FILE)
-                storePassword MYAPP_RELEASE_STORE_PASSWORD
-                keyAlias MYAPP_RELEASE_KEY_ALIAS
-                keyPassword MYAPP_RELEASE_KEY_PASSWORD
+            def localFile = project.env.get("ANDROID_STORE_FILE")
+
+            if (localFile) {
+                storeFile file(project.env.get("ANDROID_STORE_FILE"))
+                storePassword project.env.get('ANDROID_STORE_PASSWORD')
+                keyAlias project.env.get('ANDROID_KEY_ALIAS')
+                keyPassword project.env.get('ANDROID_KEY_PASSWORD')
+            } else {
+                throw new GradleException('No signing information found.')
             }
         }
     }
