@@ -33,6 +33,9 @@
 TBD
 
 ## Development
+- IOS 
+  - install CocoaPods https://cocoapods.org/
+  - run cd ios && pod install
 
 # Running application in dev mode
 - check if you have .env file in the root (PLEASE, DO NOT COMMIT THAT FILE)
