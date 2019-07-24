@@ -9,7 +9,6 @@ import RNTextDetector from "react-native-text-detector";
 import * as NavigationService from "../../../services/NavigationService";
 
 export function* processScanData({ payload }: any): Saga<*> {
-  console.log(payload);
   yield put(loadScanPending());
 
   try {
