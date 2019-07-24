@@ -5,6 +5,7 @@ import AppNavigator from "./navigation/AppNavigator";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/lib/integration/react";
 import store, { persistor } from "./redux/store";
+import * as NavigationService from "./services/NavigationService";
 
 export default class App extends React.Component {
   state = {
@@ -27,7 +28,7 @@ export default class App extends React.Component {
           <PersistGate persistor={persistor}>
             <View style={styles.container}>
               {Platform.OS === "ios" && <StatusBar barStyle="default" />}
-              <AppNavigator />
+              <AppNavigator ref={NavigationService.setNavigator} />
             </View>
           </PersistGate>
         </Provider>
