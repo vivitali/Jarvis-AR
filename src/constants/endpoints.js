@@ -1,5 +1,5 @@
 const endpoints = {
-  carNumber: "v1/car-number"
+  processNumber: "v1/process-number"
 };
 
 export default endpoints;

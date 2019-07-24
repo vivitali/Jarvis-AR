@@ -6,8 +6,6 @@ export type Props = {|
   navigation: any,
   loading: boolean,
   data: ScannerData,
-  loadScanData: () => void,
-  loadScanPending: () => void,
-  loadScanSuccess: (visionResp: any) => void,
-  loadScanFailure: (error: any) => void
+  processScanData: (data: any) => void,
+  resetScanData: () => void
 |};

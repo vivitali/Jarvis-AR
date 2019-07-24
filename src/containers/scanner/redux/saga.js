@@ -4,12 +4,11 @@ import type { Saga } from "redux-saga";
 import { loadScanPending, loadScanSuccess, loadScanFailure } from "./actions";
 import * as constants from "./constants";
 import { getUserByCarNumber } from "../../../services/api";
-import { NavigationActions } from "react-navigation";
 // $FlowFixMe
 import RNTextDetector from "react-native-text-detector";
 import * as NavigationService from "../../../services/NavigationService";
 
-export function* preoceessScanData({ payload }): Saga<*> {
+export function* processScanData({ payload }: any): Saga<*> {
   console.log(payload);
   yield put(loadScanPending());
 
@@ -32,7 +31,7 @@ export function* preoceessScanData({ payload }): Saga<*> {
  * @return {IterableIterator<*|ForkEffect>}
  */
 export function* tripSaga(): Saga<*> {
-  yield takeEvery(constants.PROCESS_SCAN_DATA, preoceessScanData);
+  yield takeEvery(constants.PROCESS_SCAN_DATA, processScanData);
 }
 
 export default tripSaga;
