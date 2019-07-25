@@ -10,7 +10,7 @@ npm-debug.*
 .env
 package-lock.json
 
-android/fastlane/api.jsond
+android/fastlane/api.json
 
 android/.gradle/*
 android/app/build/*
