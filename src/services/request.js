@@ -1,7 +1,8 @@
 import { AsyncStorage } from "react-native";
 
 export const request = async ({ url, method, body }) => {
-  const token = await AsyncStorage.getItem("userToken");
+  const userToken = await AsyncStorage.getItem("userToken");
+  const token = JSON.parse(userToken) && JSON.parse(userToken).idToken;
 
   return fetch(url, {
     method,
