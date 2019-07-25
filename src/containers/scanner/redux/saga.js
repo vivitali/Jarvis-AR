@@ -1,19 +1,25 @@
 // @flow
-import { put, takeEvery, delay } from "redux-saga/effects";
+import { put, takeEvery, call } from "redux-saga/effects";
 import type { Saga } from "redux-saga";
 import { loadScanPending, loadScanSuccess, loadScanFailure } from "./actions";
-import { LOAD_SCANNER } from "./constants";
+import * as constants from "./constants";
+import { getUserByCarNumber } from "../../../services/api";
+// $FlowFixMe
+import RNTextDetector from "react-native-text-detector";
+import * as NavigationService from "../../../services/NavigationService";
 
-/**
- *
- * @return {IterableIterator<*>}
- */
-export function* loadScanner(): Saga<*> {
+export function* processScanData({ payload }: any): Saga<*> {
   yield put(loadScanPending());
-  yield delay(5000);
 
   try {
-    yield put(loadScanSuccess({ data: "DUMMY_DATA" }));
+    const visionResp = yield RNTextDetector.detectFromUri(payload);
+
+    if (!(visionResp && visionResp.length)) {
+      throw "UNMATCHED";
+    }
+
+    const data = yield getUserByCarNumber(visionResp);
+    NavigationService.navigate("Profile", { user: data });
   } catch (error) {
     yield put(loadScanFailure(error));
   }
@@ -24,7 +30,7 @@ export function* loadScanner(): Saga<*> {
  * @return {IterableIterator<*|ForkEffect>}
  */
 export function* tripSaga(): Saga<*> {
-  yield takeEvery(LOAD_SCANNER, loadScanner);
+  yield takeEvery(constants.PROCESS_SCAN_DATA, processScanData);
 }
 
 export default tripSaga;
