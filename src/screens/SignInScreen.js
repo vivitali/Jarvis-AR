@@ -42,6 +42,7 @@ class SignInScreen extends React.Component {
       .passwordRealm({
         username: email,
         password,
+        audience: config.AUTH0_AUDIENCE,
         realm: "Username-Password-Authentication"
       })
       .then(async data => {
