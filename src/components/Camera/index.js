@@ -38,6 +38,7 @@ export default class App extends React.Component {
         <RNCamera
           ref={ref => (this.camera = ref)}
           style={styles.container}
+          captureAudio={false}
           type={this.state.type}
         >
           <View style={styles.actionWrapper}>
