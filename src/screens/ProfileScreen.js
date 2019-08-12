@@ -45,11 +45,11 @@ export default class ProfileScreen extends React.Component {
 
   render() {
     const data = this.props.navigation.getParam("user", {});
-    const user = data[0] || {};
+    const user = data || {};
 
     return (
       <View style={styles.profileContainer}>
-        <Text style={styles.optionText}>{user.name}</Text>
+        <Text style={styles.userText}>{user.name}</Text>
         <TouchableOpacity
           style={styles.option}
           onPress={() => this.handlePressPhoneBtn(user.tel)}
@@ -122,6 +122,12 @@ const styles = StyleSheet.create({
   },
   optionIconContainer: {
     marginRight: 9
+  },
+  userText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 1,
+    textAlign: 'center'
   },
   optionText: {
     fontSize: 15,

@@ -42,7 +42,7 @@
 		D880B060823B4D97ABB5CE10 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4010E4428AA42748A7A7F36 /* AntDesign.ttf */; };
 		D9B91D64789C40C7B4D70D77 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C317B834CA4D4567A3A60CEE /* Octicons.ttf */; };
 		DE201E1302F348198B1FA88A /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E7C612EB1964A959824D999 /* MaterialCommunityIcons.ttf */; };
-		DF93DC1F22FDF569003ACD3F /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = DF93DC1E22FDF569003ACD3F /* tessdata */; };
+		DF6F42852301DA5100B22691 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = DF6F42842301DA5100B22691 /* tessdata */; };
 		E691F3E7326146DABC60A4D2 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73188F493D2E4A56AEEEFB50 /* libRNCamera.a */; };
 		E8067541B8FC4BB186681CB4 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD1E9E461D224A2597AA044A /* FontAwesome5_Solid.ttf */; };
 		EB064C48624A676C77ADFF2E /* libPods-SSAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A69F0F10A6FCA48F60217396 /* libPods-SSAR.a */; };
@@ -419,11 +419,11 @@
 		D6ED8F997F6349D69DF7ADB5 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
 		D7AD270A9C4346EC9FA55F7B /* libRNTextDetector.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNTextDetector.a; sourceTree = "<group>"; };
 		D7D99C78CC154F1DB17E176D /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		DF6F42842301DA5100B22691 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = SSAR/tessdata; sourceTree = "<group>"; };
 		DF93DB7522FCA43B003ACD3F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		DF93DB7722FCA4E4003ACD3F /* libTesseractOCRiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTesseractOCRiOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF93DB7922FCABC9003ACD3F /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "../../../../../../../usr/lib/libstdc++.6.0.9.dylib"; sourceTree = "<group>"; };
 		DF93DB7C22FCADAF003ACD3F /* libstdc++.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libstdc++.a"; path = "../../../../../Downloads/libstdc++.a"; sourceTree = "<group>"; };
-		DF93DC1E22FDF569003ACD3F /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = SSAR/tessdata; sourceTree = "<group>"; };
 		E6DD18A894244A38982FF06C /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -545,7 +545,7 @@
 		13B07FAE1A68108700A75B9A /* SSAR */ = {
 			isa = PBXGroup;
 			children = (
-				DF93DC1E22FDF569003ACD3F /* tessdata */,
+				DF6F42842301DA5100B22691 /* tessdata */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -1240,7 +1240,7 @@
 				3FE3CB1527D142F6B419EF25 /* FontAwesome5_Regular.ttf in Resources */,
 				E8067541B8FC4BB186681CB4 /* FontAwesome5_Solid.ttf in Resources */,
 				BA2A1165EE2649EA90B8C1A7 /* Foundation.ttf in Resources */,
-				DF93DC1F22FDF569003ACD3F /* tessdata in Resources */,
+				DF6F42852301DA5100B22691 /* tessdata in Resources */,
 				7343667CD6CF4F27960581A1 /* Ionicons.ttf in Resources */,
 				DE201E1302F348198B1FA88A /* MaterialCommunityIcons.ttf in Resources */,
 				330E626E19BB497D8F93ECFA /* MaterialIcons.ttf in Resources */,
@@ -1265,7 +1265,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+			shellScript = "export NODE_BINARY=node\nexport NODE_OPTIONS=\"--max_old_space_size=24096\"\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		C76B5E868FABC094597BA0E1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1322,7 +1322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 18;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 236G4W8395;
 				ENABLE_BITCODE = NO;
@@ -1354,7 +1354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 236G4W8395;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
