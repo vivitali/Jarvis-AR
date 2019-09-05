@@ -14,15 +14,6 @@ const PICTURE_OPTIONS = {
 export default class App extends React.Component {
   state = {};
 
-  flip = () => {
-    this.setState({
-      type:
-        this.state.type === RNCamera.Constants.Type.back
-          ? RNCamera.Constants.Type.front
-          : RNCamera.Constants.Type.back
-    });
-  };
-
   snap = async () => {
     if (!this.camera) {
       return;
@@ -44,9 +35,6 @@ export default class App extends React.Component {
           <View style={styles.actionWrapper}>
             <TouchableOpacity style={styles.snap} onPress={this.snap}>
               <Icon name="camera" size={40} color="#ccc" />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.flip} onPress={this.flip}>
-              <Icon name="repeat" size={22} color="#ccc" />
             </TouchableOpacity>
           </View>
         </RNCamera>

@@ -1,9 +1,9 @@
 {
   "project_info": {
     "project_number": "${PROJECT_NUMBER}",
-    "firebase_url": "https://ssar-5e66c.firebaseio.com",
+    "firebase_url": "https://react-native-ar.firebaseio.com",
     "project_id": "${G_PROJECT_ID}",
-    "storage_bucket": "ssar-5e66c.appspot.com"
+    "storage_bucket": "react-native-ar.appspot.com"
   },
   "client": [
     {
@@ -15,15 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "${CLIENT_ID_1}",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.ssar.app",
-            "certificate_hash": "${CERTIFICATE_HASH}"
-          }
-        },
-        {
-          "client_id": "${CLIENT_ID_2}",
+          "client_id": "${CLIENT_ID}",
           "client_type": 3
         }
       ],
@@ -33,20 +25,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "${CLIENT_ID_3}",
+              "client_id": "${CLIENT_ID}",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

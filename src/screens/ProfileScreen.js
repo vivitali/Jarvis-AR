@@ -125,9 +125,9 @@ const styles = StyleSheet.create({
   },
   userText: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginTop: 1,
-    textAlign: 'center'
+    textAlign: "center"
   },
   optionText: {
     fontSize: 15,

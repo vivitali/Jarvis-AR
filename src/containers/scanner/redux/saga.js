@@ -18,7 +18,13 @@ export function* processScanData({ payload }: any): Saga<*> {
       throw "UNMATCHED";
     }
 
-    const data = yield getUserByCarNumber(visionResp);
+    const processedVR = visionResp.map(resp => ({
+      ...resp,
+      text: resp.text.split(" ").join("")
+    }));
+
+    const data = yield getUserByCarNumber(processedVR);
+    yield put(loadScanSuccess());
     NavigationService.navigate("Profile", { user: data });
   } catch (error) {
     yield put(loadScanFailure(error));
