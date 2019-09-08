@@ -48,5 +48,7 @@ TBD
 
 Follow instructions from https://github.com/jhen0409/react-native-debugger
 
-## Useful links
-* https://github.com/Kila2/libstdc-.6.0.9.tbd
+## How to build
+* Add libstdc for running in simulator only https://github.com/Kila2/libstdc-.6.0.9.tbd
+* ENABLE_BITCODE = No
+* Legacy build
