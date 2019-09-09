@@ -5,10 +5,5 @@
         <!-- Customize your theme here. -->
         <item name="android:statusBarColor">@color/white</item>
     </style>
-    
-    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash</item>
-        <item name="android:statusBarColor">@color/white</item>
-    </style>
 
 </resources>
