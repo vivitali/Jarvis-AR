@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import { View, Button, AsyncStorage, TextInput } from "react-native";
 import Auth0 from "react-native-auth0";
 import config from "react-native-config";
@@ -53,4 +53,8 @@ class SignInScreen extends React.Component {
   };
 }
 
-export default SignInScreen;
+export default SignInScreen; */
+
+import SignIn from "../containers/signin";
+
+export default SignIn;
