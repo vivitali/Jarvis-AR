@@ -6,6 +6,7 @@
     "start": "REACT_DEBUGGER='open -g rndebugger://set-debugger-loc?port=8081 ||' node node_modules/react-native/local-cli/cli.js start",
     "preandroid": "npm run predeploy:android",
     "android": "react-native run-android",
+    "preios": "node dev/ios",
     "ios": "react-native run-ios",
     "test": "node ./node_modules/jest/bin/jest.js --watchAll",
     "prettier": "./node_modules/.bin/prettier './src/**/*.{js,scss}' --write",
@@ -14,9 +15,11 @@
     "glow:watch": "glow --watch",
     "deploy:android": "cd android && fastlane playstore",
     "predeploy:android": "node dev/fastlane",
-    "postdeploy:android": "node dev/fastlane/post"
+    "postdeploy:android": "node dev/fastlane/post",
+    "deploy:ios": "cd ios && fastlane beta"
   },
   "dependencies": {
+    "ncp": "^2.0.0",
     "react": "16.6.3",
     "react-native": "0.58.6",
     "react-native-auth0": "1.4.0",
@@ -24,7 +27,7 @@
     "react-native-config": "0.11.7",
     "react-native-gesture-handler": "1.0.15",
     "react-native-json-tree": "1.2.0",
-    "react-native-text-detector": "0.0.6",
+    "react-native-text-detector": "git://github.com/rbelmega/react-native-text-detector.git",
     "react-native-vector-icons": "6.3.0",
     "react-navigation": "3.3.0",
     "react-redux": "6.0.0",
