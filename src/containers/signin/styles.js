@@ -4,20 +4,20 @@ import Colors from "../../constants/Colors";
 const styles = StyleSheet.create({
   signInContainer: {
     flex: 1,
-    flexDirection: "column",
     alignItems: "stretch",
-    paddingHorizontal: 50
+    paddingHorizontal: 50,
+    paddingVertical: 60
   },
-  emptyContainer: { flex: 1 },
-  headerContainer: { flex: 2 },
-  headerContainerImage: { width: 75, height: 75, marginBottom: 10 },
-  headerContainerTitle: {
-    color: "#000",
+  textContainer: {
+    flex: 2
+  },
+  bigText: {
+    color: Colors.primaryColor,
     fontWeight: "bold",
     fontSize: 50
   },
-  headerContainerText: { color: "#9E9E9E", fontSize: 30 },
-  formContainer: { flex: 4 }
+  smallText: { color: Colors.secondaryColor, fontSize: 30 },
+  formContainer: { flex: 4, justifyContent: "flex-end" }
 });
 
 export default styles;

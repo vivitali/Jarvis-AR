@@ -19,6 +19,7 @@
     "deploy:ios": "cd ios && fastlane beta"
   },
   "dependencies": {
+    "apsl-react-native-button": "^3.1.1",
     "ncp": "^2.0.0",
     "react": "16.6.3",
     "react-native": "0.58.6",
