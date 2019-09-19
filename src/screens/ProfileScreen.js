@@ -5,12 +5,14 @@ import {
   Text,
   View,
   Linking,
-  TouchableOpacity,
-  AsyncStorage
+  TouchableOpacity
 } from "react-native";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 import Icon from "react-native-vector-icons/FontAwesome";
+import { actions } from "../containers/signin/redux";
 
-export default class ProfileScreen extends React.Component {
+class ProfileScreen extends React.Component {
   static navigationOptions = {
     title: "Profile"
   };
@@ -36,11 +38,6 @@ export default class ProfileScreen extends React.Component {
     } catch (e) {
       console.log(e);
     }
-  };
-
-  _signOutAsync = async () => {
-    await AsyncStorage.clear();
-    this.props.navigation.navigate("Auth");
   };
 
   render() {
@@ -78,10 +75,7 @@ export default class ProfileScreen extends React.Component {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity
-          style={styles.option}
-          onPress={() => this._signOutAsync()}
-        >
+        <TouchableOpacity style={styles.option} onPress={this.props.invalidate}>
           <View style={{ flexDirection: "row" }}>
             <View style={styles.optionIconContainer}>
               <Icon name="sign-out" size={22} color="#ccc" />
@@ -134,3 +128,18 @@ const styles = StyleSheet.create({
     marginTop: 1
   }
 });
+
+const mapStateToProps = state => ({});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      invalidate: actions.invalidate
+    },
+    dispatch
+  );
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProfileScreen);

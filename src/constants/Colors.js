@@ -9,6 +9,10 @@ const warningBackground: "#EAEB5E" = "#EAEB5E";
 const warningText: "#666804" = "#666804";
 const noticeText: "#fff" = "#fff";
 
+const primaryColor: "#000" = "#000";
+const secondaryColor: "#9E9E9E" = "#9E9E9E";
+const contrastColor: "#FFF" = "#FFF";
+
 export default {
   tintColor,
   tabIconDefault,
@@ -19,5 +23,8 @@ export default {
   warningBackground,
   warningText,
   noticeBackground: tintColor,
-  noticeText
+  noticeText,
+  primaryColor,
+  secondaryColor,
+  contrastColor
 };
