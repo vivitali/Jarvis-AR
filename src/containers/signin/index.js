@@ -29,10 +29,8 @@ class SignIn extends Component {
   render() {
     return (
       <SafeAreaView style={styles.signInContainer}>
-        <View style={styles.textContainer}>
-          <Text style={styles.bigText}>Welcome,</Text>
-          <Text style={styles.smallText}>Sign in to continue</Text>
-        </View>
+        <Text style={styles.bigText}>Welcome,</Text>
+        <Text style={styles.smallText}>Sign in to continue</Text>
         <View style={styles.formContainer}>
           <SignInForm
             {...this.state}

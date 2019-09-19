@@ -33,7 +33,7 @@ export default function SignInForm({
         textStyle={styles.buttonText}
         onPress={onSignIn}
       >
-        SIGN IN
+        Sign In
       </Button>
       <Text style={styles.errorMsg}>{error}</Text>
     </View>

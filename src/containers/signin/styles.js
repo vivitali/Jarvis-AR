@@ -1,23 +1,24 @@
 import { StyleSheet } from "react-native";
 import Colors from "../../constants/Colors";
+import Fonts from "../../constants/Fonts";
 
 const styles = StyleSheet.create({
   signInContainer: {
     flex: 1,
-    alignItems: "stretch",
-    paddingHorizontal: 50,
-    paddingVertical: 60
-  },
-  textContainer: {
-    flex: 2
+    justifyContent: "center",
+    paddingHorizontal: 50
   },
   bigText: {
     color: Colors.primaryColor,
-    fontWeight: "bold",
-    fontSize: 50
+    fontSize: 50,
+    fontFamily: Fonts.bold
   },
-  smallText: { color: Colors.secondaryColor, fontSize: 30 },
-  formContainer: { flex: 4, justifyContent: "flex-end" }
+  smallText: {
+    color: Colors.secondaryColor,
+    fontSize: 30,
+    fontFamily: Fonts.base
+  },
+  formContainer: { marginTop: 40 }
 });
 
 export default styles;

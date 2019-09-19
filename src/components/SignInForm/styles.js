@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import Colors from "../../constants/Colors";
+import Fonts from "../../constants/Fonts";
 
 const styles = StyleSheet.create({
   formContainer: { color: Colors.secondaryColor },
@@ -7,7 +8,8 @@ const styles = StyleSheet.create({
     height: 80,
     borderBottomColor: Colors.secondaryColor,
     borderBottomWidth: 1,
-    fontSize: 20
+    fontSize: 25,
+    fontFamily: Fonts.light
   },
   lastInput: { marginBottom: 50 },
   button: {
@@ -17,10 +19,13 @@ const styles = StyleSheet.create({
     borderRadius: 22
   },
   buttonText: {
-    color: Colors.primaryColor
+    color: Colors.primaryColor,
+    fontSize: 20,
+    fontFamily: Fonts.base
   },
   errorMsg: {
-    textAlign: "center"
+    textAlign: "center",
+    fontFamily: Fonts.base
   }
 });
 
