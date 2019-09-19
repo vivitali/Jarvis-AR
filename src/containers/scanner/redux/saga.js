@@ -24,7 +24,7 @@ export function* processScanData({ payload }: any): Saga<*> {
     }));
 
     const data = yield getUserByCarNumber(processedVR);
-    yield put(loadScanSuccess());
+    yield put(loadScanSuccess(data));
     NavigationService.navigate("Profile", { user: data });
   } catch (error) {
     yield put(loadScanFailure(error));
