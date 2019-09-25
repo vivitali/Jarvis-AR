@@ -1,10 +1,11 @@
 import React from "react";
-import { View, Linking } from "react-native";
+import { View } from "react-native";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { actions } from "../signin/redux";
-import styles from "./style";
+import { actions } from "./redux";
+import { actions as signinAction } from "../signin/redux";
 import { ProfileTop, ProfileBody } from "../../components";
+import styles from "./styles";
 
 const profilePicture = require("../../assets/images/profile.png");
 
@@ -13,30 +14,8 @@ class Profile extends React.Component {
     title: "Profile"
   };
 
-  handlePressPhoneBtn = tel => {
-    Linking.canOpenURL(`tel:${tel}`)
-      .then(supported => {
-        if (!supported) {
-          console.log("Can't handle url: " + tel);
-        } else {
-          return Linking.openURL(`tel:${tel}`);
-        }
-      })
-      .catch(err => {
-        console.error("An error occurred", err);
-      });
-  };
-
-  // TODO...
-  handleSkypeBtn = user => {
-    try {
-      Linking.openURL(`skype:${user}`);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-
   render() {
+    const { proceedAction, signOut } = this.props;
     const data = this.props.navigation.getParam("user");
     const user = data || {
       name: "Rostyslav Belmeha",
@@ -50,9 +29,9 @@ class Profile extends React.Component {
         <ProfileTop avatar={profilePicture} {...user} />
         <ProfileBody
           user={user}
-          onSignOut={this.props.invalidate}
-          onSkypePress={() => this.handlePressPhoneBtn(user.tel)}
-          onPhonePress={() => this.handleSkypeBtn(user.skype)}
+          onSignOut={signOut}
+          onSkypePress={() => proceedAction({ type: "skype", user })}
+          onPhonePress={() => proceedAction({ type: "phone", user })}
         />
       </View>
     );
@@ -64,7 +43,8 @@ const mapStateToProps = state => ({});
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      invalidate: actions.invalidate
+      signOut: signinAction.invalidate,
+      proceedAction: actions.proceedAction
     },
     dispatch
   );
