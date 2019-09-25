@@ -8,7 +8,7 @@ import {
 
 import { TabBarIcon } from "../components";
 import ScannerScreen from "../screens/ScannerScreen";
-import ProfileScreen from "../screens/ProfileScreen";
+import ProfileScreen from "../screens/Profile";
 
 const ProfileStack = createStackNavigator({
   Profile: ProfileScreen
