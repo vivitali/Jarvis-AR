@@ -1,11 +1,30 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
+  profileContainer: {
+    width: "100%",
+    flex: 1
+  },
   profileBody: {
     paddingVertical: 20,
-    width: "100%",
-    flex: 1,
+    backgroundColor: "#000000",
+    flex: 1
+  },
+  profileFooter: {
+    marginTop: 2,
     backgroundColor: "#000000"
+  },
+  signout: {
+    flexDirection: "row",
+    textAlign: "center",
+    justifyContent: "center"
+  },
+  row: {
+    flexDirection: "row"
+  },
+  signoutOption: {
+    fontWeight: "bold",
+    color: "#cf0003"
   },
   option: {
     color: "white",
