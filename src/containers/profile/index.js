@@ -17,16 +17,15 @@ class Profile extends React.Component {
   render() {
     const { proceedAction, signOut } = this.props;
     const data = this.props.navigation.getParam("user");
-    const user = data || {
-      name: "Rostyslav Belmeha",
-      tel: "+380978875041",
-      skype: "burn_8_8_8",
-      carBrand: "Mitsubishi Lancer X",
-      carNumber: "AT 5656 BT"
-    };
+    const user = data || {};
     return (
       <View style={styles.profileContainer}>
-        <ProfileTop avatar={profilePicture} {...user} />
+        <ProfileTop
+          avatar={profilePicture}
+          {...user}
+          carNumber={user.car_number}
+          carBrand={user.car_brand}
+        />
         <ProfileBody
           user={user}
           onSignOut={signOut}

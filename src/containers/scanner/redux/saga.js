@@ -20,7 +20,7 @@ export function* processScanData({ payload }: any): Saga<*> {
 
     const processedVR = visionResp
       .map(
-          (resp = {}) =>
+        (resp = {}) =>
           resp.resultText ||
           resp.blockText ||
           resp.lineText ||
@@ -29,8 +29,8 @@ export function* processScanData({ payload }: any): Saga<*> {
       )
       .map(text => ({
         text: text.split(" ").join("")
-      })).slice(0, 1);
-
+      }))
+      .slice(0, 1);
 
     const data = yield getUserByCarNumber(processedVR);
     yield put(loadScanSuccess(data));
