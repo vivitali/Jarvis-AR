@@ -29,3 +29,8 @@ export const loadScanFailure = (error: Error) => ({
 export const resetScanData = () => ({
   type: constants.RESET_SCAN_DATA
 });
+
+export const searchNumber = (payload: string) => ({
+  type: constants.SEARCH_NUMBER,
+  payload
+});

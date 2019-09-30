@@ -9,6 +9,7 @@ import {
 import { TabBarIcon } from "../components";
 import ScannerScreen from "../screens/ScannerScreen";
 import ProfileScreen from "../screens/Profile";
+import SearchScreen from "../screens/SearchScreen";
 
 const ProfileStack = createStackNavigator({
   Profile: ProfileScreen
@@ -31,7 +32,20 @@ ScannerStack.navigationOptions = {
   tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="camera" />
 };
 
+/**
+ *
+ */
+const SearchStack = createStackNavigator({
+  Search: SearchScreen
+});
+
+SearchStack.navigationOptions = {
+  tabBarLabel: "Search",
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="search" />
+};
+
 export default createBottomTabNavigator({
   ProfileStack,
-  ScannerStack
+  ScannerStack,
+  SearchStack
 });

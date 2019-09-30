@@ -17,16 +17,18 @@ const ProfileBody = ({ user, onSkypePress, onSignOut, onPhonePress }) => (
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.option} onPress={onSkypePress}>
-        <View style={styles.row}>
-          <View style={styles.optionIconContainer}>
-            <Icon name="skype" size={22} color="#ccc" />
+      {!!user.skype && (
+        <TouchableOpacity style={styles.option} onPress={onSkypePress}>
+          <View style={styles.row}>
+            <View style={styles.optionIconContainer}>
+              <Icon name="skype" size={22} color="#ccc" />
+            </View>
+            <View>
+              <Text style={styles.optionText}>{user.skype}</Text>
+            </View>
           </View>
-          <View>
-            <Text style={styles.optionText}>{user.skype}</Text>
-          </View>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      )}
     </View>
 
     <View style={styles.profileFooter}>

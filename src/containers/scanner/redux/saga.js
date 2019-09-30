@@ -1,5 +1,5 @@
 // @flow
-import { put, takeEvery, call } from "redux-saga/effects";
+import { put, takeLatest, call } from "redux-saga/effects";
 import type { Saga } from "redux-saga";
 import { loadScanPending, loadScanSuccess, loadScanFailure } from "./actions";
 import * as constants from "./constants";
@@ -31,12 +31,23 @@ export function* processScanData({ payload }: any): Saga<*> {
   }
 }
 
+export function* searchNumber({ payload }) {
+  try {
+    const data = yield getUserByCarNumber([{ text: payload }]);
+    yield put(loadScanSuccess(data));
+    NavigationService.navigate("Profile", { user: data });
+  } catch (error) {
+    yield put(loadScanFailure(error));
+  }
+}
+
 /**
  * Watcher for Scanner Saga
  * @return {IterableIterator<*|ForkEffect>}
  */
 export function* tripSaga(): Saga<*> {
-  yield takeEvery(constants.PROCESS_SCAN_DATA, processScanData);
+  yield takeLatest(constants.PROCESS_SCAN_DATA, processScanData);
+  yield takeLatest(constants.SEARCH_NUMBER, searchNumber);
 }
 
 export default tripSaga;
