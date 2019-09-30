@@ -5,7 +5,7 @@ import { loadScanPending, loadScanSuccess, loadScanFailure } from "./actions";
 import * as constants from "./constants";
 import { getUserByCarNumber } from "../../../services/api";
 // $FlowFixMe
-import RNMlKit from 'react-native-firebase-mlkit';
+import RNMlKit from "react-native-firebase-mlkit";
 import * as NavigationService from "../../../services/NavigationService";
 
 export function* processScanData({ payload }: any): Saga<*> {
@@ -18,10 +18,19 @@ export function* processScanData({ payload }: any): Saga<*> {
       throw "UNMATCHED";
     }
 
-    const processedVR = visionResp.map(resp => ({
-      ...resp,
-      text: resp.text.split(" ").join("")
-    }));
+    const processedVR = visionResp
+      .map(
+          (resp = {}) =>
+          resp.resultText ||
+          resp.blockText ||
+          resp.lineText ||
+          resp.elementText ||
+          ""
+      )
+      .map(text => ({
+        text: text.split(" ").join("")
+      })).slice(0, 1);
+
 
     const data = yield getUserByCarNumber(processedVR);
     yield put(loadScanSuccess(data));

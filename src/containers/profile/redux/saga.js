@@ -14,9 +14,9 @@ export function* proceedAction({
 }: any): Saga<*> {
   try {
     switch (type) {
-      case "skype":
-        return yield Linking.openURL(`tel:${tel}`);
       case "phone":
+        return yield Linking.openURL(`tel:${tel}`);
+      case "skype":
         return yield Linking.openURL(`skype:${skype}`);
     }
   } catch (error) {
