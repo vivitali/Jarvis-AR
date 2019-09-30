@@ -5,14 +5,14 @@ import { loadScanPending, loadScanSuccess, loadScanFailure } from "./actions";
 import * as constants from "./constants";
 import { getUserByCarNumber } from "../../../services/api";
 // $FlowFixMe
-import RNTextDetector from "react-native-text-detector";
+import RNMlKit from 'react-native-firebase-mlkit';
 import * as NavigationService from "../../../services/NavigationService";
 
 export function* processScanData({ payload }: any): Saga<*> {
   yield put(loadScanPending());
 
   try {
-    const visionResp = yield RNTextDetector.detectFromUri(payload);
+    const visionResp = yield RNMlKit.deviceTextRecognition(payload);
 
     if (!(visionResp && visionResp.length)) {
       throw "UNMATCHED";

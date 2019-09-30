@@ -102,7 +102,7 @@ android {
         applicationId "com.ssar.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 122
+        versionCode 124
         versionName "1.0"
     }
     signingConfigs {
@@ -155,13 +155,14 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-firebase-mlkit')
     implementation project(':react-native-config')
     implementation project(':react-native-auth0')
     implementation 'com.google.firebase:firebase-core:16.0.1'
     implementation 'com.google.firebase:firebase-ml-vision:17.0.0'
-    implementation (project(':react-native-text-detector')) {
-        exclude group: 'com.google.firebase'
-    }
+    implementation (project(':react-native-firebase-mlkit')) {
+            exclude group: 'com.google.firebase'
+        }
     implementation project(':react-native-camera')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-gesture-handler')
