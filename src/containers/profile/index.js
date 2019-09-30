@@ -18,13 +18,14 @@ class Profile extends React.Component {
     const { proceedAction, signOut } = this.props;
     const data = this.props.navigation.getParam("user");
     const user = data || {};
-    return (
+
+      return (
       <View style={styles.profileContainer}>
         <ProfileTop
           avatar={profilePicture}
           {...user}
-          carNumber={user.car_number}
-          carBrand={user.car_brand}
+          carNumber={user.cars_number}
+          carBrand={user.cars_brand}
         />
         <ProfileBody
           user={user}
