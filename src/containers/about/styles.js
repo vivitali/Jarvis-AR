@@ -1,18 +1,19 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-  profileContainer: {
+  container: {
     width: "100%",
-    flex: 1
+    flex: 1,
+    justifyContent: "flex-end"
   },
   profileBody: {
     paddingVertical: 20,
-    backgroundColor: "#6b6b6b",
+    backgroundColor: "#a1a1a1",
     flex: 1
   },
   profileFooter: {
     marginTop: 2,
-    backgroundColor: "#6b6b6b"
+    backgroundColor: "#a1a1a1"
   },
   signout: {
     flexDirection: "row",

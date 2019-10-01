@@ -1,13 +1,13 @@
 import React from "react";
-import { View } from "react-native";
+import { Image, View } from "react-native";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { actions } from "./redux";
-import { actions as signinAction } from "../signin/redux";
 import { ProfileTop, ProfileBody } from "../../components";
 import styles from "./styles";
 
 const profilePicture = require("../../assets/images/profile.png");
+const noData = require("../../assets/images/no-data-found.png");
 
 class Profile extends React.Component {
   static navigationOptions = {
@@ -15,11 +15,10 @@ class Profile extends React.Component {
   };
 
   render() {
-    const { proceedAction, signOut } = this.props;
-    const data = this.props.navigation.getParam("user");
-    const user = data || {};
+    const { proceedAction } = this.props;
+    const user = this.props.navigation.getParam("user");
 
-      return (
+    return user ? (
       <View style={styles.profileContainer}>
         <ProfileTop
           avatar={profilePicture}
@@ -29,10 +28,13 @@ class Profile extends React.Component {
         />
         <ProfileBody
           user={user}
-          onSignOut={signOut}
           onSkypePress={() => proceedAction({ type: "skype", user })}
           onPhonePress={() => proceedAction({ type: "phone", user })}
         />
+      </View>
+    ) : (
+      <View style={styles.noDataContainer}>
+        <Image source={noData} />
       </View>
     );
   }
@@ -43,7 +45,6 @@ const mapStateToProps = state => ({});
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      signOut: signinAction.invalidate,
       proceedAction: actions.proceedAction
     },
     dispatch
