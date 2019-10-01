@@ -9,7 +9,7 @@ target 'SSAR' do
   rn_path = "#{modules_path}/react-native"
 
   # See http://facebook.github.io/react-native/docs/integration-with-existing-apps.html#configuring-cocoapods-dependencies
-  pod 'yoga', path: "#{rn_path}/ReactCommon/yoga"
+  pod 'yoga', path: "#{rn_path}/ReactCommon/yoga/yoga.podspec"
   pod 'React', path: rn_path, subspecs: [
     'Core',
     'CxxBridge',
@@ -26,19 +26,16 @@ target 'SSAR' do
     'RCTWebSocket',
   ]
 
-  pod 'RNTextDetector', path: "#{modules_path}/react-native-text-detector/ios"
+  pod 'Firebase/Core'
+  pod 'Firebase/MLVision'
+  pod 'Firebase/MLVisionTextModel'
+  pod 'Firebase/MLVisionBarcodeModel'
+  pod 'GoogleMobileVision/FaceDetector'
+  pod 'GoogleMobileVision/MVDataOutput'
 
   # React Native third party dependencies podspecs
   pod 'DoubleConversion', :podspec => "#{rn_path}/third-party-podspecs/DoubleConversion.podspec"
   pod 'glog', :podspec => "#{rn_path}/third-party-podspecs/glog.podspec"
   pod 'Folly', :podspec => "#{rn_path}/third-party-podspecs/Folly.podspec"
 
-end
-
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    if target.name == "React"
-      target.remove_from_project
-    end
-  end
 end

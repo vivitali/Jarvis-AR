@@ -1,10 +1,10 @@
 rootProject.name = 'SSAR'
+include ':react-native-firebase-mlkit'
+project(':react-native-firebase-mlkit').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-firebase-mlkit/android')
 include ':react-native-config'
 project(':react-native-config').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-config/android')
 include ':react-native-auth0'
 project(':react-native-auth0').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-auth0/android')
-include ':react-native-text-detector'
-project(':react-native-text-detector').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-text-detector/android')
 include ':react-native-camera'
 project(':react-native-camera').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-camera/android')
 include ':react-native-vector-icons'

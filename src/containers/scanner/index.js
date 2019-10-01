@@ -17,10 +17,9 @@ class Scanner extends Component<Props, *> {
   };
 
   render() {
-    const { data } = this.props;
     return (
       <View style={styles.container}>
-        {!Array.isArray(data) && <Camera snap={this.snap} />}
+        <Camera snap={this.snap} />
       </View>
     );
   }
