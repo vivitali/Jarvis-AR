@@ -3,16 +3,16 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   profileContainer: {
     width: "100%",
-    flex: 1
+    flex: 1,
+    borderTopWidth: 1,
+    borderTopColor: "rgba(255,255,255,0.18)"
   },
   profileBody: {
     paddingVertical: 20,
-    backgroundColor: "#6b6b6b",
     flex: 1
   },
   profileFooter: {
-    marginTop: 2,
-    backgroundColor: "#6b6b6b"
+    marginTop: 2
   },
   signout: {
     flexDirection: "row",
@@ -20,30 +20,20 @@ export default StyleSheet.create({
     justifyContent: "center"
   },
   row: {
-    flexDirection: "row"
-  },
-  signoutOption: {
-    fontWeight: "bold",
-    color: "#cf0003"
+    flexDirection: "row",
+    alignContent: "center"
   },
   option: {
     color: "white",
     paddingHorizontal: 15,
-    paddingVertical: 15,
-    borderBottomWidth: StyleSheet.hairlineWidth
+    paddingVertical: 15
   },
   optionIconContainer: {
     marginRight: 9
   },
-  userText: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginTop: 1,
-    textAlign: "center"
-  },
   optionText: {
-    color: "white",
-    fontSize: 15,
-    marginTop: 1
+    color: "#ffffff",
+    fontSize: 24,
+    marginTop: -5
   }
 });

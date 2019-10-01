@@ -9,7 +9,7 @@ const ProfileBody = ({ user, onSkypePress, onPhonePress }) => (
       <TouchableOpacity style={styles.option} onPress={onPhonePress}>
         <View style={styles.row}>
           <View style={styles.optionIconContainer}>
-            <Icon name="phone" size={22} color="#ccc" />
+            <Icon name="phone" size={20} color="#ffffff" />
           </View>
           <View>
             <Text style={styles.optionText}>{user.tel}</Text>
@@ -21,7 +21,7 @@ const ProfileBody = ({ user, onSkypePress, onPhonePress }) => (
         <TouchableOpacity style={styles.option} onPress={onSkypePress}>
           <View style={styles.row}>
             <View style={styles.optionIconContainer}>
-              <Icon name="skype" size={22} color="#ccc" />
+              <Icon name="skype" size={20} color="#ffffff" />
             </View>
             <View>
               <Text style={styles.optionText}>{user.skype}</Text>

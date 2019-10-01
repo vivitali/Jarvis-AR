@@ -1,4 +1,4 @@
-import { Platform, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   profileTop: {
@@ -7,31 +7,34 @@ export default StyleSheet.create({
     alignSelf: "center"
   },
   userText: {
-    fontSize: 30,
+    fontSize: 32,
     marginTop: 1,
-    textAlign: "center"
+    textAlign: "center",
+    color: "#ffffff"
   },
   carNumber: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: "bold",
     marginTop: 4,
-    textAlign: "center"
+    textAlign: "center",
+    color: "#e2e2e2"
   },
   carBrand: {
-    fontSize: 12,
+    fontSize: 16,
     marginTop: 6,
-    textAlign: "center"
+    textAlign: "center",
+    color: "#ffffff"
   },
   profileImgContainer: {
     alignSelf: "center",
-    height: 80,
-    width: 80,
-    borderRadius: 40,
+    height: 100,
+    width: 100,
+    borderRadius: 50,
     marginBottom: 20
   },
   profileImg: {
-    height: 80,
-    width: 80,
-    borderRadius: 40
+    height: 100,
+    width: 100,
+    borderRadius: 50
   }
 });

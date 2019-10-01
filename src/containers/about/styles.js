@@ -6,14 +6,8 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end"
   },
-  profileBody: {
-    paddingVertical: 20,
-    backgroundColor: "#a1a1a1",
-    flex: 1
-  },
   profileFooter: {
-    marginTop: 2,
-    backgroundColor: "#a1a1a1"
+    marginBottom: 10
   },
   signout: {
     flexDirection: "row",
@@ -25,26 +19,14 @@ export default StyleSheet.create({
   },
   signoutOption: {
     fontWeight: "bold",
-    color: "#cf0003"
-  },
-  option: {
-    color: "white",
-    paddingHorizontal: 15,
-    paddingVertical: 15,
-    borderBottomWidth: StyleSheet.hairlineWidth
+    color: "#006dcf"
   },
   optionIconContainer: {
     marginRight: 9
   },
-  userText: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginTop: 1,
-    textAlign: "center"
-  },
   optionText: {
     color: "white",
-    fontSize: 15,
+    fontSize: 20,
     marginTop: 1
   }
 });
