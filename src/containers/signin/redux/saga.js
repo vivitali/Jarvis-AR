@@ -1,9 +1,7 @@
 import { put, takeEvery, call } from "redux-saga/effects";
 
 import { navigate } from "../../../services/NavigationService";
-import { AsyncStorage } from "react-native";
-import Auth0 from "react-native-auth0";
-import config from "react-native-config";
+import { realm, auth0, appUser } from "../../../models";
 
 import * as constants from "./constants";
 import {
@@ -13,24 +11,14 @@ import {
   resetAuthenticationData
 } from "./actions";
 
-const auth0 = new Auth0({
-  domain: config.AUTH0_DOMAIN,
-  clientId: config.AUTH0_CLIENT_ID
-});
-
-const realm = {
-  audience: config.AUTH0_AUDIENCE,
-  realm: "Username-Password-Authentication"
-};
-
 export function* authenticate({ payload }) {
   yield put(authenticationPending());
   try {
-    const token = yield call(() => {
+    const user = yield call(() => {
       return auth0.auth.passwordRealm({ ...realm, ...payload });
     });
     yield call(() => {
-      return AsyncStorage.setItem("userToken", JSON.stringify(token));
+      return appUser.set(user);
     });
     yield put(authenticationSuccess());
     yield navigate("Scanner");
@@ -41,7 +29,7 @@ export function* authenticate({ payload }) {
 
 export function* resetAuthentication() {
   yield call(() => {
-    return AsyncStorage.clear();
+    return appUser.clear();
   });
   yield put(resetAuthenticationData());
   yield navigate("Auth");

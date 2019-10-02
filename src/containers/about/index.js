@@ -11,11 +11,12 @@ import styles from "./styles";
 
 class About extends Component<Props, *> {
   render() {
-    const { onSignOut } = this.props;
+    const { signOut } = this.props;
+
     return (
       <View style={styles.container}>
         <View style={styles.profileFooter}>
-          <TouchableOpacity style={styles.option} onPress={onSignOut}>
+          <TouchableOpacity style={styles.option} onPress={signOut}>
             <View style={styles.signout}>
               <View style={styles.optionIconContainer}>
                 <Icon name="sign-out" size={22} style={styles.signoutOption} />

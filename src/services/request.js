@@ -1,13 +1,12 @@
-import { AsyncStorage } from "react-native";
+import { appUser } from "../models";
 
 export const request = async ({ url, method, body }) => {
-  const userToken = await AsyncStorage.getItem("userToken");
-  const token = JSON.parse(userToken) && JSON.parse(userToken).accessToken;
+  const { accessToken } = await appUser.get();
 
   const response = await fetch(url, {
     method,
     headers: new Headers({
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${accessToken}`,
       "Content-Type": "application/json"
     }),
     body: JSON.stringify(body)
