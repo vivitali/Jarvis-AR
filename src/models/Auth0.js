@@ -8,6 +8,6 @@ export const auth0 = new Auth0({
 
 export const realm = {
   audience: config.AUTH0_AUDIENCE,
-  scope: "openid",
-  realm: "Username-Password-Authentication"
+  realm: config.AUTH0_REALM,
+  scope: "openid"
 };

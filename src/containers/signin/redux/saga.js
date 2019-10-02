@@ -29,7 +29,7 @@ export function* authenticate({ payload }) {
 
 export function* resetAuthentication() {
   yield call(() => {
-    return appUser.remove();
+    return appUser.clear();
   });
   yield put(resetAuthenticationData());
   yield navigate("Auth");
