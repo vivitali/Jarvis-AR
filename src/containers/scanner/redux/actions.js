@@ -3,10 +3,6 @@
 import * as constants from "./constants";
 import type { ScannerData } from "./types";
 
-export const loadScanData = () => ({
-  type: constants.LOAD_SCANNER
-});
-
 export const processScanData = (payload: ScannerData) => ({
   type: constants.PROCESS_SCAN_DATA,
   payload

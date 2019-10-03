@@ -4,10 +4,13 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { Text, TouchableOpacity, View } from "react-native";
+// $FlowFixMe
+import Icon from "react-native-vector-icons/FontAwesome";
 
 import { actions as signinAction } from "../signin/redux";
-import Icon from "react-native-vector-icons/FontAwesome";
 import styles from "./styles";
+
+import { type Props } from "./types";
 
 class About extends Component<Props, *> {
   render() {
@@ -34,7 +37,7 @@ class About extends Component<Props, *> {
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = () => ({});
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(

@@ -9,7 +9,9 @@ import { actions } from "../scanner/redux";
 
 import styles from "../../components/SignInForm/styles";
 
-class Search extends Component<Props, *> {
+import { type Props, type State } from "./types";
+
+class Search extends Component<Props, State> {
   state = {
     search: ""
   };

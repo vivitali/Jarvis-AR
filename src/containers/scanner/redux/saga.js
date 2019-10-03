@@ -40,7 +40,7 @@ export function* processScanData({ payload }: any): Saga<*> {
   }
 }
 
-export function* searchNumber({ payload }) {
+export function* searchNumber({ payload }: any): any {
   try {
     const data = yield getUserByCarNumber([{ text: payload }]);
     yield put(loadScanSuccess(data));

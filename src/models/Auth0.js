@@ -1,13 +1,13 @@
 import Auth0 from "react-native-auth0";
-import config from "react-native-config";
+import config from "../configs";
 
 export const auth0 = new Auth0({
-  domain: config.AUTH0_DOMAIN,
-  clientId: config.AUTH0_CLIENT_ID
+  domain: config.domain,
+  clientId: config.clientId
 });
 
 export const realm = {
-  audience: config.AUTH0_AUDIENCE,
-  realm: config.AUTH0_REALM,
+  audience: config.audience,
+  realm: config.realm,
   scope: "openid"
 };
