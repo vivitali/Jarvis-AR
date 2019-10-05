@@ -1,4 +1,4 @@
-app_identifier("org.reactjs.native.example.SSAR") # The bundle identifier of your app
+app_identifier("com.if-webui.Jarvis") # The bundle identifier of your app
 apple_id("belmega31@gmail.com") # Your Apple email address
 
 itc_team_id("120325322") # App Store Connect Team ID
