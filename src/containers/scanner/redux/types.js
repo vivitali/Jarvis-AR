@@ -1,14 +1,14 @@
 // @flow
-
-export const DammyData: "DUMMY_DATA" = "DUMMY_DATA";
-
-export type ScannerData = { data: typeof DammyData };
 import {
   LOAD_SCANNER,
   LOAD_SCAN_FAILURE,
   LOAD_SCAN_PENDING,
   LOAD_SCAN_SUCCESS
 } from "./constants";
+
+export const DummyData: "DUMMY_DATA" = "DUMMY_DATA";
+
+export type ScannerData = { data: typeof DummyData };
 
 export type Action =
   | LoadScanDataAction

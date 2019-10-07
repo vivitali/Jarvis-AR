@@ -8,8 +8,8 @@
     "android": "react-native run-android",
     "preios": "node dev/ios",
     "ios": "react-native run-ios",
-    "test": "node ./node_modules/jest/bin/jest.js --watchAll",
-    "prettier": "./node_modules/.bin/prettier './src/**/*.{js,scss}' --write",
+    "test": "jest",
+    "prettier": "prettier './src/**/*.{js,scss}' --write",
     "flow": "flow",
     "glow": "glow",
     "glow:watch": "glow --watch",
@@ -20,38 +20,42 @@
     "deploy:ios": "cd ios && fastlane beta"
   },
   "dependencies": {
-    "apsl-react-native-button": "^3.1.1",
-    "ncp": "^2.0.0",
+    "apsl-react-native-button": "3.1.1",
     "react": "16.6.3",
     "react-native": "0.58.6",
-    "react-native-auth0": "1.4.0",
+    "react-native-auth0": "1.6.0",
     "react-native-camera": "1.11.2",
     "react-native-config": "0.11.7",
-    "react-native-firebase-mlkit": "^0.6.2",
+    "react-native-firebase-mlkit": "0.6.2",
     "react-native-gesture-handler": "1.0.15",
-    "react-native-json-tree": "1.2.0",
     "react-native-vector-icons": "6.3.0",
     "react-navigation": "3.3.0",
     "react-redux": "6.0.0",
     "redux": "4.0.1",
     "redux-persist": "5.10.0",
-    "redux-saga": "1.0.1",
+    "redux-saga": "1.1.1",
     "reselect": "4.0.0"
   },
   "devDependencies": {
-    "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "24.1.0",
-    "babel-preset-react-native": "5.0.2",
-    "dotenv": "6.2.0",
-    "flow-bin": "0.93.0",
+    "@babel/runtime": "7.6.2",
+    "babel-core": "6.26.3",
+    "dotenv": "8.1.0",
+    "flow-bin": "0.109.0",
     "glow": "1.2.2",
-    "jest": "24.1.0",
-    "metro-react-native-babel-preset": "0.52.0",
-    "prettier": "1.16.4",
+    "jest": "24.9.0",
+    "metro-react-native-babel-preset": "0.56.0",
+    "prettier": "1.18.2",
     "react-test-renderer": "16.6.3"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": ["./node_modules/react-native-gesture-handler/jestSetup.js"],
+    "transformIgnorePatterns": [
+      "/node_modules/(?!native-base?!(jest-))/"
+    ],
+    "globals": {
+      "window": {}
+    }
   },
   "rnpm": {
     "assets": [

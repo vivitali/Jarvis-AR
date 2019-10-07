@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		0075681FF5174C7EB40A8622 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F47EF895E4F242B09985EF67 /* Lato-HairlineItalic.ttf */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
@@ -52,7 +53,7 @@
 		DF2BF6B32342AA5D00AEB958 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF2BF6B22342AA5D00AEB958 /* GoogleService-Info.plist */; };
 		E691F3E7326146DABC60A4D2 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73188F493D2E4A56AEEEFB50 /* libRNCamera.a */; };
 		E8067541B8FC4BB186681CB4 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD1E9E461D224A2597AA044A /* FontAwesome5_Solid.ttf */; };
-		EB064C48624A676C77ADFF2E /* libPods-SSAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A69F0F10A6FCA48F60217396 /* libPods-SSAR.a */; };
+		EB064C48624A676C77ADFF2E /* libPods-Jarvis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A69F0F10A6FCA48F60217396 /* libPods-Jarvis.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		F70C3DBAD73841358959CD93 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECFFB19C0F7F41E2B739C825 /* Lato-Italic.ttf */; };
 		FE4F77C7E34147C0AD60DFFF /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D801B32BA3E48C5A9510BE1 /* Lato-Regular.ttf */; };
@@ -387,15 +388,15 @@
 		0E7C612EB1964A959824D999 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* SSAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SSAR/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SSAR/AppDelegate.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Jarvis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jarvis.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Jarvis/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Jarvis/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SSAR/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SSAR/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SSAR/main.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Jarvis/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Jarvis/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Jarvis/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		147B6520FDEC821C61832FF2 /* Pods-SSAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSAR.release.xcconfig"; path = "Target Support Files/Pods-SSAR/Pods-SSAR.release.xcconfig"; sourceTree = "<group>"; };
+		147B6520FDEC821C61832FF2 /* Pods-Jarvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jarvis.release.xcconfig"; path = "Target Support Files/Pods-Jarvis/Pods-Jarvis.release.xcconfig"; sourceTree = "<group>"; };
 		1620387169B441F0AA944020 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		1CE3294836A34C3283BF39A9 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -418,8 +419,8 @@
 		887768F0005F4EC6AA81F8E5 /* libReactNativeConfig.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libReactNativeConfig.a; sourceTree = "<group>"; };
 		939AB31ED59B48A6A9A2BA10 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		99D5931964544847B71D1DFB /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
-		9E55BB3684978432EF17F0F1 /* Pods-SSAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SSAR.debug.xcconfig"; path = "Target Support Files/Pods-SSAR/Pods-SSAR.debug.xcconfig"; sourceTree = "<group>"; };
-		A69F0F10A6FCA48F60217396 /* libPods-SSAR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SSAR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E55BB3684978432EF17F0F1 /* Pods-Jarvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jarvis.debug.xcconfig"; path = "Target Support Files/Pods-Jarvis/Pods-Jarvis.debug.xcconfig"; sourceTree = "<group>"; };
+		A69F0F10A6FCA48F60217396 /* libPods-Jarvis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jarvis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B4010E4428AA42748A7A7F36 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		B578667AE90B44FF8BECA570 /* libReactNativeConfig-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libReactNativeConfig-tvOS.a"; sourceTree = "<group>"; };
@@ -468,7 +469,7 @@
 				E691F3E7326146DABC60A4D2 /* libRNCamera.a in Frameworks */,
 				363DEB3C586B46C88FF29A48 /* libA0Auth0.a in Frameworks */,
 				D7E4562D82444E9CB74D4E65 /* libReactNativeConfig.a in Frameworks */,
-				EB064C48624A676C77ADFF2E /* libPods-SSAR.a in Frameworks */,
+				EB064C48624A676C77ADFF2E /* libPods-Jarvis.a in Frameworks */,
 				7BEAC4573CFB4C5CBED59375 /* libRNMlKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,7 +539,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* SSAR */ = {
+		13B07FAE1A68108700A75B9A /* Jarvis */ = {
 			isa = PBXGroup;
 			children = (
 				DF2BF6B22342AA5D00AEB958 /* GoogleService-Info.plist */,
@@ -550,7 +551,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = SSAR;
+			name = Jarvis;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -582,7 +583,7 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				A69F0F10A6FCA48F60217396 /* libPods-SSAR.a */,
+				A69F0F10A6FCA48F60217396 /* libPods-Jarvis.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -674,7 +675,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* SSAR */,
+				13B07FAE1A68108700A75B9A /* Jarvis */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
@@ -690,7 +691,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* SSAR.app */,
+				13B07F961A680F5B00A75B9A /* Jarvis.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -764,8 +765,8 @@
 		D0ABCB7242DE336843ABC675 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9E55BB3684978432EF17F0F1 /* Pods-SSAR.debug.xcconfig */,
-				147B6520FDEC821C61832FF2 /* Pods-SSAR.release.xcconfig */,
+				9E55BB3684978432EF17F0F1 /* Pods-Jarvis.debug.xcconfig */,
+				147B6520FDEC821C61832FF2 /* Pods-Jarvis.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -781,9 +782,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13B07F861A680F5B00A75B9A /* SSAR */ = {
+		13B07F861A680F5B00A75B9A /* Jarvis */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SSAR" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Jarvis" */;
 			buildPhases = (
 				C76B5E868FABC094597BA0E1 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -796,9 +797,9 @@
 			);
 			dependencies = (
 			);
-			name = SSAR;
+			name = Jarvis;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* SSAR.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Jarvis.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -815,7 +816,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SSAR" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Jarvis" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -903,7 +904,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* SSAR */,
+				13B07F861A680F5B00A75B9A /* Jarvis */,
 			);
 		};
 /* End PBXProject section */
@@ -1285,18 +1286,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SSAR/Pods-SSAR-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVFaceDetectorResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/GoogleMobileVision/GoogleMVTextDetectorResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Jarvis/Pods-Jarvis-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseMLVisionTextModel/GoogleMVTextDetectorResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVFaceDetectorResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMVTextDetectorResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SSAR/Pods-SSAR-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Jarvis/Pods-Jarvis-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C76B5E868FABC094597BA0E1 /* [CP] Check Pods Manifest.lock */ = {
@@ -1314,7 +1313,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SSAR-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Jarvis-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1342,7 +1341,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = SSAR;
+			path = Jarvis;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1350,10 +1349,10 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E55BB3684978432EF17F0F1 /* Pods-SSAR.debug.xcconfig */;
+			baseConfigurationReference = 9E55BB3684978432EF17F0F1 /* Pods-Jarvis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 77;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 236G4W8395;
 				ENABLE_BITCODE = NO;
@@ -1368,7 +1367,7 @@
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-firebase-mlkit/ios",
 				);
-				INFOPLIST_FILE = SSAR/Info.plist;
+				INFOPLIST_FILE = Jarvis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -1376,18 +1375,18 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = SSAR;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.if-webui.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = Jarvis;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 147B6520FDEC821C61832FF2 /* Pods-SSAR.release.xcconfig */;
+			baseConfigurationReference = 147B6520FDEC821C61832FF2 /* Pods-Jarvis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 61;
+				CURRENT_PROJECT_VERSION = 77;
 				DEVELOPMENT_TEAM = 236G4W8395;
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1401,7 +1400,7 @@
 					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
 					"$(SRCROOT)/../node_modules/react-native-firebase-mlkit/ios",
 				);
-				INFOPLIST_FILE = SSAR/Info.plist;
+				INFOPLIST_FILE = Jarvis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
@@ -1409,8 +1408,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = SSAR;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.if-webui.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = Jarvis;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1517,7 +1516,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "SSAR" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Jarvis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1526,7 +1525,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "SSAR" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Jarvis" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

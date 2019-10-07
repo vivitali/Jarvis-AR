@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "SSAR.app"
-               BlueprintName = "SSAR"
-               ReferencedContainer = "container:SSAR.xcodeproj">
+               BuildableName = "Jarvis.app"
+               BlueprintName = "Jarvis"
+               ReferencedContainer = "container:Jarvis.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "SSARTests.xctest"
-               BlueprintName = "SSARTests"
-               ReferencedContainer = "container:SSAR.xcodeproj">
+               BuildableName = "JarvisTests.xctest"
+               BlueprintName = "JarvisTests"
+               ReferencedContainer = "container:Jarvis.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "SSARTests.xctest"
-               BlueprintName = "SSARTests"
-               ReferencedContainer = "container:SSAR.xcodeproj">
+               BuildableName = "JarvisTests.xctest"
+               BlueprintName = "JarvisTests"
+               ReferencedContainer = "container:Jarvis.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-            BuildableName = "SSARTests.xctest"
-            BlueprintName = "SSARTests"
-            ReferencedContainer = "container:SSAR.xcodeproj">
+            BuildableName = "JarvisTests.xctest"
+            BlueprintName = "JarvisTests"
+            ReferencedContainer = "container:Jarvis.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "SSAR.app"
-            BlueprintName = "SSAR"
-            ReferencedContainer = "container:SSAR.xcodeproj">
+            BuildableName = "Jarvis.app"
+            BlueprintName = "Jarvis"
+            ReferencedContainer = "container:Jarvis.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
