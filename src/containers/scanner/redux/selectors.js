@@ -48,6 +48,7 @@ export const getProfile = createSelector(
   profileData =>
     Object.values(profileData)
       .filter(Array.isArray)
+      // $FlowFixMe
       .flat()
       .map(user => ({
         ...user,
