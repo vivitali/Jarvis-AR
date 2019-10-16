@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { actions } from "./redux";
 import { ProfileTop, ProfileBody } from "../../components";
 import styles from "./styles";
+import { getProfile } from "../scanner/redux/selectors";
 
 const profilePicture = require("../../assets/images/user.jpg");
 const noData = require("../../assets/images/no-data-found.png");
@@ -16,18 +17,12 @@ class Profile extends React.Component {
   };
 
   render() {
-    const { proceedAction } = this.props;
-    const user = this.props.navigation.getParam("user");
+    const { proceedAction, user } = this.props;
 
     return user ? (
       <View style={styles.profileContainer}>
         <ImageBackground source={bg} style={{ width: "100%", height: "100%" }}>
-          <ProfileTop
-            avatar={profilePicture}
-            {...user}
-            carNumber={user.cars_number}
-            carBrand={user.cars_brand}
-          />
+          <ProfileTop avatar={profilePicture} {...user} />
           <ProfileBody
             user={user}
             onSkypePress={() => proceedAction({ type: "skype", user })}
@@ -43,7 +38,9 @@ class Profile extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({});
+const mapStateToProps = state => ({
+  user: getProfile(state)
+});
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(

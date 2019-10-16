@@ -1,5 +1,5 @@
 // @flow
-import { put, takeLatest, call } from "redux-saga/effects";
+import { put, takeLatest } from "redux-saga/effects";
 import type { Saga } from "redux-saga";
 import { loadScanPending, loadScanSuccess, loadScanFailure } from "./actions";
 import * as constants from "./constants";
@@ -19,23 +19,17 @@ export function* processScanData({ payload }: any): Saga<*> {
     }
 
     const processedVR = visionResp
-      .map(
-        (resp = {}) =>
-          resp.resultText ||
-          resp.blockText ||
-          resp.lineText ||
-          resp.elementText ||
-          ""
-      )
-      .map(text => ({
-        text: text.split(" ").join("")
-      }))
-      .slice(0, 1);
+      .filter((resp = {}) => resp.lineText)
+      .map(({ lineText }) => ({
+        text: lineText.split(" ").join("")
+      }));
 
     const data = yield getUserByCarNumber(processedVR);
     yield put(loadScanSuccess(data));
-    NavigationService.navigate("Profile", { user: data });
+    //todo check if user exist before navigation
+    NavigationService.navigate("Profile");
   } catch (error) {
+    alert(error);
     yield put(loadScanFailure(error));
   }
 }
@@ -44,8 +38,11 @@ export function* searchNumber({ payload }: any): any {
   try {
     const data = yield getUserByCarNumber([{ text: payload }]);
     yield put(loadScanSuccess(data));
-    NavigationService.navigate("Profile", { user: data });
+    //todo check if user exist before navigation
+    // move to a general handler
+    NavigationService.navigate("Profile");
   } catch (error) {
+    alert(error);
     yield put(loadScanFailure(error));
   }
 }
