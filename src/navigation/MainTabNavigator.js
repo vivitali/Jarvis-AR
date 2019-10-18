@@ -11,6 +11,7 @@ import ScannerScreen from "../screens/ScannerScreen";
 import ProfileScreen from "../screens/Profile";
 import SearchScreen from "../screens/SearchScreen";
 import AboutScreen from "../screens/AboutScreen";
+import Colors from "../constants/Colors";
 
 const ProfileStack = createStackNavigator({
   Profile: ProfileScreen
@@ -53,7 +54,7 @@ const AboutStack = createStackNavigator({
 
 AboutStack.navigationOptions = {
   tabBarLabel: "About",
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="info" />
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="cog" />
 };
 
 export default createBottomTabNavigator({
@@ -61,4 +62,12 @@ export default createBottomTabNavigator({
   ScannerStack,
   SearchStack,
   AboutStack
+}, {
+  tabBarOptions: {
+    showLabel: false,
+    style: {
+      backgroundColor: Colors.bottomBarBg,
+      boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.3)",
+    }
+  }
 });

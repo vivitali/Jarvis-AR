@@ -1,13 +1,15 @@
 // @flow
 
 const tintColor: "#2f95dc" = "#2f95dc";
-const tabIconDefault: "#ccc" = "#ccc";
+const tabIconDefault: "#fff" = "#fff";
+const tabIconSelected: "#DDA720" = "#DDA720";
 const tabBar: "#fefefe" = "#fefefe";
 const errorBackground: "red" = "red";
 const errorText: "#fff" = "#fff";
 const warningBackground: "#EAEB5E" = "#EAEB5E";
 const warningText: "#666804" = "#666804";
 const noticeText: "#fff" = "#fff";
+const bottomBarBg: "#3A1831" = "#3A1831";
 
 const primaryColor: "#000" = "#000";
 const secondaryColor: "#9E9E9E" = "#9E9E9E";
@@ -16,7 +18,7 @@ const contrastColor: "#FFF" = "#FFF";
 export default {
   tintColor,
   tabIconDefault,
-  tabIconSelected: tintColor,
+  tabIconSelected,
   tabBar,
   errorBackground,
   errorText,
@@ -26,5 +28,6 @@ export default {
   noticeText,
   primaryColor,
   secondaryColor,
-  contrastColor
+  contrastColor,
+  bottomBarBg
 };

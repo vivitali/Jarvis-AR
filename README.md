@@ -49,7 +49,6 @@ TBD
 Follow instructions from https://github.com/jhen0409/react-native-debugger
 
 ## How to build
-* ENABLE_BITCODE = No
-* Legacy build
-* $(PROJECT_DIR)/../../../ios/Pods/FirebaseMLVision/Frameworks
-* https://github.com/facebook/react-native/pull/25146/files#diff-263fc157dfce55895cdc16495b55d190
+* go to Xcode -> File -> Workspace settings --> Build System: Legacy build system
+* go to Xcode -> Jarvis -> Libraries -> RNMlKit.xcodeproj -> Build Settings -> Search Path -> Framework Search Path: $(PROJECT_DIR)/../../../ios/Pods/FirebaseMLVision/Frameworks
+* go to the project -> node_modules -> react native -> React -> Base -> https://github.com/facebook/react-native/pull/25146/files#diff-263fc157dfce55895cdc16495b55d190
