@@ -9,14 +9,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 50
   },
   bigText: {
-    color: Colors.primaryColor,
+    color: "rgba(255, 255, 255, 0.9)",
     fontSize: 50,
-    fontFamily: Fonts.bold
-  },
-  smallText: {
-    color: Colors.secondaryColor,
-    fontSize: 30,
-    fontFamily: Fonts.base
+    lineHeight: 61,
+    fontFamily: Fonts.bold,
+    textAlign: "center",
+    marginBottom: 82
   },
   formContainer: { marginTop: 40 }
 });

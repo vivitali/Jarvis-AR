@@ -5,27 +5,52 @@ import Fonts from "../../constants/Fonts";
 const styles = StyleSheet.create({
   formContainer: { color: Colors.secondaryColor },
   textInput: {
-    height: 80,
-    borderBottomColor: Colors.secondaryColor,
-    borderBottomWidth: 1,
-    fontSize: 25,
-    fontFamily: Fonts.light
-  },
-  lastInput: { marginBottom: 50 },
-  button: {
-    backgroundColor: Colors.contrastColor,
-    borderColor: Colors.primaryColor,
+    height: 43,
+    width: 270,
     borderWidth: 1,
-    borderRadius: 22
+    borderColor: "rgba(255, 255, 255, 0.9)",
+    borderStyle: "solid",
+    backgroundColor: "rgba(196, 196, 196, 0.5)",
+    fontSize: 18,
+    lineHeight: 22,
+    fontFamily: Fonts.bold,
+    color: "rgba(255, 255, 255, 0.3)",
+    borderRadius: 20,
+    marginBottom: 40,
+    alignSelf: "center",
+    padding: 10,
+  },
+  passwordWrapper: {
+    marginBottom: 43,
+    flexDirection: "row",
+    justifyContent: "space-between"
+  },
+  inputPassword: {
+    flex: 1,
+    marginRight: 10,
+    fontSize: 18,
+    lineHeight: 22,
+    fontFamily: Fonts.bold,
+    color: "rgba(255, 255, 255, 0.3)",
+  },
+  button: {
+    borderColor: "rgba(255, 255, 255, 0.5)",
+    borderWidth: 1,
+    borderRadius: 20,
+    height: 40,
+    width: 217,
+    alignSelf: "center"
   },
   buttonText: {
-    color: Colors.primaryColor,
-    fontSize: 20,
-    fontFamily: Fonts.base
+    color: "rgba(255, 255, 255, 0.9)",
+    fontSize: 18,
+    lineHeight: 22,
+    fontFamily: Fonts.bold
   },
   errorMsg: {
     textAlign: "center",
-    fontFamily: Fonts.base
+    fontFamily: Fonts.base,
+    color: Colors.errorColor
   }
 });
 
