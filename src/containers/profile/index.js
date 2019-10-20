@@ -9,7 +9,8 @@ import { getProfile } from "../scanner/redux/selectors";
 
 const profilePicture = require("../../assets/images/user.jpg");
 const noData = require("../../assets/images/no-data-found.png");
-const bg = require("../../assets/images/bg.jpg");
+
+import Layout from "../../constants/Layout";
 
 class Profile extends React.Component {
   static navigationOptions = {
@@ -21,7 +22,7 @@ class Profile extends React.Component {
 
     return user ? (
       <View style={styles.profileContainer}>
-        <ImageBackground source={bg} style={{ width: "100%", height: "100%" }}>
+        <ImageBackground source={Layout.bgImage} style={{ width: "100%", height: "100%" }}>
           <ProfileTop avatar={profilePicture} {...user} />
           <ProfileBody
             user={user}
