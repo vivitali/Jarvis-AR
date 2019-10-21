@@ -1,6 +1,13 @@
-import React, {Component} from "react";
-import { View, TextInput, Text, TouchableOpacity, KeyboardAvoidingView } from "react-native";
-import Button from "apsl-react-native-button";
+import React, { Component } from "react";
+import {
+  View,
+  TextInput,
+  Text,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  TouchableHighlight
+} from "react-native";
+
 import Icon from "react-native-vector-icons/FontAwesome";
 import Colors from "../../constants/Colors";
 
@@ -8,11 +15,20 @@ import styles from "./styles";
 
 export default class SignIn extends Component {
   state = {
-    hidePassword: true
+    hidePassword: true,
+    pressStatus: false
   };
 
   managePasswordVisibility = () => {
     this.setState({ hidePassword: !this.state.hidePassword });
+  };
+
+  onHideUnderlay = () => {
+    this.setState({ pressStatus: false });
+  };
+
+  onShowUnderlay = () => {
+    this.setState({ pressStatus: true });
   };
 
   render() {
@@ -51,13 +67,16 @@ export default class SignIn extends Component {
             }
           </TouchableOpacity>
         </View>
-        <Button
-          style={styles.button}
-          textStyle={styles.buttonText}
+        <TouchableHighlight
+          underlayColor="#DDA720"
+          style={this.state.pressStatus ? styles.buttonPress : styles.button}
           onPress={onSignIn}
+          onHideUnderlay = {() => this.onHideUnderlay()}
+          onShowUnderlay = {() => this.onShowUnderlay()}
+          activeOpacity={1}
         >
-          Sign In
-        </Button>
+          <Text style={styles.buttonText}>Sign In</Text>
+        </TouchableHighlight>
         <Text style={styles.errorMsg}>{error}</Text>
       </KeyboardAvoidingView>
     )

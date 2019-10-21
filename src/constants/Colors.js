@@ -11,6 +11,7 @@ const warningText: "#666804" = "#666804";
 const noticeText: "#fff" = "#fff";
 const bottomBarBg: "#3A1831" = "#3A1831";
 const errorColor: "#DDA720" = "#DDA720";
+const pressButton: "#DDA720" = "#DDA720";
 
 const primaryColor: "#000" = "#000";
 const secondaryColor: "#9E9E9E" = "#9E9E9E";
@@ -31,5 +32,6 @@ export default {
   secondaryColor,
   contrastColor,
   bottomBarBg,
-  errorColor
+  errorColor,
+  pressButton
 };
