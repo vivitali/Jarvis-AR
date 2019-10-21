@@ -4,21 +4,23 @@ import Fonts from "../../constants/Fonts";
 
 const styles = StyleSheet.create({
   formContainer: { color: Colors.secondaryColor },
-  textInput: {
-    height: 43,
-    width: 270,
-    borderWidth: 1,
+  textInputWrapper: {
     borderColor: "rgba(255, 255, 255, 0.9)",
     borderStyle: "solid",
     backgroundColor: "rgba(196, 196, 196, 0.5)",
+    height: 43,
+    width: 270,
+    borderWidth: 1,
+    alignSelf: "center",
+    borderRadius: 20,
+    marginBottom: 40,
+    padding: 10
+  },
+  textInput: {
     fontSize: 18,
     lineHeight: 22,
     fontFamily: Fonts.bold,
-    color: "rgba(255, 255, 255, 0.3)",
-    borderRadius: 20,
-    marginBottom: 40,
-    alignSelf: "center",
-    padding: 10,
+    color: "rgba(255, 255, 255, 0.3)"
   },
   passwordWrapper: {
     marginBottom: 43,
@@ -31,7 +33,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 22,
     fontFamily: Fonts.bold,
-    color: "rgba(255, 255, 255, 0.3)",
+    color: "rgba(255, 255, 255, 0.3)"
   },
   button: {
     borderColor: "rgba(255, 255, 255, 0.5)",

@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import { View, TextInput, Text, TouchableOpacity, KeyboardAvoidingView } from "react-native";
+import React, { Component } from "react";
+import { View, TextInput, Text, TouchableOpacity } from "react-native";
 import Button from "apsl-react-native-button";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Colors from "../../constants/Colors";
@@ -19,14 +19,24 @@ export default class SignIn extends Component {
     const { email, password, error, onInputChange, onSignIn } = this.props;
 
     return (
-      <KeyboardAvoidingView style={styles.formContainer} behavior="padding" enabled={true}>
-        <TextInput
-          style={styles.textInput}
-          value={email}
-          onChangeText={text => onInputChange(text, "email")}
-          placeholder="Email"
-        />
-        <View style={[styles.textInput, styles.passwordWrapper]}>
+      <View style={styles.formContainer}>
+        <View style={styles.textInputWrapper}>
+          <TextInput
+            style={styles.textInput}
+            value={email}
+            autoCompleteType="email"
+            keyboardType="email-address"
+            onChangeText={text => onInputChange(text, "email")}
+            placeholder="Email"
+          />
+        </View>
+        <View
+          style={[
+            styles.textInput,
+            styles.textInputWrapper,
+            styles.passwordWrapper
+          ]}
+        >
           <TextInput
             style={styles.inputPassword}
             value={password}
@@ -35,20 +45,20 @@ export default class SignIn extends Component {
             textContentType="password"
             secureTextEntry={this.state.hidePassword}
           />
-          <TouchableOpacity onPress = { this.managePasswordVisibility }>
-            {
-              this.state.hidePassword ?
-                <Icon
-                  name="eye-slash"
-                  size={20}
-                  style={{ color: Colors.primaryColor }}
-                /> :
-                <Icon
-                  name="eye"
-                  size={20}
-                  style={{ color: Colors.contrastColor }}
-                />
-            }
+          <TouchableOpacity onPress={this.managePasswordVisibility}>
+            {this.state.hidePassword ? (
+              <Icon
+                name="eye-slash"
+                size={20}
+                style={{ color: Colors.primaryColor }}
+              />
+            ) : (
+              <Icon
+                name="eye"
+                size={20}
+                style={{ color: Colors.contrastColor }}
+              />
+            )}
           </TouchableOpacity>
         </View>
         <Button
@@ -59,7 +69,7 @@ export default class SignIn extends Component {
           Sign In
         </Button>
         <Text style={styles.errorMsg}>{error}</Text>
-      </KeyboardAvoidingView>
-    )
-  };
+      </View>
+    );
+  }
 }
