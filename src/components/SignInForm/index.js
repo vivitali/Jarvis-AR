@@ -1,6 +1,12 @@
-import React, {Component} from "react";
-import { View, TextInput, Text, TouchableOpacity, KeyboardAvoidingView, TouchableHighlight } from "react-native";
-import Button from "apsl-react-native-button";
+import React, { Component } from "react";
+import {
+  View,
+  TextInput,
+  Text,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  TouchableHighlight
+} from "react-native";
 
 import Icon from "react-native-vector-icons/FontAwesome";
 import Colors from "../../constants/Colors";
