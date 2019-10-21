@@ -7,7 +7,8 @@ import {
   Animated,
   Keyboard,
   SafeAreaView,
-  ImageBackground
+  ImageBackground,
+  Platform
 } from "react-native";
 
 import { actions, selectors } from "./redux";
@@ -91,7 +92,7 @@ class SignIn extends Component {
 
   render() {
     return (
-      <KeyboardAvoidingView behavior="padding" enabled={true}>
+      <KeyboardAvoidingView behavior="padding" enabled={Platform.OS === "ios"}>
         <ImageBackground
           source={Layout.bgImage}
           style={{ width: "100%", height: "100%" }}

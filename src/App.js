@@ -1,5 +1,11 @@
 import React from "react";
-import {ImageBackground, Platform, StatusBar, StyleSheet, View} from "react-native";
+import {
+  ImageBackground,
+  Platform,
+  StatusBar,
+  StyleSheet,
+  View
+} from "react-native";
 // import { AppLoading, Asset, Font, Icon } from "expo";
 import AppNavigator from "./navigation/AppNavigator";
 import { Provider } from "react-redux";
@@ -29,11 +35,11 @@ export default class App extends React.Component {
           <PersistGate persistor={persistor}>
             <View style={styles.container}>
               <ImageBackground
-                  source={Layout.bgImage}
-                  style={{ width: "100%", height: "100%" }}
+                source={Layout.bgImage}
+                style={{ width: "100%", height: "100%" }}
               >
-              {Platform.OS === "ios" && <StatusBar barStyle="default" />}
-              <AppNavigator ref={NavigationService.setNavigator} />
+                {Platform.OS === "ios" && <StatusBar barStyle="default" />}
+                <AppNavigator ref={NavigationService.setNavigator} />
               </ImageBackground>
             </View>
           </PersistGate>
@@ -71,6 +77,6 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   }
 });

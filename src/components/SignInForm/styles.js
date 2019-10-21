@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   textInputWrapper: {
-    height: 43,
     width: 270,
     borderWidth: 1,
     borderColor: "rgba(255, 255, 255, 0.9)",
@@ -16,15 +15,16 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(196, 196, 196, 0.5)",
     borderRadius: 20,
     marginBottom: 40,
-    alignSelf: "center",
-    padding: 10
+    alignSelf: "center"
   },
   textInput: {
+    height: 43,
     fontSize: 18,
     lineHeight: 22,
     fontFamily: Fonts.base,
     textAlign: "center",
-    color: "rgba(255, 255, 255, 0.3)"
+    color: "rgba(255, 255, 255, 0.3)",
+    padding: 10
   },
   passwordWrapper: {
     marginBottom: 43,
@@ -32,13 +32,12 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   inputPassword: {
-    flex: 1,
     marginRight: 10,
-    fontSize: 18,
-    lineHeight: 22,
-    fontFamily: Fonts.base,
-    color: "rgba(255, 255, 255, 0.3)",
-    textAlign: "center"
+    width: 220
+  },
+  icon: {
+    justifyContent: "center",
+    flex: 1
   },
   button: {
     borderColor: "rgba(255, 255, 255, 0.5)",

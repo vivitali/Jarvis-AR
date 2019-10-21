@@ -45,22 +45,19 @@ export default class SignIn extends Component {
             placeholder="Email"
           />
         </View>
-        <View
-          style={[
-            styles.textInput,
-            styles.textInputWrapper,
-            styles.passwordWrapper
-          ]}
-        >
+        <View style={[styles.textInputWrapper, styles.passwordWrapper]}>
           <TextInput
-            style={styles.inputPassword}
+            style={[styles.inputPassword, styles.textInput]}
             value={password}
             onChangeText={text => onInputChange(text, "password")}
             placeholder="Password"
             textContentType="password"
             secureTextEntry={this.state.hidePassword}
           />
-          <TouchableOpacity onPress={this.managePasswordVisibility}>
+          <TouchableOpacity
+            onPress={this.managePasswordVisibility}
+            style={styles.icon}
+          >
             {this.state.hidePassword ? (
               <Icon
                 name="eye-slash"
