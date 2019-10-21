@@ -1,11 +1,12 @@
 import React from "react";
-import { Platform, StatusBar, StyleSheet, View } from "react-native";
+import {ImageBackground, Platform, StatusBar, StyleSheet, View} from "react-native";
 // import { AppLoading, Asset, Font, Icon } from "expo";
 import AppNavigator from "./navigation/AppNavigator";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/lib/integration/react";
 import store, { persistor } from "./redux/store";
 import * as NavigationService from "./services/NavigationService";
+import Layout from "./constants/Layout";
 
 export default class App extends React.Component {
   state = {
@@ -27,8 +28,13 @@ export default class App extends React.Component {
         <Provider store={store}>
           <PersistGate persistor={persistor}>
             <View style={styles.container}>
+              <ImageBackground
+                  source={Layout.bgImage}
+                  style={{ width: "100%", height: "100%" }}
+              >
               {Platform.OS === "ios" && <StatusBar barStyle="default" />}
               <AppNavigator ref={NavigationService.setNavigator} />
+              </ImageBackground>
             </View>
           </PersistGate>
         </Provider>
@@ -66,6 +72,5 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff"
   }
 });
