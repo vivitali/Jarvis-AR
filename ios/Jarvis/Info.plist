@@ -48,7 +48,11 @@
 	<key>NSCameraUsageDescription</key>
 	<string>Needed for scan purposes</string>
 	<key>UIAppFonts</key>
-	<array/>
+	</array>
+	<key>CFBundleGetInfoString</key>
+	<string/>
+	<key>LSApplicationCategoryType</key>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>

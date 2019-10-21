@@ -27,6 +27,7 @@
 		909E8ACD176C4809B061E676 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBEE3DFD80E6414896392156 /* libRNGestureHandler.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		D7E4562D82444E9CB74D4E65 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 887768F0005F4EC6AA81F8E5 /* libReactNativeConfig.a */; };
+		DF24E475235E229500AA03B4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF24E474235E229500AA03B4 /* GoogleService-Info.plist */; };
 		E691F3E7326146DABC60A4D2 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73188F493D2E4A56AEEEFB50 /* libRNCamera.a */; };
 		EB064C48624A676C77ADFF2E /* libPods-Jarvis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A69F0F10A6FCA48F60217396 /* libPods-Jarvis.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
@@ -411,7 +412,7 @@
 		D0374B9883714AE3B67C0ADA /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		D6ED8F997F6349D69DF7ADB5 /* ReactNativeConfig.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = ReactNativeConfig.xcodeproj; path = "../node_modules/react-native-config/ios/ReactNativeConfig.xcodeproj"; sourceTree = "<group>"; };
 		D7D99C78CC154F1DB17E176D /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
-		DF2BF6B22342AA5D00AEB958 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DF24E474235E229500AA03B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E085937E3A9643EEB06C4923 /* Lato-Hairline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Hairline.ttf"; path = "../src/assets/fonts/Lato-Hairline.ttf"; sourceTree = "<group>"; };
 		E6DD18A894244A38982FF06C /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		ECFFB19C0F7F41E2B739C825 /* Lato-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Italic.ttf"; path = "../src/assets/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
@@ -520,7 +521,7 @@
 		13B07FAE1A68108700A75B9A /* Jarvis */ = {
 			isa = PBXGroup;
 			children = (
-				DF2BF6B22342AA5D00AEB958 /* GoogleService-Info.plist */,
+				DF24E474235E229500AA03B4 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -1217,6 +1218,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				DF24E475235E229500AA03B4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
