@@ -14,7 +14,7 @@ import Layout from "../../constants/Layout";
 
 class Profile extends React.Component {
   static navigationOptions = {
-    title: "Profile"
+	  header: null
   };
 
   render() {

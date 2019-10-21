@@ -3,9 +3,7 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
   profileContainer: {
     width: "100%",
-    flex: 1,
-    borderTopWidth: 1,
-    borderTopColor: "rgba(255,255,255,0.18)"
+    flex: 1
   },
   profileBody: {
     paddingVertical: 20,
@@ -17,11 +15,12 @@ export default StyleSheet.create({
   signout: {
     flexDirection: "row",
     textAlign: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   row: {
-    flexDirection: "row",
-    alignContent: "center"
+	flexDirection: "row",
+	alignContent: "center",
+	justifyContent: "space-around"
   },
   option: {
     color: "white",
@@ -29,11 +28,22 @@ export default StyleSheet.create({
     paddingVertical: 15
   },
   optionIconContainer: {
-    marginRight: 9
+	display: "flex",
+	marginRight: 9,
+	borderWidth: 2,
+	borderColor: "#dda720",
+	width: 63,
+	height: 63,
+	borderRadius: 50,
+	alignItems: "center",
+	justifyContent: "center"
   },
   optionText: {
-    color: "#ffffff",
-    fontSize: 24,
-    marginTop: -5
+	color: "#ffffff",
+	fontSize: 24,
+	marginTop: -5
+  },
+  phoneIcon: {
+	transform: [{ scaleX: -1}]
   }
 });

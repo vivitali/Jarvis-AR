@@ -9,8 +9,11 @@ const AuthStack = createStackNavigator(
     SignIn: SignInScreen
   },
   {
-    headerMode: "none",
-    headerBackTitleVisible: false
+	headerMode: "none",
+	headerBackTitleVisible: false,
+	navigationOptions: {
+		headerVisible: false,
+	}
   }
 );
 

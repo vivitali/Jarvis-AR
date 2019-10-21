@@ -1,40 +1,34 @@
 import { StyleSheet } from "react-native";
+import Fonts from "../../constants/Fonts";
 
 export default StyleSheet.create({
   profileTop: {
-    paddingTop: 20,
-    paddingBottom: 40,
-    alignSelf: "center"
+  	height: '75%'
   },
-  userText: {
-    fontSize: 32,
-    marginTop: 1,
-    textAlign: "center",
-    color: "#ffffff"
+  profileInfo: {
+	fontSize: 25,
+	lineHeight: 30,
+	marginBottom: 18,
+	textAlign: "center",
+	color: "#ffffff",
+	fontFamily: Fonts.base
   },
-  carNumber: {
-    fontSize: 20,
-    fontWeight: "bold",
-    marginTop: 4,
-    textAlign: "center",
-    color: "#e2e2e2"
-  },
-  carBrand: {
-    fontSize: 16,
-    marginTop: 6,
-    textAlign: "center",
-    color: "#ffffff"
+  profileContactsContainer: {
+  	display: 'flex',
+	height: '40%',
+	justifyContent: "center",
   },
   profileImgContainer: {
-    alignSelf: "center",
-    height: 100,
-    width: 100,
-    borderRadius: 50,
-    marginBottom: 20
+	alignSelf: "center",
+	justifyContent: "center",
+	height: '60%',
+	paddingTop: 30,
   },
   profileImg: {
-    height: 100,
-    width: 100,
-    borderRadius: 50
+	height: 200,
+	width: 200,
+	borderRadius: 100,
+	borderWidth: 1,
+	borderColor: "rgba(255, 255, 255, 0.9)",
   }
 });
