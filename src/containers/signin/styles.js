@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import Colors from "../../constants/Colors";
 import Fonts from "../../constants/Fonts";
 
 export const WELCOME_SIZE = 50;
@@ -18,7 +17,7 @@ const styles = StyleSheet.create({
     color: "rgba(255, 255, 255, 0.9)",
     fontSize: WELCOME_SIZE,
     lineHeight: 61,
-    fontFamily: Fonts.bold,
+    fontFamily: Fonts.black,
     textAlign: "center",
     marginBottom: WELCOME_MARGIN
   },

@@ -1,6 +1,7 @@
-const hairline = "Lato-Hairline";
-const light = "Lato-Light";
-const base = "Lato-Regular";
-const bold = "Lato-Bold";
+const light = "ProximaNova-Thin";
+const base = "ProximaNova-Regular";
+const bold = "ProximaNova-Bold";
+const extrabold = "ProximaNova-Extrabold";
+const black = "ProximaNova-Black";
 
-export default { hairline, light, base, bold };
+export default { light, base, bold, black, extrabold };
