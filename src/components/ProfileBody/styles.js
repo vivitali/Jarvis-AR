@@ -24,12 +24,12 @@ export default StyleSheet.create({
   },
   option: {
     paddingHorizontal: 15,
-    paddingVertical: 15,
-	marginRight: 30
+    paddingVertical: 15
   },
   optionPhone: {
 	paddingHorizontal: 15,
 	paddingVertical: 15,
+	marginLeft: 30
   },
   optionIconContainer: {
 	display: "flex",
