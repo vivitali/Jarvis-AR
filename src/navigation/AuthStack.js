@@ -10,7 +10,7 @@ const AuthStack = createStackNavigator(
   },
   {
 	headerMode: "none",
-	headerBackTitleVisible: false,
+	headerBackTitleVisible: false
   }
 );
 
