@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { Text, TouchableOpacity, View } from "react-native";
 // $FlowFixMe
 import Icon from "react-native-vector-icons/FontAwesome";
+import Button from "apsl-react-native-button";
 
 import { actions as signinAction } from "../signin/redux";
 import styles from "./styles";
@@ -14,7 +15,7 @@ import { type Props } from "./types";
 
 class About extends Component<Props, *> {
   render() {
-    const { signOut } = this.props;
+    const { signOut, navigation: { navigate } } = this.props;
 
     return (
       <View style={styles.container}>
@@ -25,6 +26,14 @@ class About extends Component<Props, *> {
                 <Icon name="sign-out" size={22} style={styles.signoutOption} />
               </View>
               <View>
+                <Button
+                  title="Info"
+                  onPress={() => navigate('Info')}
+                />
+                <Button
+                  title="Help"
+                  onPress={() => navigate('Help')}
+                />
                 <Text style={[styles.optionText, styles.signoutOption]}>
                   Sign Out
                 </Text>

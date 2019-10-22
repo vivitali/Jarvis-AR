@@ -11,6 +11,8 @@ import ScannerScreen from "../screens/ScannerScreen";
 import ProfileScreen from "../screens/Profile";
 import SearchScreen from "../screens/SearchScreen";
 import AboutScreen from "../screens/AboutScreen";
+import InfoScreen from "../screens/InfoScreen";
+import HelpScreen from "../screens/HelpScreen";
 import Colors from "../constants/Colors";
 
 const ProfileStack = createStackNavigator({
@@ -49,7 +51,15 @@ SearchStack.navigationOptions = {
  *
  */
 const AboutStack = createStackNavigator({
-  About: AboutScreen
+  About: AboutScreen,
+  Info: InfoScreen,
+  Help: HelpScreen,
+}, {
+  transitionConfig: () => ({
+    transitionSpec: {
+      duration: 0,
+    },
+  }),
 });
 
 AboutStack.navigationOptions = {
