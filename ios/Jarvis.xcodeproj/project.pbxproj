@@ -6,7 +6,6 @@
 	objectVersion = 46;
 	objects = {
 /* Begin PBXBuildFile section */
-		0075681FF5174C7EB40A8622 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F47EF895E4F242B09985EF67 /* Lato-HairlineItalic.ttf */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
@@ -26,25 +25,22 @@
 		330E626E19BB497D8F93ECFA /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02B60BF3430241238F057793 /* MaterialIcons.ttf */; };
 		33F2E76EAE314A8E96BF213A /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 939AB31ED59B48A6A9A2BA10 /* EvilIcons.ttf */; };
 		363DEB3C586B46C88FF29A48 /* libA0Auth0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 766DF2866F524E179A5503B4 /* libA0Auth0.a */; };
-		365BB45ADBB34B4A84291539 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5443EA434CB24CCAA128D766 /* Lato-Bold.ttf */; };
 		3FE3CB1527D142F6B419EF25 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3F21A5A1B6D430DB2022508 /* FontAwesome5_Regular.ttf */; };
-		4C5EF22603A549458CDE67CE /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCD723C95B284B049A6B0295 /* Lato-Light.ttf */; };
 		56A07767F21A4343B11A55AA /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1620387169B441F0AA944020 /* Feather.ttf */; };
 		5996AB0124574FE0A22E235B /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BEBADB3257342649781678C /* FontAwesome.ttf */; };
 		59E5A5E66AED4DC39EAD1ADA /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E8591E31CD449978F30A3DC /* Entypo.ttf */; };
-		630CF5C57CD94D9A9C94232B /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E085937E3A9643EEB06C4923 /* Lato-Hairline.ttf */; };
-		6FE35B73281F41A79FDD217E /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4610E85569F64247A95672C8 /* Lato-BoldItalic.ttf */; };
 		7343667CD6CF4F27960581A1 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2F87DD34566471D88269277 /* Ionicons.ttf */; };
+		7885D2046245415E9187FD9E /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 18E0A40F2672418F830D2039 /* ProximaNova-Extrabold.otf */; };
 		7BEAC4573CFB4C5CBED59375 /* libRNMlKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADD8BD32CE944DCB0F9F111 /* libRNMlKit.a */; };
-		8079F02133DE440983C092FC /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8152B89A75D74162B9188AB9 /* Lato-BlackItalic.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		8DEF34DB7AD6487C9A8AC26B /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B72AEAA0BE0F4BCAA5E6B8A7 /* Lato-Black.ttf */; };
 		909E8ACD176C4809B061E676 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBEE3DFD80E6414896392156 /* libRNGestureHandler.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		BA2A1165EE2649EA90B8C1A7 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0374B9883714AE3B67C0ADA /* Foundation.ttf */; };
-		C487680569A44B4780D45F6E /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 79841E2F38A7405583543140 /* Lato-LightItalic.ttf */; };
+		BE6601513C4A4438B6754BB4 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B6874A101ED048DDBDD5ED19 /* ProximaNova-Regular.otf */; };
+		C6C147DF77FF4013B33AE5E9 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 268D3D548B994F97AF1E4E3F /* ProximaNova-Bold.otf */; };
 		C6FE7DE0A3B84615A6BEB74A /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE5821512D5948F6AFC33E75 /* SimpleLineIcons.ttf */; };
 		C7BF914A901E4E2798354E48 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FD0EC4C73747466B912A1195 /* Zocial.ttf */; };
+		D1B994BB7D484ADFA13AEF94 /* ProximaNova-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 722AC914C8084B3A9827A5DE /* ProximaNova-Thin.otf */; };
 		D7E4562D82444E9CB74D4E65 /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 887768F0005F4EC6AA81F8E5 /* libReactNativeConfig.a */; };
 		D880B060823B4D97ABB5CE10 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B4010E4428AA42748A7A7F36 /* AntDesign.ttf */; };
 		D9B91D64789C40C7B4D70D77 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C317B834CA4D4567A3A60CEE /* Octicons.ttf */; };
@@ -54,8 +50,7 @@
 		E8067541B8FC4BB186681CB4 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD1E9E461D224A2597AA044A /* FontAwesome5_Solid.ttf */; };
 		EB064C48624A676C77ADFF2E /* libPods-Jarvis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A69F0F10A6FCA48F60217396 /* libPods-Jarvis.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
-		F70C3DBAD73841358959CD93 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ECFFB19C0F7F41E2B739C825 /* Lato-Italic.ttf */; };
-		FE4F77C7E34147C0AD60DFFF /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D801B32BA3E48C5A9510BE1 /* Lato-Regular.ttf */; };
+		EF51F36AB90648CCBD94BF72 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A13A65A2767342DD80F23958 /* ProximaNova-Black.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -397,7 +392,9 @@
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		147B6520FDEC821C61832FF2 /* Pods-Jarvis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jarvis.release.xcconfig"; path = "Target Support Files/Pods-Jarvis/Pods-Jarvis.release.xcconfig"; sourceTree = "<group>"; };
 		1620387169B441F0AA944020 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		18E0A40F2672418F830D2039 /* ProximaNova-Extrabold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Extrabold.otf"; path = "../src/assets/fonts/ProximaNova-Extrabold.otf"; sourceTree = "<group>"; };
 		1CE3294836A34C3283BF39A9 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		268D3D548B994F97AF1E4E3F /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Bold.otf"; path = "../src/assets/fonts/ProximaNova-Bold.otf"; sourceTree = "<group>"; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADD8BD32CE944DCB0F9F111 /* libRNMlKit.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNMlKit.a; sourceTree = "<group>"; };
 		3D801B32BA3E48C5A9510BE1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../src/assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
@@ -409,6 +406,7 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		65EF1E8BB1C7484585AE1E45 /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; };
 		7063B26358684D9A85694511 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
+		722AC914C8084B3A9827A5DE /* ProximaNova-Thin.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Thin.otf"; path = "../src/assets/fonts/ProximaNova-Thin.otf"; sourceTree = "<group>"; };
 		73188F493D2E4A56AEEEFB50 /* libRNCamera.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCamera.a; sourceTree = "<group>"; };
 		766DF2866F524E179A5503B4 /* libA0Auth0.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libA0Auth0.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
@@ -419,11 +417,13 @@
 		939AB31ED59B48A6A9A2BA10 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		99D5931964544847B71D1DFB /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		9E55BB3684978432EF17F0F1 /* Pods-Jarvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jarvis.debug.xcconfig"; path = "Target Support Files/Pods-Jarvis/Pods-Jarvis.debug.xcconfig"; sourceTree = "<group>"; };
+		A13A65A2767342DD80F23958 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Black.otf"; path = "../src/assets/fonts/ProximaNova-Black.otf"; sourceTree = "<group>"; };
 		A69F0F10A6FCA48F60217396 /* libPods-Jarvis.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jarvis.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B4010E4428AA42748A7A7F36 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		B578667AE90B44FF8BECA570 /* libReactNativeConfig-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libReactNativeConfig-tvOS.a"; sourceTree = "<group>"; };
 		B5E0E25C611A4EA6A964451E /* A0Auth0.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = A0Auth0.xcodeproj; path = "../node_modules/react-native-auth0/ios/A0Auth0.xcodeproj"; sourceTree = "<group>"; };
+		B6874A101ED048DDBDD5ED19 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ProximaNova-Regular.otf"; path = "../src/assets/fonts/ProximaNova-Regular.otf"; sourceTree = "<group>"; };
 		B72AEAA0BE0F4BCAA5E6B8A7 /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../src/assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
 		C317B834CA4D4567A3A60CEE /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		C3F21A5A1B6D430DB2022508 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
@@ -615,6 +615,11 @@
 				FCD723C95B284B049A6B0295 /* Lato-Light.ttf */,
 				79841E2F38A7405583543140 /* Lato-LightItalic.ttf */,
 				3D801B32BA3E48C5A9510BE1 /* Lato-Regular.ttf */,
+				A13A65A2767342DD80F23958 /* ProximaNova-Black.otf */,
+				268D3D548B994F97AF1E4E3F /* ProximaNova-Bold.otf */,
+				18E0A40F2672418F830D2039 /* ProximaNova-Extrabold.otf */,
+				B6874A101ED048DDBDD5ED19 /* ProximaNova-Regular.otf */,
+				722AC914C8084B3A9827A5DE /* ProximaNova-Thin.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1249,16 +1254,11 @@
 				D9B91D64789C40C7B4D70D77 /* Octicons.ttf in Resources */,
 				C6FE7DE0A3B84615A6BEB74A /* SimpleLineIcons.ttf in Resources */,
 				C7BF914A901E4E2798354E48 /* Zocial.ttf in Resources */,
-				8DEF34DB7AD6487C9A8AC26B /* Lato-Black.ttf in Resources */,
-				8079F02133DE440983C092FC /* Lato-BlackItalic.ttf in Resources */,
-				365BB45ADBB34B4A84291539 /* Lato-Bold.ttf in Resources */,
-				6FE35B73281F41A79FDD217E /* Lato-BoldItalic.ttf in Resources */,
-				630CF5C57CD94D9A9C94232B /* Lato-Hairline.ttf in Resources */,
-				0075681FF5174C7EB40A8622 /* Lato-HairlineItalic.ttf in Resources */,
-				F70C3DBAD73841358959CD93 /* Lato-Italic.ttf in Resources */,
-				4C5EF22603A549458CDE67CE /* Lato-Light.ttf in Resources */,
-				C487680569A44B4780D45F6E /* Lato-LightItalic.ttf in Resources */,
-				FE4F77C7E34147C0AD60DFFF /* Lato-Regular.ttf in Resources */,
+				EF51F36AB90648CCBD94BF72 /* ProximaNova-Black.otf in Resources */,
+				C6C147DF77FF4013B33AE5E9 /* ProximaNova-Bold.otf in Resources */,
+				7885D2046245415E9187FD9E /* ProximaNova-Extrabold.otf in Resources */,
+				BE6601513C4A4438B6754BB4 /* ProximaNova-Regular.otf in Resources */,
+				D1B994BB7D484ADFA13AEF94 /* ProximaNova-Thin.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1351,7 +1351,7 @@
 			baseConfigurationReference = 9E55BB3684978432EF17F0F1 /* Pods-Jarvis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 99;
+				CURRENT_PROJECT_VERSION = 107;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 236G4W8395;
 				ENABLE_BITCODE = NO;
@@ -1385,7 +1385,7 @@
 			baseConfigurationReference = 147B6520FDEC821C61832FF2 /* Pods-Jarvis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 99;
+				CURRENT_PROJECT_VERSION = 107;
 				DEVELOPMENT_TEAM = 236G4W8395;
 				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = YES;

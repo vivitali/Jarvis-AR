@@ -4,7 +4,6 @@ import {
   TextInput,
   Text,
   TouchableOpacity,
-  KeyboardAvoidingView,
   TouchableHighlight
 } from "react-native";
 
@@ -35,50 +34,57 @@ export default class SignIn extends Component {
     const { email, password, error, onInputChange, onSignIn } = this.props;
 
     return (
-      <KeyboardAvoidingView style={styles.formContainer} behavior="padding" enabled={true}>
-        <TextInput
-          style={styles.textInput}
-          value={email}
-          onChangeText={text => onInputChange(text, "email")}
-          placeholder="Email"
-        />
-        <View style={[styles.textInput, styles.passwordWrapper]}>
+      <View style={styles.formContainer}>
+        <View style={styles.textInputWrapper}>
           <TextInput
-            style={styles.inputPassword}
+            autoCompleteType="email"
+            keyboardType="email-address"
+            style={styles.textInput}
+            value={email}
+            onChangeText={text => onInputChange(text, "email")}
+            placeholder="Email"
+          />
+        </View>
+        <View style={[styles.textInputWrapper, styles.passwordWrapper]}>
+          <TextInput
+            style={[styles.inputPassword, styles.textInput]}
             value={password}
             onChangeText={text => onInputChange(text, "password")}
             placeholder="Password"
             textContentType="password"
             secureTextEntry={this.state.hidePassword}
           />
-          <TouchableOpacity onPress = { this.managePasswordVisibility }>
-            {
-              this.state.hidePassword ?
-                <Icon
-                  name="eye-slash"
-                  size={20}
-                  style={{ color: Colors.primaryColor }}
-                /> :
-                <Icon
-                  name="eye"
-                  size={20}
-                  style={{ color: Colors.contrastColor }}
-                />
-            }
+          <TouchableOpacity
+            onPress={this.managePasswordVisibility}
+            style={styles.icon}
+          >
+            {this.state.hidePassword ? (
+              <Icon
+                name="eye-slash"
+                size={20}
+                style={{ color: Colors.primaryColor }}
+              />
+            ) : (
+              <Icon
+                name="eye"
+                size={20}
+                style={{ color: Colors.contrastColor }}
+              />
+            )}
           </TouchableOpacity>
         </View>
         <TouchableHighlight
           underlayColor="#DDA720"
           style={this.state.pressStatus ? styles.buttonPress : styles.button}
           onPress={onSignIn}
-          onHideUnderlay = {() => this.onHideUnderlay()}
-          onShowUnderlay = {() => this.onShowUnderlay()}
+          onHideUnderlay={() => this.onHideUnderlay()}
+          onShowUnderlay={() => this.onShowUnderlay()}
           activeOpacity={1}
         >
           <Text style={styles.buttonText}>Sign In</Text>
         </TouchableHighlight>
         <Text style={styles.errorMsg}>{error}</Text>
-      </KeyboardAvoidingView>
-    )
-  };
+      </View>
+    );
+  }
 }
