@@ -11,9 +11,6 @@ const AuthStack = createStackNavigator(
   {
 	headerMode: "none",
 	headerBackTitleVisible: false,
-	navigationOptions: {
-		headerVisible: false,
-	}
   }
 );
 
