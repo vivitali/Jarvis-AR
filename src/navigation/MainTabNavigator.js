@@ -57,17 +57,20 @@ AboutStack.navigationOptions = {
   tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="cog" />
 };
 
-export default createBottomTabNavigator({
-  ProfileStack,
-  ScannerStack,
-  SearchStack,
-  AboutStack
-}, {
-  tabBarOptions: {
-    showLabel: false,
-    style: {
-      backgroundColor: Colors.bottomBarBg,
-      boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.3)",
+export default createBottomTabNavigator(
+  {
+    ProfileStack,
+    ScannerStack,
+    SearchStack,
+    AboutStack
+  },
+  {
+    tabBarOptions: {
+      showLabel: false,
+      style: {
+        backgroundColor: Colors.bottomBarBg,
+        boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.3)"
+      }
     }
   }
-});
+);

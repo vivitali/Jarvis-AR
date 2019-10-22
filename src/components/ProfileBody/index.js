@@ -1,34 +1,34 @@
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from "react-native-vector-icons/FontAwesome5";
+import EntypoIcon from "react-native-vector-icons/Entypo";
 import styles from "./styles";
 
-const ProfileBody = ({ user, onSkypePress, onPhonePress }) => (
+const ProfileBody = ({ user, onPhoneWorkPress, onPhonePress }) => (
   <View style={styles.profileContainer}>
     <View style={styles.profileBody}>
-      <TouchableOpacity style={styles.option} onPress={onPhonePress}>
-        <View style={styles.row}>
+      <View style={styles.row}>
+        <TouchableOpacity style={styles.option} onPress={onPhonePress}>
           <View style={styles.optionIconContainer}>
-            <Icon name="phone" size={20} color="#ffffff" />
-          </View>
-          <View>
-            <Text style={styles.optionText}>{user.tel}</Text>
-          </View>
-        </View>
-      </TouchableOpacity>
-
-      {!!user.skype && (
-        <TouchableOpacity style={styles.option} onPress={onSkypePress}>
-          <View style={styles.row}>
-            <View style={styles.optionIconContainer}>
-              <Icon name="skype" size={20} color="#ffffff" />
-            </View>
-            <View>
-              <Text style={styles.optionText}>{user.skype}</Text>
-            </View>
+            <EntypoIcon name="mobile" size={35.2} color="#dda720" />
           </View>
         </TouchableOpacity>
-      )}
+        {!!user.phone_work && (
+          <TouchableOpacity
+            style={styles.optionPhone}
+            onPress={onPhoneWorkPress}
+          >
+            <View style={styles.optionIconContainer}>
+              <Icon
+                name="phone"
+                size={32}
+                color="#dda720"
+                style={styles.phoneIcon}
+              />
+            </View>
+          </TouchableOpacity>
+        )}
+      </View>
     </View>
   </View>
 );
