@@ -20,12 +20,16 @@ export default StyleSheet.create({
   row: {
 	flexDirection: "row",
 	alignContent: "center",
-	justifyContent: "space-around"
+	justifyContent: "center"
   },
   option: {
-    color: "white",
     paddingHorizontal: 15,
-    paddingVertical: 15
+    paddingVertical: 15,
+	marginRight: 30
+  },
+  optionPhone: {
+	paddingHorizontal: 15,
+	paddingVertical: 15,
   },
   optionIconContainer: {
 	display: "flex",
