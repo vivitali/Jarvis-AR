@@ -15,39 +15,39 @@ export default StyleSheet.create({
   signout: {
     flexDirection: "row",
     textAlign: "center",
-    justifyContent: "center",
+    justifyContent: "center"
   },
   row: {
-	flexDirection: "row",
-	alignContent: "center",
-	justifyContent: "center"
+    flexDirection: "row",
+    alignContent: "center",
+    justifyContent: "center"
   },
   option: {
     paddingHorizontal: 15,
     paddingVertical: 15
   },
   optionPhone: {
-	paddingHorizontal: 15,
-	paddingVertical: 15,
-	marginLeft: 30
+    paddingHorizontal: 15,
+    paddingVertical: 15,
+    marginLeft: 30
   },
   optionIconContainer: {
-	display: "flex",
-	marginRight: 9,
-	borderWidth: 2,
-	borderColor: "#dda720",
-	width: 63,
-	height: 63,
-	borderRadius: 50,
-	alignItems: "center",
-	justifyContent: "center"
+    display: "flex",
+    marginRight: 9,
+    borderWidth: 2,
+    borderColor: "#dda720",
+    width: 63,
+    height: 63,
+    borderRadius: 50,
+    alignItems: "center",
+    justifyContent: "center"
   },
   optionText: {
-	color: "#ffffff",
-	fontSize: 24,
-	marginTop: -5
+    color: "#ffffff",
+    fontSize: 24,
+    marginTop: -5
   },
   phoneIcon: {
-	transform: [{ scaleX: -1}]
+    transform: [{ scaleX: -1 }]
   }
 });

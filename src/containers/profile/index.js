@@ -14,7 +14,7 @@ import Layout from "../../constants/Layout";
 
 class Profile extends React.Component {
   static navigationOptions = {
-	  header: null
+    header: null
   };
 
   render() {
@@ -22,7 +22,10 @@ class Profile extends React.Component {
 
     return user ? (
       <View style={styles.profileContainer}>
-        <ImageBackground source={Layout.bgImage} style={{ width: "100%", height: "100%" }}>
+        <ImageBackground
+          source={Layout.bgImage}
+          style={{ width: "100%", height: "100%" }}
+        >
           <ProfileTop avatar={profilePicture} {...user} />
           <ProfileBody
             user={user}
