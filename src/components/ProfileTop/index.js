@@ -9,9 +9,8 @@ const ProfileTop = ({ avatar, name, tel, carNumber, carBrand }) => (
     </View>
     <View style={styles.profileContactsContainer}>
       <Text style={styles.profileInfo}>{name}</Text>
-      <Text style={styles.profileInfo}>
-        {carBrand} {carNumber}
-      </Text>
+      <Text style={styles.carBrand}>{carBrand}</Text>
+      <Text style={styles.carNumber}>{carNumber}</Text>
       <Text style={styles.profileInfo}>{tel}</Text>
     </View>
   </View>

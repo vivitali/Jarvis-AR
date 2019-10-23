@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import Fonts from "../../constants/Fonts";
+import Color from "../../constants/Colors";
 
 export default StyleSheet.create({
   profileTop: {
@@ -8,10 +9,26 @@ export default StyleSheet.create({
   profileInfo: {
     fontSize: 25,
     lineHeight: 30,
-    marginBottom: 18,
+    marginBottom: 15,
     textAlign: "center",
-    color: "#ffffff",
+    color: Color.contrastColor,
     fontFamily: Fonts.base
+  },
+  carBrand: {
+    fontSize: 22,
+    lineHeight: 27,
+    marginBottom: 10,
+    textAlign: "center",
+    color: Color.contrastColor,
+    fontFamily: Fonts.base
+  },
+  carNumber: {
+    fontSize: 23,
+    lineHeight: 28,
+    marginBottom: 15,
+    textAlign: "center",
+    color: Color.contrastColor,
+    fontFamily: Fonts.bold
   },
   profileContactsContainer: {
     display: "flex",
