@@ -10,7 +10,9 @@ import { TabBarIcon } from "../components";
 import ScannerScreen from "../screens/ScannerScreen";
 import ProfileScreen from "../screens/Profile";
 import SearchScreen from "../screens/SearchScreen";
-import AboutScreen from "../screens/AboutScreen";
+import SettingsScreen from "../screens/SettingsScreen";
+import InfoScreen from "../screens/InfoScreen";
+import HelpScreen from "../screens/HelpScreen";
 import Colors from "../constants/Colors";
 
 const ProfileStack = createStackNavigator({
@@ -48,12 +50,20 @@ SearchStack.navigationOptions = {
 /**
  *
  */
-const AboutStack = createStackNavigator({
-  About: AboutScreen
+const SettingsStack = createStackNavigator({
+  Settings: SettingsScreen,
+  Info: InfoScreen,
+  Help: HelpScreen,
+}, {
+  transitionConfig: () => ({
+    transitionSpec: {
+      duration: 0,
+    },
+  }),
 });
 
-AboutStack.navigationOptions = {
-  tabBarLabel: "About",
+SettingsStack.navigationOptions = {
+  tabBarLabel: "Settings",
   tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="cog" />
 };
 
@@ -62,7 +72,7 @@ export default createBottomTabNavigator(
     ProfileStack,
     ScannerStack,
     SearchStack,
-    AboutStack
+    SettingsStack
   },
   {
     tabBarOptions: {
