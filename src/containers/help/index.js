@@ -1,6 +1,6 @@
 // @flow
 
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { ImageBackground, Text, TouchableOpacity, View, Linking } from "react-native";
 // $FlowFixMe
 import Icon from "react-native-vector-icons/FontAwesome";

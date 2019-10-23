@@ -1,33 +1,33 @@
 
 import { StyleSheet } from "react-native";
+import Colors from "../../constants/Colors";
+import Fonts from "../../constants/Fonts";
 
 export default StyleSheet.create({
   container: {
-    width: "100%",
-    flex: 1,
-    justifyContent: "flex-end"
+    paddingHorizontal: 25
   },
-  profileFooter: {
-    marginBottom: 10
+  backButton: {
+    color: Colors.contrastColor,
+    fontSize: 20
   },
-  signout: {
+  settingTitle: {
+    textTransform: "capitalize",
+    color: Colors.contrastColor,
+    fontSize: 25,
+    lineHeight: 30,
+    fontFamily: Fonts.base,
+    marginLeft: 30
+  },
+  titleWrapper: {
     flexDirection: "row",
-    textAlign: "center",
-    justifyContent: "center"
+    marginTop: 60,
+    alignItems: "center"
   },
-  row: {
-    flexDirection: "row"
-  },
-  signoutOption: {
-    fontWeight: "bold",
-    color: "#006dcf"
-  },
-  optionIconContainer: {
-    marginRight: 9
-  },
-  optionText: {
-    color: "white",
+  infoText: {
+    color: Colors.contrastColor,
     fontSize: 20,
-    marginTop: 1
+    marginTop: 35,
+    fontFamily: Fonts.base,
   }
 });
