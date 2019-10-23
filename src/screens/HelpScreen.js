@@ -1,3 +1,3 @@
-import Info from "../containers/info";
+import Help from "../containers/help";
 
-export default Info;
+export default Help;
