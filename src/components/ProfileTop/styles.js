@@ -8,10 +8,26 @@ export default StyleSheet.create({
   profileInfo: {
     fontSize: 25,
     lineHeight: 30,
-    marginBottom: 18,
+    marginBottom: 15,
     textAlign: "center",
     color: "#ffffff",
     fontFamily: Fonts.base
+  },
+  carBrand: {
+    fontSize: 22,
+    lineHeight: 27,
+    marginBottom: 10,
+    textAlign: "center",
+    color: "#ffffff",
+    fontFamily: Fonts.base
+  },
+  carNumber: {
+    fontSize: 23,
+    lineHeight: 28,
+    marginBottom: 15,
+    textAlign: "center",
+    color: "#ffffff",
+    fontFamily: Fonts.bold
   },
   profileContactsContainer: {
     display: "flex",
