@@ -50,17 +50,20 @@ SearchStack.navigationOptions = {
 /**
  *
  */
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
-  Info: InfoScreen,
-  Help: HelpScreen,
-}, {
-  transitionConfig: () => ({
-    transitionSpec: {
-      duration: 0,
-    },
-  }),
-});
+const SettingsStack = createStackNavigator(
+  {
+    Settings: SettingsScreen,
+    Info: InfoScreen,
+    Help: HelpScreen
+  },
+  {
+    transitionConfig: () => ({
+      transitionSpec: {
+        duration: 0
+      }
+    })
+  }
+);
 
 SettingsStack.navigationOptions = {
   tabBarLabel: "Settings",

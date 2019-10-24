@@ -13,21 +13,21 @@ export default StyleSheet.create({
     fontSize: 25,
     lineHeight: 30,
     fontFamily: Fonts.base,
-    marginTop: 60,
+    marginTop: 60
   },
   profileFooter: {
     marginBottom: 40,
-    marginTop: "auto",
+    marginTop: "auto"
   },
   signout: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "flex-start",
+    justifyContent: "flex-start"
   },
   signoutOption: {
     fontSize: 20,
     color: Colors.contrastColor,
-    fontFamily: Fonts.base,
+    fontFamily: Fonts.base
   },
   signoutIcon: {
     marginRight: 18,

@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { actions } from "./redux";
 import { ProfileTop, ProfileBody } from "../../components";
 import styles from "./styles";
-import { getProfile } from "../scanner/redux/selectors";
+import { getUserProfile } from "../scanner/redux/selectors";
 
 const profilePicture = require("../../assets/images/user.jpg");
 const noData = require("../../assets/images/no-data-found.png");
@@ -43,7 +43,7 @@ class Profile extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  user: getProfile(state)
+  user: getUserProfile(state)
 });
 
 const mapDispatchToProps = dispatch =>

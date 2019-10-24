@@ -12,6 +12,10 @@ import styles from "./styles";
 import { Camera } from "../../components";
 
 class Scanner extends Component<Props, *> {
+  static navigationOptions = {
+    header: null
+  };
+
   snap = data => {
     this.props.processScanData(data.uri);
   };

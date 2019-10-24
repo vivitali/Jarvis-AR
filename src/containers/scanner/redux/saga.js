@@ -1,7 +1,12 @@
 // @flow
 import { put, takeLatest } from "redux-saga/effects";
 import type { Saga } from "redux-saga";
-import { loadScanPending, loadScanSuccess, loadScanFailure } from "./actions";
+import {
+  loadScanPending,
+  loadScanSuccess,
+  loadScanFailure,
+  selectUserProfile
+} from "./actions";
 import * as constants from "./constants";
 import { getUserByCarNumber } from "../../../services/api";
 // $FlowFixMe
@@ -40,6 +45,15 @@ export function* searchNumber({ payload }: any): any {
     yield put(loadScanSuccess(data));
     //todo check if user exist before navigation
     // move to a general handler
+  } catch (error) {
+    alert(error);
+    yield put(loadScanFailure(error));
+  }
+}
+
+export function* navigationProfile({ payload }: any): any {
+  try {
+    yield put(selectUserProfile(payload));
     NavigationService.navigate("Profile");
   } catch (error) {
     alert(error);
@@ -54,6 +68,7 @@ export function* searchNumber({ payload }: any): any {
 export function* tripSaga(): Saga<*> {
   yield takeLatest(constants.PROCESS_SCAN_DATA, processScanData);
   yield takeLatest(constants.SEARCH_NUMBER, searchNumber);
+  yield takeLatest(constants.NAVIGATE_PROFILE, navigationProfile);
 }
 
 export default tripSaga;

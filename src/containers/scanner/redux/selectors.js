@@ -40,7 +40,6 @@ export const getProfileData = createSelector(
 
 /**
  * Selector for getting profile
- * todo: now it's hardcoded to use first item in result
  * @return {*}
  */
 export const getProfile = createSelector(
@@ -56,5 +55,10 @@ export const getProfile = createSelector(
         name: user.users_name,
         carNumber: user.cars_number,
         carBrand: user.cars_brand
-      }))[0]
+      }))
+);
+
+export const getUserProfile = createSelector(
+  getScannerReducer,
+  scanner => scanner.selectedUser
 );
