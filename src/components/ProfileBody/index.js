@@ -1,6 +1,7 @@
 import React from "react";
 import { TouchableOpacity, View } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from "react-native-vector-icons/FontAwesome5";
+import EntypoIcon from "react-native-vector-icons/Entypo";
 import styles from "./styles";
 
 const ProfileBody = ({ user, onPhoneWorkPress, onPhonePress }) => (
@@ -9,7 +10,7 @@ const ProfileBody = ({ user, onPhoneWorkPress, onPhonePress }) => (
       <View style={styles.row}>
         <TouchableOpacity style={styles.option} onPress={onPhonePress}>
           <View style={styles.optionIconContainer}>
-            <Icon name="mobile" size={48} color="#dda720" />
+            <EntypoIcon name="mobile" size={35.2} color="#dda720" />
           </View>
         </TouchableOpacity>
         {!!user.phone_work && (
