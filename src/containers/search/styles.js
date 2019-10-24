@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 25,
-    marginTop: 100,
+    marginTop: 100
   },
   searchInputWrapper: {
     display: "flex",
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   searchInput: {
     color: Colors.contrastColor,
     fontSize: 20,
-    fontFamily: Fonts.base,
+    fontFamily: Fonts.base
   },
   userCard: {
     backgroundColor: Colors.contrastColor,
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     paddingVertical: 13,
     paddingRight: 23,
     paddingLeft: 6,
-    height: 'auto',
+    height: "auto",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",

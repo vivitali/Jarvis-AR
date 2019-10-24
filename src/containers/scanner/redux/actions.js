@@ -40,5 +40,3 @@ export const selectUserProfile = (payload: any) => ({
   type: constants.SELECT_PROFILE,
   payload
 });
-
-

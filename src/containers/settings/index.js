@@ -7,7 +7,7 @@ import { ImageBackground, Text, TouchableOpacity, View } from "react-native";
 // $FlowFixMe
 import Icon from "react-native-vector-icons/FontAwesome";
 
-import {actions as signinAction} from "../signin/redux";
+import { actions as signinAction } from "../signin/redux";
 import styles from "./styles";
 
 import { type Props } from "./types";
@@ -19,41 +19,53 @@ class Settings extends Component<Props, *> {
   });
 
   render() {
-    const { signOut, navigation: {navigate} } = this.props;
+    const {
+      signOut,
+      navigation: { navigate }
+    } = this.props;
 
     return (
-      <ImageBackground source={Layout.bgImage} style={{width: "100%", height: "100%"}}>
+      <ImageBackground
+        source={Layout.bgImage}
+        style={{ width: "100%", height: "100%" }}
+      >
         <View style={styles.container}>
           <Text style={styles.settingTitle}>Settings</Text>
           <View style={styles.settingBtnsWrapper}>
             <TouchableOpacity
               title="Info"
-              onPress={() => navigate('Info')}
+              onPress={() => navigate("Info")}
               style={styles.settingBtns}
             >
-              <Icon name="info" size={22} style={[styles.signoutOption, styles.signoutIcon]}/>
-              <Text style={styles.signoutOption}>
-                Info
-              </Text>
+              <Icon
+                name="info"
+                size={22}
+                style={[styles.signoutOption, styles.signoutIcon]}
+              />
+              <Text style={styles.signoutOption}>Info</Text>
             </TouchableOpacity>
             <TouchableOpacity
               title="Help"
-              onPress={() => navigate('Help')}
+              onPress={() => navigate("Help")}
               style={styles.settingBtns}
             >
-              <Icon name="question-circle" size={22} style={[styles.signoutOption, styles.signoutIcon]}/>
-              <Text style={styles.signoutOption}>
-                Help
-              </Text>
+              <Icon
+                name="question-circle"
+                size={22}
+                style={[styles.signoutOption, styles.signoutIcon]}
+              />
+              <Text style={styles.signoutOption}>Help</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.profileFooter}>
             <TouchableOpacity style={styles.option} onPress={signOut}>
               <View style={styles.signout}>
-                <Icon name="sign-out" size={22} style={[styles.signoutOption, styles.signoutIcon]}/>
-                <Text style={styles.signoutOption}>
-                  Log Out
-                </Text>
+                <Icon
+                  name="sign-out"
+                  size={22}
+                  style={[styles.signoutOption, styles.signoutIcon]}
+                />
+                <Text style={styles.signoutOption}>Log Out</Text>
               </View>
             </TouchableOpacity>
           </View>

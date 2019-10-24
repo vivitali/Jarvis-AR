@@ -13,20 +13,27 @@ export default class Info extends Component<Props, *> {
   });
 
   render() {
-    const {navigation} = this.props;
+    const { navigation } = this.props;
 
     return (
-      <ImageBackground source={Layout.bgImage} style={{width: "100%", height: "100%"}}>
+      <ImageBackground
+        source={Layout.bgImage}
+        style={{ width: "100%", height: "100%" }}
+      >
         <View style={styles.container}>
           <View style={styles.titleWrapper}>
-            <TouchableOpacity onPress={() => {
-              navigation.goBack()
-            }}>
-              <Icon name="arrow-left" style={styles.backButton}/>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.goBack();
+              }}
+            >
+              <Icon name="arrow-left" style={styles.backButton} />
             </TouchableOpacity>
             <Text style={styles.settingTitle}>Info</Text>
           </View>
-          <Text style={styles.infoText}>This is the best app you've ever seen</Text>
+          <Text style={styles.infoText}>
+            This is the best app you've ever seen
+          </Text>
         </View>
       </ImageBackground>
     );

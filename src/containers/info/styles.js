@@ -1,4 +1,3 @@
-
 import { StyleSheet } from "react-native";
 import Colors from "../../constants/Colors";
 import Fonts from "../../constants/Fonts";
@@ -28,6 +27,6 @@ export default StyleSheet.create({
     color: Colors.contrastColor,
     fontSize: 20,
     marginTop: 35,
-    fontFamily: Fonts.base,
+    fontFamily: Fonts.base
   }
 });

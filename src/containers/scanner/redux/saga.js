@@ -1,7 +1,12 @@
 // @flow
 import { put, takeLatest } from "redux-saga/effects";
 import type { Saga } from "redux-saga";
-import { loadScanPending, loadScanSuccess, loadScanFailure, selectUserProfile } from "./actions";
+import {
+  loadScanPending,
+  loadScanSuccess,
+  loadScanFailure,
+  selectUserProfile
+} from "./actions";
 import * as constants from "./constants";
 import { getUserByCarNumber } from "../../../services/api";
 // $FlowFixMe
