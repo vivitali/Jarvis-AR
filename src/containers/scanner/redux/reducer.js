@@ -4,7 +4,8 @@ import {
   LOAD_SCAN_FAILURE,
   LOAD_SCAN_PENDING,
   LOAD_SCAN_SUCCESS,
-  RESET_SCAN_DATA
+  RESET_SCAN_DATA,
+  SELECT_PROFILE
 } from "./constants";
 import type { ScannerState, Action } from "./types";
 
@@ -39,6 +40,11 @@ export default function reducer(
         error: action.error,
         loading: false,
         loaded: false
+      };
+    case SELECT_PROFILE:
+      return {
+        ...state,
+        selectedUser: action.payload
       };
     case RESET_SCAN_DATA:
       return initialState;
