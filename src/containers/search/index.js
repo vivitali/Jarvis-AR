@@ -73,8 +73,8 @@ class Search extends Component<Props, State> {
                       {user.carNumber}
                     </Text>
                   )}
-                  {!!user.users_name && (
-                    <Text style={styles.userDetails}>{user.users_name}</Text>
+                  {!!user.name && (
+                    <Text style={styles.userDetails}>{user.name}</Text>
                   )}
                 </View>
                 <TouchableOpacity
