@@ -10,7 +10,7 @@ import {
 import type { ScannerState, Action } from "./types";
 
 export const initialState: ScannerState = {
-  data: null,
+  data: [],
   loading: false,
   loaded: false,
   error: null
