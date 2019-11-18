@@ -43,6 +43,7 @@ export default class SignIn extends Component {
             value={email}
             onChangeText={text => onInputChange(text, "email")}
             placeholder="Email"
+            onSubmitEditing={onSignIn}
           />
         </View>
         <View style={[styles.textInputWrapper, styles.passwordWrapper]}>
@@ -53,6 +54,7 @@ export default class SignIn extends Component {
             placeholder="Password"
             textContentType="password"
             secureTextEntry={this.state.hidePassword}
+            onSubmitEditing={onSignIn}
           />
           <TouchableOpacity
             onPress={this.managePasswordVisibility}
