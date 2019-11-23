@@ -26,7 +26,7 @@ class Camera extends React.Component {
     const { isFocused } = this.props;
 
     if (!isFocused) {
-      return <View></View>;
+      return <Text>Camera is disabled</Text>;
     }
 
     return (
