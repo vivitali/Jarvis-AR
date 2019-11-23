@@ -1,7 +1,8 @@
 import React from "react";
-import { TouchableOpacity, View } from "react-native";
+import { TouchableOpacity, View, Text } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { RNCamera } from "react-native-camera";
+import { withNavigationFocus } from "react-navigation";
 
 import styles from "./styles";
 
@@ -11,9 +12,7 @@ const PICTURE_OPTIONS = {
   forceUpOrientation: true
 };
 
-export default class App extends React.Component {
-  state = {};
-
+class Camera extends React.Component {
   snap = async () => {
     if (!this.camera) {
       return;
@@ -24,17 +23,22 @@ export default class App extends React.Component {
   };
 
   render() {
+    const { isFocused } = this.props;
+
+    if (!isFocused) {
+      return <View></View>;
+    }
+
     return (
       <View style={styles.container}>
         <RNCamera
           ref={ref => (this.camera = ref)}
           style={styles.container}
           captureAudio={false}
-          type={this.state.type}
         >
           <View style={styles.actionWrapper}>
             <TouchableOpacity style={styles.snap} onPress={this.snap}>
-              <Icon name="camera" size={40} color="#ccc" />
+              <Icon name="camera" size={50} color="#ccc" />
             </TouchableOpacity>
           </View>
         </RNCamera>
@@ -42,3 +46,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default withNavigationFocus(Camera);
