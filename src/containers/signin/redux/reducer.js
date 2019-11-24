@@ -2,7 +2,8 @@ import {
   AUTH_PENDING,
   AUTH_SUCCESS,
   AUTH_FAILURE,
-  RESET_AUTH
+  RESET_AUTH,
+  RESET_ERROR
 } from "./constants";
 
 export const initialState = {
@@ -35,6 +36,12 @@ export default function reducer(state = initialState, action) {
       };
     case RESET_AUTH:
       return initialState;
+
+    case RESET_ERROR:
+      return {
+        ...state,
+        error: null
+      };
     default:
       return state;
   }

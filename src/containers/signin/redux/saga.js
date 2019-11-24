@@ -22,8 +22,12 @@ export function* authenticate({ payload }) {
     });
     yield put(authenticationSuccess());
     yield navigate("Scanner");
-  } catch ({ message }) {
-    yield put(authenticationFailure(message));
+  } catch ({ message, name }) {
+    const err =
+      name === "Missing required parameters"
+        ? "Please, fill all required fields"
+        : message;
+    yield put(authenticationFailure(err));
   }
 }
 

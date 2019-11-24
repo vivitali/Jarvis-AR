@@ -12,6 +12,8 @@ import { getUserByCarNumber } from "../../../services/api";
 // $FlowFixMe
 import RNMlKit from "react-native-firebase-mlkit";
 import * as NavigationService from "../../../services/NavigationService";
+import { getProfile } from "./selectors";
+import { select } from "@redux-saga/core/effects";
 
 export function* processScanData({ payload }: any): Saga<*> {
   yield put(loadScanPending());
@@ -31,7 +33,13 @@ export function* processScanData({ payload }: any): Saga<*> {
 
     const data = yield getUserByCarNumber(processedVR);
     yield put(loadScanSuccess(data));
-    //todo check if user exist before navigation
+    const [firstMatch] = yield select(getProfile);
+
+    if (!firstMatch) {
+      throw "Please, try again";
+    }
+
+    yield put(selectUserProfile(firstMatch));
     NavigationService.navigate("Profile");
   } catch (error) {
     alert(error);

@@ -38,6 +38,7 @@ class SignIn extends Component {
   }
 
   componentWillMount() {
+    this.props.resetAuthError();
     this.keyboardWillShowSub = Keyboard.addListener(
       "keyboardWillShow",
       this.keyboardWillShow
@@ -131,7 +132,8 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      authenticate: actions.authenticate
+      authenticate: actions.authenticate,
+      resetAuthError: actions.resetAuthError
     },
     dispatch
   );

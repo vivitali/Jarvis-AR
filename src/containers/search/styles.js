@@ -15,12 +15,14 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     borderBottomColor: Colors.contrastColor,
     justifyContent: "space-between",
-    marginBottom: 10
+    marginBottom: 10,
+    position: "relative"
   },
   searchInput: {
     color: Colors.contrastColor,
     fontSize: 20,
-    fontFamily: Fonts.base
+    fontFamily: Fonts.base,
+    width: "100%"
   },
   userCard: {
     backgroundColor: Colors.contrastColor,
@@ -56,7 +58,9 @@ const styles = StyleSheet.create({
   searchBtn: {
     borderWidth: 0,
     marginBottom: 5,
-    height: "auto"
+    height: "auto",
+    position: "absolute",
+    right: 0
   },
   textUnderline: {
     textDecorationColor: Colors.searchResult,

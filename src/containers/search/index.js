@@ -54,7 +54,10 @@ class Search extends Component<Props, State> {
               onChangeText={search => this.setState({ search })}
               placeholder="Enter car number"
               style={styles.searchInput}
+              returnKeyType="search"
+              autoCorrect={false}
               placeholderTextColor="#fff"
+              onSubmitEditing={this.onSearch}
             />
             <Button onPress={this.onSearch} style={styles.searchBtn}>
               <Icon name="search" size={22} color="#fff" />

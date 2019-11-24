@@ -25,3 +25,7 @@ export const authenticationFailure = error => ({
 export const resetAuthenticationData = () => ({
   type: constants.RESET_AUTH
 });
+
+export const resetAuthError = () => ({
+  type: constants.RESET_ERROR
+});
