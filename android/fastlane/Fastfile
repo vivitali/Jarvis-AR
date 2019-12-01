@@ -1,0 +1,40 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Deploy a new version to the Google Play"
+  lane :deploy do
+    gradle(task: "clean assembleRelease")
+    upload_to_play_store
+  end
+    before_all do
+      sh "rm -f ../app/build/outputs/apk/*/*/*.apk"
+    end
+  lane :playstore do
+    increment_version_code(gradle_file_path: "app/build.gradle")
+
+    gradle(
+      task: 'assemble',
+      build_type: 'Release'
+    )
+
+    upload_to_play_store(
+        track: 'alpha',
+        rollout: '0.51'
+      ) # Uploads the APK built in the gradle step above and releases it to all production users
+  end
+end
