@@ -15,7 +15,6 @@
     "glow:watch": "glow --watch",
     "deploy:android": "cd android && fastlane playstore",
     "predeploy:android": "node dev/fastlane",
-    "postdeploy:android": "node dev/fastlane/post",
     "predeploy:ios": "npm run preios",
     "deploy:ios": "cd ios && fastlane beta"
   },

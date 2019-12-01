@@ -1,4 +1,4 @@
-package com.jarvis;
+package com.ssar.app;
 
 import com.facebook.react.ReactActivity;
 

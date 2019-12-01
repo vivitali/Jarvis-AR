@@ -10,31 +10,41 @@
 #     https://docs.fastlane.tools/plugins/available-plugins
 #
 
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
+update_fastlane
 
 default_platform(:android)
 
 platform :android do
-  desc "Deploy a new version to the Google Play"
-  lane :deploy do
-    gradle(task: "clean assembleRelease")
-    upload_to_play_store
-  end
+
     before_all do
-      sh "rm -f ../app/build/outputs/apk/*/*/*.apk"
+     sh "rm -rf ../app/build"
+     sh "cp ./../../dev/fastlane/key.keystore ./../app/key.keystore"
     end
+
+    after_all do
+      sh "rm -f ./../app/key.keystore"
+      sh "rm -f ./api.json"
+      sh "rm -f ./app/google-services.json"
+      sh "rm -f ./../app/src/debug/google-services.json"
+      sh "rm -f ./../app/src/release/google-services.json"
+    end
+
   lane :playstore do
-    increment_version_code(gradle_file_path: "app/build.gradle")
+   increment_version_code(gradle_file_path: "app/build.gradle")
 
     gradle(
-      task: 'assemble',
+      task: 'bundle',
       build_type: 'Release'
     )
 
+    # Uploads the APK built in the gradle step above and releases it to all production users
     upload_to_play_store(
         track: 'alpha',
         rollout: '0.51'
-      ) # Uploads the APK built in the gradle step above and releases it to all production users
+      )
+
+      gradle(
+        task: "clean"
+      )
   end
 end

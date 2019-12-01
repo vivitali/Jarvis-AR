@@ -129,27 +129,33 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.jarvis"
+        applicationId "com.ssar.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode 166
+        versionName "1.1"
         missingDimensionStrategy 'react-native-camera', 'mlkit'
     }
+     signingConfigs {
+            release {
+                def localFile = project.env.get("ANDROID_STORE_FILE")
+
+                if (localFile) {
+                    storeFile file(project.env.get("ANDROID_STORE_FILE"))
+                    storePassword project.env.get('ANDROID_STORE_PASSWORD')
+                    keyAlias project.env.get('ANDROID_KEY_ALIAS')
+                    keyPassword project.env.get('ANDROID_KEY_PASSWORD')
+                } else {
+                    throw new GradleException('No signing information found.')
+                }
+            }
+     }
     splits {
         abi {
             reset()
             enable enableSeparateBuildPerCPUArchitecture
             universalApk false  // If true, also generate a universal APK
             include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
-        }
-    }
-    signingConfigs {
-        debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
         }
     }
     buildTypes {
@@ -159,7 +165,7 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
