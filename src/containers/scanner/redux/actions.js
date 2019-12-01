@@ -5,38 +5,38 @@ import type { ScannerData } from "./types";
 
 export const processScanData = (payload: ScannerData) => ({
   type: constants.PROCESS_SCAN_DATA,
-  payload
+  payload,
 });
 
 export const loadScanPending = () => ({
-  type: constants.LOAD_SCAN_PENDING
+  type: constants.LOAD_SCAN_PENDING,
 });
 
 export const loadScanSuccess = (payload: ScannerData) => ({
   type: constants.LOAD_SCAN_SUCCESS,
-  payload
+  payload,
 });
 
 export const loadScanFailure = (error: Error) => ({
   type: constants.LOAD_SCAN_FAILURE,
-  error
+  error,
 });
 
 export const resetScanData = () => ({
-  type: constants.RESET_SCAN_DATA
+  type: constants.RESET_SCAN_DATA,
 });
 
 export const searchNumber = (payload: string) => ({
   type: constants.SEARCH_NUMBER,
-  payload
+  payload,
 });
 
 export const navigateProfile = (payload: any) => ({
   type: constants.NAVIGATE_PROFILE,
-  payload
+  payload,
 });
 
 export const selectUserProfile = (payload: any) => ({
   type: constants.SELECT_PROFILE,
-  payload
+  payload,
 });

@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 25,
-    marginTop: 100
+    marginTop: 100,
   },
   searchInputWrapper: {
     display: "flex",
@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
     borderBottomColor: Colors.contrastColor,
     justifyContent: "space-between",
     marginBottom: 10,
-    position: "relative"
+    position: "relative",
   },
   searchInput: {
     color: Colors.contrastColor,
     fontSize: 20,
     fontFamily: Fonts.base,
-    width: "100%"
+    width: "100%",
   },
   userCard: {
     backgroundColor: Colors.contrastColor,
@@ -38,12 +38,12 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    borderWidth: 0
+    borderWidth: 0,
   },
   userDetails: {
     color: Colors.searchResult,
     fontSize: 20,
-    fontFamily: Fonts.base
+    fontFamily: Fonts.base,
   },
   mobileBtn: {
     backgroundColor: Colors.pressButton,
@@ -53,19 +53,19 @@ const styles = StyleSheet.create({
     height: 40,
     borderRadius: 50,
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   searchBtn: {
     borderWidth: 0,
     marginBottom: 5,
     height: "auto",
     position: "absolute",
-    right: 0
+    right: 0,
   },
   textUnderline: {
     textDecorationColor: Colors.searchResult,
-    textDecorationLine: "underline"
-  }
+    textDecorationLine: "underline",
+  },
 });
 
 export default styles;

@@ -15,13 +15,13 @@ import Layout from "../../constants/Layout";
 
 class Settings extends Component<Props, *> {
   static navigationOptions = () => ({
-    header: null
+    header: null,
   });
 
   render() {
     const {
       signOut,
-      navigation: { navigate }
+      navigation: { navigate },
     } = this.props;
 
     return (
@@ -80,12 +80,9 @@ const mapStateToProps = () => ({});
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      signOut: signinAction.invalidate
+      signOut: signinAction.invalidate,
     },
     dispatch
   );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Settings);
+export default connect(mapStateToProps, mapDispatchToProps)(Settings);

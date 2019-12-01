@@ -9,8 +9,8 @@ const bgImage = require("../assets/images/bg.png");
 export default {
   window: {
     width,
-    height
+    height,
   },
   isSmallDevice: width < 375,
-  bgImage
+  bgImage,
 };

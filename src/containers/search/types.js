@@ -1,8 +1,8 @@
 // @flow
 export type Props = {|
-  searchNumber: (search: string) => void
+  searchNumber: (search: string) => void,
 |};
 
 export type State = {|
-  search: string
+  search: string,
 |};

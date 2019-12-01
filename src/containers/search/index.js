@@ -9,7 +9,7 @@ import {
   TextInput,
   View,
   Text,
-  TouchableOpacity
+  TouchableOpacity,
 } from "react-native";
 import { actions } from "../scanner/redux";
 import { actions as actionsProfile } from "../profile/redux";
@@ -23,11 +23,11 @@ import Icon from "react-native-vector-icons/FontAwesome";
 
 class Search extends Component<Props, State> {
   state = {
-    search: ""
+    search: "",
   };
 
   static navigationOptions = {
-    header: null
+    header: null,
   };
 
   onSearch = () => {
@@ -97,7 +97,7 @@ class Search extends Component<Props, State> {
 }
 
 const mapStateToProps = state => ({
-  users: getProfile(state)
+  users: getProfile(state),
 });
 
 const mapDispatchToProps = dispatch =>
@@ -105,12 +105,9 @@ const mapDispatchToProps = dispatch =>
     {
       searchNumber: actions.searchNumber,
       navigateProfile: actions.navigateProfile,
-      proceedAction: actionsProfile.proceedAction
+      proceedAction: actionsProfile.proceedAction,
     },
     dispatch
   );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Search);
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

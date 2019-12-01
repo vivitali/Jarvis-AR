@@ -6,7 +6,7 @@ import {
   Text,
   TouchableOpacity,
   View,
-  Linking
+  Linking,
 } from "react-native";
 // $FlowFixMe
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -16,7 +16,7 @@ import Layout from "../../constants/Layout";
 
 export default class Help extends Component<Props, *> {
   static navigationOptions = () => ({
-    header: null
+    header: null,
   });
 
   render() {

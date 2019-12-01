@@ -3,7 +3,7 @@ import {
   LOAD_SCANNER,
   LOAD_SCAN_FAILURE,
   LOAD_SCAN_PENDING,
-  LOAD_SCAN_SUCCESS
+  LOAD_SCAN_SUCCESS,
 } from "./constants";
 
 export const DummyData: "DUMMY_DATA" = "DUMMY_DATA";
@@ -17,26 +17,26 @@ export type Action =
   | LoadScanErrorAction;
 
 export type LoadScanDataAction = {|
-  type: typeof LOAD_SCANNER
+  type: typeof LOAD_SCANNER,
 |};
 
 export type LoadScanPendingAction = {|
-  type: typeof LOAD_SCAN_PENDING
+  type: typeof LOAD_SCAN_PENDING,
 |};
 
 export type LoadScanSuccessAction = {|
   type: typeof LOAD_SCAN_SUCCESS,
-  payload: ScannerData
+  payload: ScannerData,
 |};
 
 export type LoadScanErrorAction = {|
   type: typeof LOAD_SCAN_FAILURE,
-  error: Error
+  error: Error,
 |};
 
 export type ScannerState = $ReadOnly<{|
   data: ?ScannerData,
   loading: boolean,
   loaded: boolean,
-  error: ?Error // TODO: create common Error type
+  error: ?Error, // TODO: create common Error type
 |}>;

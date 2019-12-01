@@ -5,5 +5,5 @@ export default {
   clientId: config.AUTH0_CLIENT_ID || "clientId",
   audience: config.AUTH0_AUDIENCE || "audience",
   realm: config.AUTH0_REALM || "realm",
-  nodeJS: config.NODE_SERVER || ""
+  nodeJS: config.NODE_SERVER || "",
 };

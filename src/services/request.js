@@ -7,9 +7,9 @@ export const request = async ({ url, method, body }) => {
     method,
     headers: new Headers({
       Authorization: `Bearer ${accessToken}`,
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     }),
-    body: JSON.stringify(body)
+    body: JSON.stringify(body),
   });
 
   return response.json();

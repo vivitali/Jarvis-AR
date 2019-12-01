@@ -7,11 +7,11 @@ export const screenHeight = Dimensions.screenHeight;
 export const screenWidth = Dimensions.screenWidth;
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
   screen: {
     backgroundColor: Colors.black,
-    flex: 1
+    flex: 1,
   },
   camera: {
     position: "absolute",
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     top: 0,
     left: 0,
-    flex: 1
+    flex: 1,
   },
   imageBackground: {
     position: "absolute",
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-start",
     justifyContent: "flex-start",
     top: 0,
-    left: 0
+    left: 0,
   },
   buttonContainer: {
     width: 70,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     bottom: 36,
     alignSelf: "center",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
   button: {
     width: 64,
@@ -49,15 +49,15 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     borderRadius: 32,
     borderWidth: 4,
-    borderColor: Colors.black
+    borderColor: Colors.black,
   },
   boundingRect: {
     position: "absolute",
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 2,
-    borderColor: "#FF6600"
-  }
+    borderColor: "#FF6600",
+  },
 });
 
 export default styles;

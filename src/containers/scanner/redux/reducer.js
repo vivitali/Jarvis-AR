@@ -5,7 +5,7 @@ import {
   LOAD_SCAN_PENDING,
   LOAD_SCAN_SUCCESS,
   RESET_SCAN_DATA,
-  SELECT_PROFILE
+  SELECT_PROFILE,
 } from "./constants";
 import type { ScannerState, Action } from "./types";
 
@@ -13,7 +13,7 @@ export const initialState: ScannerState = {
   data: [],
   loading: false,
   loaded: false,
-  error: null
+  error: null,
 };
 
 export default function reducer(
@@ -25,26 +25,26 @@ export default function reducer(
       return {
         ...state,
         loading: true,
-        loaded: false
+        loaded: false,
       };
     case LOAD_SCAN_SUCCESS:
       return {
         ...state,
         data: action.payload,
         loading: false,
-        loaded: true
+        loaded: true,
       };
     case LOAD_SCAN_FAILURE:
       return {
         ...state,
         error: action.error,
         loading: false,
-        loaded: false
+        loaded: false,
       };
     case SELECT_PROFILE:
       return {
         ...state,
-        selectedUser: action.payload
+        selectedUser: action.payload,
       };
     case RESET_SCAN_DATA:
       return initialState;

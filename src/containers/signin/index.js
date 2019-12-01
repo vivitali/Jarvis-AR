@@ -8,7 +8,7 @@ import {
   Keyboard,
   SafeAreaView,
   ImageBackground,
-  Platform
+  Platform,
 } from "react-native";
 
 import { actions, selectors } from "./redux";
@@ -19,7 +19,7 @@ import styles, {
   WELCOME_MARGIN,
   WELCOME_MARGIN_SMALL,
   WELCOME_SIZE,
-  WELCOME_SIZE_SMALL
+  WELCOME_SIZE_SMALL,
 } from "./styles";
 
 import Layout from "../../constants/Layout";
@@ -27,7 +27,7 @@ import Layout from "../../constants/Layout";
 class SignIn extends Component {
   state = {
     email: null,
-    password: null
+    password: null,
   };
 
   constructor(props) {
@@ -58,12 +58,12 @@ class SignIn extends Component {
     Animated.parallel([
       Animated.timing(this.welcomeSize, {
         duration: event.duration,
-        toValue: WELCOME_SIZE_SMALL
+        toValue: WELCOME_SIZE_SMALL,
       }),
       Animated.timing(this.welcomePadding, {
         duration: event.duration,
-        toValue: WELCOME_MARGIN_SMALL
-      })
+        toValue: WELCOME_MARGIN_SMALL,
+      }),
     ]).start();
   };
 
@@ -71,18 +71,18 @@ class SignIn extends Component {
     Animated.parallel([
       Animated.timing(this.welcomeSize, {
         duration: event.duration,
-        toValue: WELCOME_SIZE
+        toValue: WELCOME_SIZE,
       }),
       Animated.timing(this.welcomePadding, {
         duration: event.duration,
-        toValue: WELCOME_MARGIN
-      })
+        toValue: WELCOME_MARGIN,
+      }),
     ]).start();
   };
 
   handleInputChange = (text, field) => {
     this.setState({
-      [field]: text
+      [field]: text,
     });
   };
 
@@ -104,8 +104,8 @@ class SignIn extends Component {
                 styles.bigText,
                 {
                   marginBottom: this.welcomePadding,
-                  fontSize: this.welcomeSize
-                }
+                  fontSize: this.welcomeSize,
+                },
               ]}
             >
               Welcome!
@@ -126,19 +126,16 @@ class SignIn extends Component {
 }
 
 const mapStateToProps = state => ({
-  error: selectors.getAuthError(state)
+  error: selectors.getAuthError(state),
 });
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       authenticate: actions.authenticate,
-      resetAuthError: actions.resetAuthError
+      resetAuthError: actions.resetAuthError,
     },
     dispatch
   );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SignIn);
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

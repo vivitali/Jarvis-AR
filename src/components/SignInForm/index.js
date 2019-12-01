@@ -4,7 +4,7 @@ import {
   TextInput,
   Text,
   TouchableOpacity,
-  TouchableHighlight
+  TouchableHighlight,
 } from "react-native";
 
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -15,7 +15,7 @@ import styles from "./styles";
 export default class SignIn extends Component {
   state = {
     hidePassword: true,
-    pressStatus: false
+    pressStatus: false,
   };
 
   managePasswordVisibility = () => {

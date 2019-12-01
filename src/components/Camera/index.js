@@ -9,17 +9,24 @@ import styles from "./styles";
 const PICTURE_OPTIONS = {
   quality: 1,
   fixOrientation: true,
-  forceUpOrientation: true
+  forceUpOrientation: true,
 };
 
 class Camera extends React.Component {
+  state = {
+    text: "",
+  };
+
+  onTextRecognized = text => {
+    this.setState({ text });
+  };
+
   snap = async () => {
-    if (!this.camera) {
+    if (!this.camera && !this.state.text) {
       return;
     }
 
-    const data = await this.camera.takePictureAsync(PICTURE_OPTIONS);
-    this.props.snap(data);
+    this.props.snap(this.state.text);
   };
 
   render() {
@@ -34,6 +41,7 @@ class Camera extends React.Component {
         <RNCamera
           ref={ref => (this.camera = ref)}
           style={styles.container}
+          onTextRecognized={this.onTextRecognized}
           captureAudio={false}
         >
           <View style={styles.actionWrapper}>

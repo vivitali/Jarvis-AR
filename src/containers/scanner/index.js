@@ -13,11 +13,11 @@ import { Camera } from "../../components";
 
 class Scanner extends Component<Props, *> {
   static navigationOptions = {
-    header: null
+    header: null,
   };
 
   snap = data => {
-    this.props.processScanData(data.uri);
+    this.props.processScanData(data);
   };
 
   render() {
@@ -30,19 +30,16 @@ class Scanner extends Component<Props, *> {
 }
 
 const mapStateToProps = state => ({
-  loading: selectors.isLoading(state)
+  loading: selectors.isLoading(state),
 });
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       processScanData: actions.processScanData,
-      resetScanData: actions.resetScanData
+      resetScanData: actions.resetScanData,
     },
     dispatch
   );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Scanner);
+export default connect(mapStateToProps, mapDispatchToProps)(Scanner);
