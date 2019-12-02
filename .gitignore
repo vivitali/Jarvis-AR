@@ -26,5 +26,10 @@ ios/Podfile.lock
 /ios/GoogleService-Info.plist
 /ios/Jarvis.app.dSYM.zip
 /ios/Jarvis.ipa
+
 /android/app/key.keystore
 /android/local.properties
+/android/build/
+
+/ios/Jarvis.xcworkspace/xcuserdata/
+/ios/Jarvis.xcodeproj/project.xcworkspace/
