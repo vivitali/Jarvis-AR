@@ -42,20 +42,18 @@ export const getProfileData = createSelector(
  * Selector for getting profile
  * @return {*}
  */
-export const getProfile = createSelector(
-  getProfileData,
-  profileData =>
-    Object.values(profileData)
-      .filter(Array.isArray)
-      // $FlowFixMe
-      .flat()
-      .map(user => ({
-        ...user,
-        tel: user.user_contacts_value,
-        name: user.users_name,
-        carNumber: user.cars_number,
-        carBrand: user.cars_brand
-      }))
+export const getProfile = createSelector(getProfileData, profileData =>
+  Object.values(profileData)
+    .filter(Array.isArray)
+    // $FlowFixMe
+    .flat()
+    .map(user => ({
+      ...user,
+      tel: user.user_contacts_value,
+      name: user.users_name,
+      carNumber: user.cars_number,
+      carBrand: user.cars_brand,
+    }))
 );
 
 export const getUserProfile = createSelector(

@@ -1,8 +1,7 @@
- <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="com.ssar.app">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -16,8 +15,7 @@
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.Black.NoTitleBar"
-            android:screenOrientation="portrait">
+            android:theme="@android:style/Theme.Black.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -29,7 +27,8 @@
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
         android:windowSoftInputMode="adjustResize"
-          android:exported="true">
+        android:screenOrientation="portrait"
+        android:exported="true">
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
     </application>

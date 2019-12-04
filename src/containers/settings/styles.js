@@ -5,7 +5,7 @@ import Fonts from "../../constants/Fonts";
 export default StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: 25
+    paddingHorizontal: 25,
   },
   settingTitle: {
     textTransform: "capitalize",
@@ -13,32 +13,32 @@ export default StyleSheet.create({
     fontSize: 25,
     lineHeight: 30,
     fontFamily: Fonts.base,
-    marginTop: 60
+    marginTop: 60,
   },
   profileFooter: {
     marginBottom: 40,
-    marginTop: "auto"
+    marginTop: "auto",
   },
   signout: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "flex-start"
+    justifyContent: "flex-start",
   },
   signoutOption: {
     fontSize: 20,
     color: Colors.contrastColor,
-    fontFamily: Fonts.base
+    fontFamily: Fonts.base,
   },
   signoutIcon: {
     marginRight: 18,
     width: 20,
-    textAlign: "center"
+    textAlign: "center",
   },
   settingBtns: {
     flexDirection: "row",
-    marginBottom: 25
+    marginBottom: 25,
   },
   settingBtnsWrapper: {
-    marginTop: 35
-  }
+    marginTop: 35,
+  },
 });

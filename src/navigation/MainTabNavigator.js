@@ -1,10 +1,8 @@
 // @flow
 
 import React from "react";
-import {
-  createStackNavigator,
-  createBottomTabNavigator
-} from "react-navigation";
+import { createBottomTabNavigator } from "react-navigation-tabs";
+import { createStackNavigator } from "react-navigation-stack";
 
 import { TabBarIcon } from "../components";
 import ScannerScreen from "../screens/ScannerScreen";
@@ -16,36 +14,36 @@ import HelpScreen from "../screens/HelpScreen";
 import Colors from "../constants/Colors";
 
 const ProfileStack = createStackNavigator({
-  Profile: ProfileScreen
+  Profile: ProfileScreen,
 });
 
 ProfileStack.navigationOptions = {
   tabBarLabel: "Profile",
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="user" />
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="user" />,
 };
 
 /**
  *
  */
 const ScannerStack = createStackNavigator({
-  Scanner: ScannerScreen
+  Scanner: ScannerScreen,
 });
 
 ScannerStack.navigationOptions = {
   tabBarLabel: "Scanner",
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="camera" />
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="camera" />,
 };
 
 /**
  *
  */
 const SearchStack = createStackNavigator({
-  Search: SearchScreen
+  Search: SearchScreen,
 });
 
 SearchStack.navigationOptions = {
   tabBarLabel: "Search",
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="search" />
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="search" />,
 };
 /**
  *
@@ -54,20 +52,20 @@ const SettingsStack = createStackNavigator(
   {
     Settings: SettingsScreen,
     Info: InfoScreen,
-    Help: HelpScreen
+    Help: HelpScreen,
   },
   {
     transitionConfig: () => ({
       transitionSpec: {
-        duration: 0
-      }
-    })
+        duration: 0,
+      },
+    }),
   }
 );
 
 SettingsStack.navigationOptions = {
   tabBarLabel: "Settings",
-  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="cog" />
+  tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="cog" />,
 };
 
 export default createBottomTabNavigator(
@@ -75,15 +73,15 @@ export default createBottomTabNavigator(
     ProfileStack,
     ScannerStack,
     SearchStack,
-    SettingsStack
+    SettingsStack,
   },
   {
     tabBarOptions: {
       showLabel: false,
       style: {
         backgroundColor: Colors.bottomBarBg,
-        boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.3)"
-      }
-    }
+        boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.3)",
+      },
+    },
   }
 );

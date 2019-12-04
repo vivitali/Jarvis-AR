@@ -16,11 +16,6 @@ or alternatively using `brew cask install fastlane`
 
 # Available Actions
 ## Android
-### android deploy
-```
-fastlane android deploy
-```
-Deploy a new version to the Google Play
 ### android playstore
 ```
 fastlane android playstore

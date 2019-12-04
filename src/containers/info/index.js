@@ -9,7 +9,7 @@ import Layout from "../../constants/Layout";
 
 export default class Info extends Component<Props, *> {
   static navigationOptions = () => ({
-    header: null
+    header: null,
   });
 
   render() {

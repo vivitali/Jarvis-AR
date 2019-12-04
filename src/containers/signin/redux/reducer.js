@@ -3,13 +3,13 @@ import {
   AUTH_SUCCESS,
   AUTH_FAILURE,
   RESET_AUTH,
-  RESET_ERROR
+  RESET_ERROR,
 } from "./constants";
 
 export const initialState = {
   loading: false,
   loaded: false,
-  error: null
+  error: null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -18,21 +18,21 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         loading: true,
-        loaded: false
+        loaded: false,
       };
     case AUTH_SUCCESS:
       return {
         ...state,
         error: null,
         loading: false,
-        loaded: true
+        loaded: true,
       };
     case AUTH_FAILURE:
       return {
         ...state,
         error: action.error,
         loading: false,
-        loaded: false
+        loaded: false,
       };
     case RESET_AUTH:
       return initialState;
@@ -40,7 +40,7 @@ export default function reducer(state = initialState, action) {
     case RESET_ERROR:
       return {
         ...state,
-        error: null
+        error: null,
       };
     default:
       return state;

@@ -9,8 +9,8 @@ import * as actions from "./actions";
 export function* proceedAction({
   payload: {
     type,
-    user: { tel, skype }
-  }
+    user: { tel, skype },
+  },
 }: any): Saga<*> {
   try {
     switch (type) {

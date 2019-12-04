@@ -5,27 +5,67 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.005112">
+      <testcase classname="fastlane.lanes" name="00: update_fastlane" time="3.558988">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: rm -f ../app/build/outputs/apk/*/*/*.apk" time="0.020686">
+      <testcase classname="fastlane.lanes" name="01: default_platform" time="0.000942">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: increment_version_code" time="0.010353">
+      <testcase classname="fastlane.lanes" name="02: rm -rf ../app/build" time="0.318803">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: gradle" time="59.535697">
+      <testcase classname="fastlane.lanes" name="03: cp ./../../dev/fastlane/key.keystore ./../app/key.keystore" time="0.007134">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: upload_to_play_store" time="15.142114">
+      <testcase classname="fastlane.lanes" name="04: increment_version_code" time="0.002982">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: gradle" time="84.351061">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: upload_to_play_store" time="128.508505">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: gradle" time="5.678114">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: rm -f ./../app/key.keystore" time="0.006045">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: rm -f ./api.json" time="0.004863">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: rm -f ./app/google-services.json" time="0.005381">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: rm -f ./../app/src/debug/google-services.json" time="0.005749">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="12: rm -f ./../app/src/release/google-services.json" time="0.004861">
         
       </testcase>
     

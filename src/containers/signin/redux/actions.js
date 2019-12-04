@@ -2,30 +2,30 @@ import * as constants from "./constants";
 
 export const authenticate = payload => ({
   type: constants.AUTHENTICATE,
-  payload
+  payload,
 });
 
 export const invalidate = () => ({
-  type: constants.INVALIDATE
+  type: constants.INVALIDATE,
 });
 
 export const authenticationPending = () => ({
-  type: constants.AUTH_PENDING
+  type: constants.AUTH_PENDING,
 });
 
 export const authenticationSuccess = () => ({
-  type: constants.AUTH_SUCCESS
+  type: constants.AUTH_SUCCESS,
 });
 
 export const authenticationFailure = error => ({
   type: constants.AUTH_FAILURE,
-  error
+  error,
 });
 
 export const resetAuthenticationData = () => ({
-  type: constants.RESET_AUTH
+  type: constants.RESET_AUTH,
 });
 
 export const resetAuthError = () => ({
-  type: constants.RESET_ERROR
+  type: constants.RESET_ERROR,
 });

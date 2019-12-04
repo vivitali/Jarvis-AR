@@ -6,20 +6,26 @@ import { withNavigationFocus } from "react-navigation";
 
 import styles from "./styles";
 
-const PICTURE_OPTIONS = {
-  quality: 1,
-  fixOrientation: true,
-  forceUpOrientation: true
-};
-
 class Camera extends React.Component {
+  state = {
+    cameraReady: false,
+    text: "",
+  };
+
+  onTextRecognized = text => {
+    this.setState({ text });
+  };
+
+  onCameraReady = () => {
+    this.setState({ cameraReady: true });
+  };
+
   snap = async () => {
-    if (!this.camera) {
+    if (!this.cameraReady && !this.state.text) {
       return;
     }
 
-    const data = await this.camera.takePictureAsync(PICTURE_OPTIONS);
-    this.props.snap(data);
+    this.props.snap(this.state.text);
   };
 
   render() {
@@ -32,8 +38,9 @@ class Camera extends React.Component {
     return (
       <View style={styles.container}>
         <RNCamera
-          ref={ref => (this.camera = ref)}
+          onCameraReady={this.onCameraReady}
           style={styles.container}
+          onTextRecognized={this.cameraReady ? this.onTextRecognized : null}
           captureAudio={false}
         >
           <View style={styles.actionWrapper}>

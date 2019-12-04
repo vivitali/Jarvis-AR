@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   signInContainer: {
     flex: 1,
     justifyContent: "center",
-    paddingHorizontal: 50
+    paddingHorizontal: 50,
   },
   bigText: {
     color: "rgba(255, 255, 255, 0.9)",
@@ -19,9 +19,9 @@ const styles = StyleSheet.create({
     lineHeight: 61,
     fontFamily: Fonts.black,
     textAlign: "center",
-    marginBottom: WELCOME_MARGIN
+    marginBottom: WELCOME_MARGIN,
   },
-  formContainer: { marginTop: 40 }
+  formContainer: { marginTop: 40 },
 });
 
 export default styles;

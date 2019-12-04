@@ -5,12 +5,12 @@ import {
   loadScanPending,
   loadScanSuccess,
   loadScanFailure,
-  selectUserProfile
+  selectUserProfile,
 } from "./actions";
 import * as constants from "./constants";
 import { getUserByCarNumber } from "../../../services/api";
 // $FlowFixMe
-import RNMlKit from "react-native-firebase-mlkit";
+// import RNMlKit from "react-native-firebase-mlkit";
 import * as NavigationService from "../../../services/NavigationService";
 import { getProfile } from "./selectors";
 import { select } from "@redux-saga/core/effects";
@@ -19,17 +19,13 @@ export function* processScanData({ payload }: any): Saga<*> {
   yield put(loadScanPending());
 
   try {
-    const visionResp = yield RNMlKit.deviceTextRecognition(payload);
-
-    if (!(visionResp && visionResp.length)) {
+    if (!(payload && payload.textBlocks.length)) {
       throw "UNMATCHED";
     }
 
-    const processedVR = visionResp
-      .filter((resp = {}) => resp.lineText)
-      .map(({ lineText }) => ({
-        text: lineText.split(" ").join("")
-      }));
+    const processedVR = payload.textBlocks.map(({ value }) => ({
+      text: value.split(" ").join(""),
+    }));
 
     const data = yield getUserByCarNumber(processedVR);
     yield put(loadScanSuccess(data));

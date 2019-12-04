@@ -35,5 +35,5 @@ export default {
   bottomBarBg,
   errorColor,
   pressButton,
-  searchResult
+  searchResult,
 };

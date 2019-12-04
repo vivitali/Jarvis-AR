@@ -14,7 +14,7 @@ import Layout from "../../constants/Layout";
 
 class Profile extends React.Component {
   static navigationOptions = {
-    header: null
+    header: null,
   };
 
   render() {
@@ -43,18 +43,15 @@ class Profile extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  user: getUserProfile(state)
+  user: getUserProfile(state),
 });
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      proceedAction: actions.proceedAction
+      proceedAction: actions.proceedAction,
     },
     dispatch
   );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Profile);
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);

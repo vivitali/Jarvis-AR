@@ -8,7 +8,7 @@ import {
   authenticationPending,
   authenticationSuccess,
   authenticationFailure,
-  resetAuthenticationData
+  resetAuthenticationData,
 } from "./actions";
 
 export function* authenticate({ payload }) {

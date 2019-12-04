@@ -4,7 +4,7 @@ import {
   Platform,
   StatusBar,
   StyleSheet,
-  View
+  View,
 } from "react-native";
 // import { AppLoading, Asset, Font, Icon } from "expo";
 import AppNavigator from "./navigation/AppNavigator";
@@ -16,7 +16,7 @@ import Layout from "./constants/Layout";
 
 export default class App extends React.Component {
   state = {
-    isLoadingComplete: true
+    isLoadingComplete: true,
   };
 
   render() {
@@ -77,6 +77,6 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
-  }
+    flex: 1,
+  },
 });

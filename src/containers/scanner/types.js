@@ -7,5 +7,5 @@ export type Props = {|
   loading: boolean,
   data: ScannerData,
   processScanData: (data: any) => void,
-  resetScanData: () => void
+  resetScanData: () => void,
 |};
