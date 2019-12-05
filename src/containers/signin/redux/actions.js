@@ -1,5 +1,10 @@
 import * as constants from "./constants";
 
+export const faceIdAuthenticate = payload => ({
+  type: constants.FACE_ID_AUTHENTICATE,
+  payload,
+});
+
 export const authenticate = payload => ({
   type: constants.AUTHENTICATE,
   payload,
