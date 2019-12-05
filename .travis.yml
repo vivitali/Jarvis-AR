@@ -44,9 +44,9 @@ before_install:
 - gem install fastlane -NV
 - echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
-script:
-- npm run flow
-- yes | /usr/local/android-sdk/tools/bin/sdkmanager "build-tools;28.0.3"
+# script:
+# - npm run flow
+# - yes | /usr/local/android-sdk/tools/bin/sdkmanager "build-tools;28.0.3"
 
 deploy:
   provider: script
