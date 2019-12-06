@@ -16,7 +16,10 @@
     "deploy:android": "cd android && fastlane playstore",
     "predeploy:android": "node dev/fastlane",
     "predeploy:ios": "npm run preios",
-    "deploy:ios": "cd ios && fastlane beta"
+    "deploy:ios": "cd ios && fastlane beta",
+    "flow-typed-install": "flow-typed install",
+    "flow-typed-create-stub-react-native": "flow-typed create-stub react-native",
+    "postinstall": "npm run flow-typed-install && npm run flow-typed-create-stub-react-native"
   },
   "dependencies": {
     "@react-native-community/async-storage": "1.6.3",
@@ -45,6 +48,7 @@
     "@babel/runtime": "7.7.4",
     "dotenv": "8.2.0",
     "flow-bin": "0.112.0",
+    "flow-typed": "^2.6.2",
     "glow": "1.2.2",
     "jest": "24.9.0",
     "metro-react-native-babel-preset": "0.57.0",
