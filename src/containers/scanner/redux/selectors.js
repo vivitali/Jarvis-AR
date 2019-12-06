@@ -1,4 +1,4 @@
-// @flow
+
 import { createSelector } from "reselect";
 import type { State } from "../../../redux/types"; //TODO: absolute path
 import type { ScannerState } from "./types";
