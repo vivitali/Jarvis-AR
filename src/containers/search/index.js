@@ -13,13 +13,15 @@ import {
 } from "react-native";
 import { actions } from "../scanner/redux";
 import { actions as actionsProfile } from "../profile/redux";
-import { getProfile } from "../scanner/redux/selectors";
+import { getProfile, isLoading } from "../scanner/redux/selectors";
 
 import styles from "./styles";
 
 import { type Props, type State } from "./types";
 import Layout from "../../constants/Layout";
 import Icon from "react-native-vector-icons/FontAwesome";
+
+import Loader from "../../components/Loader";
 
 class Search extends Component<Props, State> {
   state = {
@@ -40,7 +42,7 @@ class Search extends Component<Props, State> {
 
   render() {
     const { search } = this.state;
-    const { proceedAction, users } = this.props;
+    const { proceedAction, users, isSearching } = this.props;
 
     return (
       <ImageBackground
@@ -63,7 +65,9 @@ class Search extends Component<Props, State> {
               <Icon name="search" size={22} color="#fff" />
             </Button>
           </View>
-          {users &&
+          {isSearching && <Loader></Loader>}
+          {!isSearching &&
+            users &&
             users.map(user => (
               <Button
                 key={user.users_id}
@@ -98,6 +102,7 @@ class Search extends Component<Props, State> {
 
 const mapStateToProps = state => ({
   users: getProfile(state),
+  isSearching: isLoading(state),
 });
 
 const mapDispatchToProps = dispatch =>
