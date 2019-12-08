@@ -1,4 +1,4 @@
-// @flow
+
 
 import React, { Component } from "react";
 import { ImageBackground, Text, TouchableOpacity, View } from "react-native";
