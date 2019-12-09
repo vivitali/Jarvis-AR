@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   inputPassword: {
     left: 30,
-    marginRight: 20,
+    marginRight: 15,
     width: 220,
     paddingLeft: 10,
     paddingRight: 20,

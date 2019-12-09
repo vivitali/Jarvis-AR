@@ -1,8 +1,8 @@
 import React from "react";
 import { TouchableOpacity, View, Text } from "react-native";
-import Icon from "react-native-vector-icons/FontAwesome";
 import { RNCamera } from "react-native-camera";
 import { withNavigationFocus } from "react-navigation";
+import IcoMoon from "../../components/Icons";
 
 import styles from "./styles";
 
@@ -45,7 +45,7 @@ class Camera extends React.Component {
         >
           <View style={styles.actionWrapper}>
             <TouchableOpacity style={styles.snap} onPress={this.snap}>
-              <Icon name="camera" size={50} color="#ccc" style={{paddingBottom: 30}} />
+              <IcoMoon name="photo-button" size={50} color="#ccc" style={{paddingBottom: 30}} />
             </TouchableOpacity>
           </View>
         </RNCamera>
