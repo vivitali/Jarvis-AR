@@ -8,11 +8,14 @@ const ProfileBody = ({ user, onPhoneWorkPress, onPhonePress }) => (
   <View style={styles.profileContainer}>
     <View style={styles.profileBody}>
       <View style={styles.row}>
-        <TouchableOpacity style={styles.option} onPress={onPhonePress}>
-          <View style={styles.optionIconContainer}>
-            <EntypoIcon name="mobile" size={35.2} color="#dda720" />
-          </View>
-        </TouchableOpacity>
+        {!!parseInt(user.tel) && (
+          <TouchableOpacity style={styles.option} onPress={onPhonePress}>
+            <View style={styles.optionIconContainer}>
+              <EntypoIcon name="mobile" size={35.2} color="#dda720"/>
+            </View>
+          </TouchableOpacity>
+        )}
+
         {!!user.phone_work && (
           <TouchableOpacity
             style={styles.optionPhone}

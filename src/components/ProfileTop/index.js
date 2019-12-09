@@ -11,7 +11,7 @@ const ProfileTop = ({ avatar, name, tel, carNumber, carBrand }) => (
       <Text style={styles.profileInfo}>{name}</Text>
       <Text style={styles.carBrand}>{carBrand}</Text>
       <Text style={styles.carNumber}>{carNumber}</Text>
-      <Text style={styles.profileInfo}>{tel}</Text>
+      {!!parseInt(tel) && <Text style={styles.profileInfo}>{tel}</Text>}
     </View>
   </View>
 );
