@@ -8,7 +8,7 @@ export default class Index extends React.Component {
       <Icon
         name={this.props.name}
         size={26}
-        style={{ marginTop: 10 }}
+        style={{ margin: 10}}
         color={
           this.props.focused ? Colors.tabIconSelected : Colors.tabIconDefault
         }
