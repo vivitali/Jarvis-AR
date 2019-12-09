@@ -10,8 +10,7 @@ import {
   authenticationFailure,
   resetAuthenticationData,
 } from "./actions";
-import { resetProfileData } from "../../profile/redux/actions";
-import { resetScanData } from "../../scanner/redux/actions";
+import resetData from "../../../redux/saga/app.saga";
 
 export function* authenticate({ payload }) {
   yield put(authenticationPending());
@@ -41,17 +40,11 @@ export function* resetAuthentication() {
   yield navigate("Auth");
 }
 
-export function* resetData() {
-  yield call(resetAuthentication);
-  yield put(resetProfileData());
-  yield put(resetScanData());
-}
-
 /**
  * Watcher for SignIn Saga
  * @return {IterableIterator<*|ForkEffect>}
  */
 export default function* authenticationSaga() {
   yield takeEvery(constants.AUTHENTICATE, authenticate);
-  yield takeEvery(constants.INVALIDATE, resetData);
+  yield takeEvery(constants.RESETALLDATA, resetData);
 }

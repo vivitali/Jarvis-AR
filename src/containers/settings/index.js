@@ -80,7 +80,7 @@ const mapStateToProps = () => ({});
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      signOut: signinAction.invalidate,
+      signOut: signinAction.resetAllData,
     },
     dispatch
   );
