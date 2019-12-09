@@ -12,6 +12,7 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		32E478B5239D2AE90042C9EA /* Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E478B4239D2AE90042C9EA /* Lottie.swift */; };
 		7798D5F540B64E0EB917EF11 /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DFB7B90802C54AADABF55CCA /* ProximaNova-Extrabold.otf */; };
 		7D96042785EF481FBF65322E /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8F1B707339F74637A15EBDDD /* ProximaNova-Bold.otf */; };
 		A44709FD7AAF4025862D204B /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CC82E1DC8AF3470A8C93D6AA /* ProximaNova-Regular.otf */; };
@@ -39,6 +40,8 @@
 		27C8BCA95FC34B8DB627D349 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		282B7BBA1E1C47FDB075259D /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		2FB90A46280F48BBB6766DF9 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		32E478B3239D2AE90042C9EA /* Jarvis-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Jarvis-Bridging-Header.h"; sourceTree = "<group>"; };
+		32E478B4239D2AE90042C9EA /* Lottie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lottie.swift; sourceTree = "<group>"; };
 		38A5372E9F3727E85F61C26B /* Pods-Jarvis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jarvis.debug.xcconfig"; path = "Target Support Files/Pods-Jarvis/Pods-Jarvis.debug.xcconfig"; sourceTree = "<group>"; };
 		45E61ED85BF14A14A147B8C0 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		4DB378E46E9CA06B23A5FD5A /* libPods-Jarvis-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jarvis-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +154,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				32E478B4239D2AE90042C9EA /* Lottie.swift */,
 				13B07FAE1A68108700A75B9A /* Jarvis */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* JarvisTests */,
@@ -158,6 +162,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				5A8638BEC1430326D1542CA8 /* Pods */,
 				AB0AD19FD6C741ACA00C4AA8 /* Resources */,
+				32E478B3239D2AE90042C9EA /* Jarvis-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 236G4W8395;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -390,6 +396,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				32E478B5239D2AE90042C9EA /* Lottie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +420,7 @@
 			baseConfigurationReference = 38A5372E9F3727E85F61C26B /* Pods-Jarvis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 125;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 236G4W8395;
@@ -426,6 +434,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.if-webui.Jarvis";
 				PRODUCT_NAME = Jarvis;
+				SWIFT_OBJC_BRIDGING_HEADER = "Jarvis-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -435,6 +446,7 @@
 			baseConfigurationReference = 52641BF0951F88812CE67D06 /* Pods-Jarvis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 125;
 				DEVELOPMENT_TEAM = 236G4W8395;
 				INFOPLIST_FILE = Jarvis/Info.plist;
@@ -447,6 +459,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.if-webui.Jarvis";
 				PRODUCT_NAME = Jarvis;
+				SWIFT_OBJC_BRIDGING_HEADER = "Jarvis-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
