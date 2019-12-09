@@ -41,11 +41,6 @@ export default function reducer(
         loading: false,
         loaded: false,
       };
-    case SELECT_PROFILE:
-      return {
-        ...state,
-        selectedUser: action.payload,
-      };
     case RESET_SCAN_DATA:
       return initialState;
     default:

@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { actions } from "./redux";
 import { ProfileTop, ProfileBody } from "../../components";
 import styles from "./styles";
-import { getUserProfile } from "../scanner/redux/selectors";
+import { getUserProfile } from "./redux/selectors";
 
 const profilePicture = require("../../assets/images/user.jpg");
 const noData = require("../../assets/images/no-data-found.png");

@@ -55,8 +55,3 @@ export const getProfile = createSelector(getProfileData, profileData =>
       carBrand: user.cars_brand,
     }))
 );
-
-export const getUserProfile = createSelector(
-  getScannerReducer,
-  scanner => scanner.selectedUser
-);

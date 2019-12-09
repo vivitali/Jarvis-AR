@@ -35,8 +35,3 @@ export const navigateProfile = (payload: any) => ({
   type: constants.NAVIGATE_PROFILE,
   payload,
 });
-
-export const selectUserProfile = (payload: any) => ({
-  type: constants.SELECT_PROFILE,
-  payload,
-});
