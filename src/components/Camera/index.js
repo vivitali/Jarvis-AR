@@ -30,6 +30,7 @@ class Camera extends React.Component {
 
   render() {
     const { isFocused } = this.props;
+    const { text } = this.state;
 
     if (!isFocused) {
       return <Text>Camera is disabled</Text>;
@@ -43,16 +44,18 @@ class Camera extends React.Component {
           onTextRecognized={this.cameraReady ? this.onTextRecognized : null}
           captureAudio={false}
         >
-          <View style={styles.actionWrapper}>
-            <TouchableOpacity style={styles.snap} onPress={this.snap}>
-              <IcoMoon
-                name="photo-button"
-                size={50}
-                color="#ccc"
-                style={{ paddingBottom: 30 }}
-              />
-            </TouchableOpacity>
-          </View>
+          {!!text && (
+            <View style={styles.actionWrapper}>
+              <TouchableOpacity style={styles.snap} onPress={this.snap}>
+                <IcoMoon
+                  name="photo-button"
+                  size={50}
+                  color="#ccc"
+                  style={{ paddingBottom: 30 }}
+                />
+              </TouchableOpacity>
+            </View>
+          )}
         </RNCamera>
       </View>
     );
