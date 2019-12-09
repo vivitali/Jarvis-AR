@@ -9,6 +9,7 @@ npm-debug.*
 .vscode
 .env
 package-lock.json
+flow-typed
 
 android/fastlane/api.json
 
