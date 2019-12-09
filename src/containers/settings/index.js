@@ -10,6 +10,7 @@ import styles from "./styles";
 
 import { type Props } from "./types";
 import Layout from "../../constants/Layout";
+import IcoMoon from '../../components/Icons';
 
 class Settings extends Component<Props, *> {
   static navigationOptions = () => ({
@@ -58,9 +59,8 @@ class Settings extends Component<Props, *> {
           <View style={styles.profileFooter}>
             <TouchableOpacity style={styles.option} onPress={signOut}>
               <View style={styles.signout}>
-                <Icon
-                  name="sign-out"
-                  size={22}
+                <IcoMoon
+                  name="log-out"
                   style={[styles.signoutOption, styles.signoutIcon]}
                 />
                 <Text style={styles.signoutOption}>Log Out</Text>

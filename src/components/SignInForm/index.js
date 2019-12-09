@@ -6,9 +6,8 @@ import {
   TouchableOpacity,
   TouchableHighlight,
 } from "react-native";
-
-import Icon from "react-native-vector-icons/FontAwesome";
 import Colors from "../../constants/Colors";
+import IcoMoon from "../../components/Icons";
 
 import styles from "./styles";
 
@@ -61,14 +60,14 @@ export default class SignIn extends Component {
             style={styles.icon}
           >
             {this.state.hidePassword ? (
-              <Icon
-                name="eye-slash"
+              <IcoMoon
+                name="eye-off"
                 size={20}
                 style={{ color: Colors.primaryColor }}
               />
             ) : (
-              <Icon
-                name="eye"
+              <IcoMoon
+                name="eye-on"
                 size={20}
                 style={{ color: Colors.contrastColor }}
               />
