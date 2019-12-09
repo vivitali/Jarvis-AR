@@ -11,7 +11,7 @@ const ProfileBody = ({ user, onPhoneWorkPress, onPhonePress }) => (
         {!!parseInt(user.tel) && (
           <TouchableOpacity style={styles.option} onPress={onPhonePress}>
             <View style={styles.optionIconContainer}>
-              <EntypoIcon name="mobile" size={35.2} color="#dda720"/>
+              <EntypoIcon name="mobile" size={35.2} color="#dda720" />
             </View>
           </TouchableOpacity>
         )}

@@ -11,7 +11,7 @@ export const authenticate = payload => ({
 });
 
 export const resetAllData = () => ({
-  type: constants.RESETALLDATA,
+  type: constants.RESET_ALL_DATA,
 });
 
 export const authenticationPending = () => ({

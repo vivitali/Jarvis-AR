@@ -74,7 +74,7 @@ function* faceIdAuthenticate() {
 export default function* authenticationSaga() {
   yield takeEvery(constants.AUTHENTICATE, authenticate);
   yield takeEvery(constants.FACE_ID_AUTHENTICATE, faceIdAuthenticate);
-  yield takeEvery(constants.RESETALLDATA, resetData);
+  yield takeEvery(constants.RESET_ALL_DATA, resetData);
 }
 
 const handleError = (e = {}) => {

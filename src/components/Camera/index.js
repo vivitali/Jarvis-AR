@@ -45,7 +45,12 @@ class Camera extends React.Component {
         >
           <View style={styles.actionWrapper}>
             <TouchableOpacity style={styles.snap} onPress={this.snap}>
-              <Icon name="camera" size={50} color="#ccc" style={{paddingBottom: 30}} />
+              <Icon
+                name="camera"
+                size={50}
+                color="#ccc"
+                style={{ paddingBottom: 30 }}
+              />
             </TouchableOpacity>
           </View>
         </RNCamera>
