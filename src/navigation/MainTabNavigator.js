@@ -1,5 +1,3 @@
-// @flow
-
 import React from "react";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import { createStackNavigator } from "react-navigation-stack";

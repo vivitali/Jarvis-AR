@@ -1,5 +1,3 @@
-// @flow
-
 import {
   LOAD_SCAN_FAILURE,
   LOAD_SCAN_PENDING,
