@@ -16,7 +16,7 @@ export default StyleSheet.create({
     fontSize: 25,
     lineHeight: 30,
     fontFamily: Fonts.base,
-    marginLeft: 30,
+    marginLeft: 20,
   },
   titleWrapper: {
     flexDirection: "row",

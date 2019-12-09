@@ -2,10 +2,9 @@
 
 import React, { Component } from "react";
 import { ImageBackground, Text, TouchableOpacity, View } from "react-native";
-// $FlowFixMe
-import Icon from "react-native-vector-icons/FontAwesome";
 import styles from "./styles";
 import Layout from "../../constants/Layout";
+import IcoMoon from '../../components/Icons';
 
 export default class Info extends Component<Props, *> {
   static navigationOptions = () => ({
@@ -27,8 +26,9 @@ export default class Info extends Component<Props, *> {
                 navigation.goBack();
               }}
             >
-              <Icon name="arrow-left" style={styles.backButton} />
+              <IcoMoon name='Arrow' style={styles.backButton} />
             </TouchableOpacity>
+
             <Text style={styles.settingTitle}>Info</Text>
           </View>
           <Text style={styles.infoText}>
