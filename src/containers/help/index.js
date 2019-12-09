@@ -8,11 +8,10 @@ import {
   View,
   Linking,
 } from "react-native";
-// $FlowFixMe
-import Icon from "react-native-vector-icons/FontAwesome";
 import styles from "./styles";
 
 import Layout from "../../constants/Layout";
+import IcoMoon from "../../components/Icons";
 
 export default class Help extends Component<Props, *> {
   static navigationOptions = () => ({
@@ -34,7 +33,7 @@ export default class Help extends Component<Props, *> {
                 navigation.goBack();
               }}
             >
-              <Icon name="arrow-left" style={styles.backButton} />
+              <IcoMoon name='Arrow' style={styles.backButton} />
             </TouchableOpacity>
             <Text style={styles.settingTitle}>Help</Text>
           </View>
