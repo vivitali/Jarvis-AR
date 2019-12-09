@@ -32,8 +32,11 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   inputPassword: {
-    marginRight: 10,
+    left: 30,
+    marginRight: 20,
     width: 220,
+    paddingLeft: 10,
+    paddingRight: 20,
   },
   icon: {
     justifyContent: "center",

@@ -38,7 +38,7 @@ export default class App extends React.Component {
                 source={Layout.bgImage}
                 style={{ width: "100%", height: "100%" }}
               >
-                {Platform.OS === "ios" && <StatusBar barStyle="default" />}
+                <StatusBar barStyle="light-content" backgroundColor="black" />
                 <AppNavigator ref={NavigationService.setNavigator} />
               </ImageBackground>
             </View>

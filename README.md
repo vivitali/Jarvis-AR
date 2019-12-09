@@ -18,10 +18,12 @@
     │           └── index.js
     │       index.js
     ├──  redux
+    |    ├── saga
+    |    |   |   index.js
+    |    |   └── app.saga.js
     │    |   actions.js
     │    |   constants.js
     │    |   reducer.js
-    │    |   saga.js
     │    |   selectors.js
     │    |   createStore.js
     │    └── index.js

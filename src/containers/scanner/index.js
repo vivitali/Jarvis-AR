@@ -35,7 +35,6 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       processScanData: actions.processScanData,
-      resetScanData: actions.resetScanData,
     },
     dispatch
   );

@@ -10,8 +10,8 @@ export const authenticate = payload => ({
   payload,
 });
 
-export const invalidate = () => ({
-  type: constants.INVALIDATE,
+export const resetAllData = () => ({
+  type: constants.RESETALLDATA,
 });
 
 export const authenticationPending = () => ({

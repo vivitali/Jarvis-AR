@@ -1,12 +1,9 @@
 // @flow
 import { put, takeLatest } from "redux-saga/effects";
 import type { Saga } from "redux-saga";
-import {
-  loadScanPending,
-  loadScanSuccess,
-  loadScanFailure,
-  selectUserProfile,
-} from "./actions";
+import { loadScanPending, loadScanSuccess, loadScanFailure } from "./actions";
+import { selectUserProfile } from "../../profile/redux/actions";
+
 import * as constants from "./constants";
 import { getUserByCarNumber } from "../../../services/api";
 // $FlowFixMe
@@ -44,6 +41,7 @@ export function* processScanData({ payload }: any): Saga<*> {
 }
 
 export function* searchNumber({ payload }: any): any {
+  yield put(loadScanPending());
   try {
     const data = yield getUserByCarNumber([{ text: payload }]);
     yield put(loadScanSuccess(data));
