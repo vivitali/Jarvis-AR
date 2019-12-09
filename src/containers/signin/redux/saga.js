@@ -10,6 +10,7 @@ import {
   authenticationFailure,
   resetAuthenticationData,
 } from "./actions";
+import resetData from "../../../redux/saga/app.saga";
 
 export function* authenticate({ payload }) {
   yield put(authenticationPending());
@@ -45,5 +46,5 @@ export function* resetAuthentication() {
  */
 export default function* authenticationSaga() {
   yield takeEvery(constants.AUTHENTICATE, authenticate);
-  yield takeEvery(constants.INVALIDATE, resetAuthentication);
+  yield takeEvery(constants.RESETALLDATA, resetData);
 }
