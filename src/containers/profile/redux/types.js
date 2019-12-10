@@ -9,6 +9,7 @@ export type Action = selectUserProfile | resetProfileData;
 
 export type selectUserProfile = {|
   type: typeof SELECT_PROFILE,
+  payload: any,
 |};
 
 export type resetProfileData = {|
@@ -16,5 +17,5 @@ export type resetProfileData = {|
 |};
 
 export type ProfileState = $ReadOnly<{|
-  selectedUser: object,
+  selectedUser: any,
 |}>;
