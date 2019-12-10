@@ -91,6 +91,10 @@ class SignIn extends Component {
     this.props.authenticate({ username, password });
   };
 
+  componentDidMount(): void {
+    this.props.faceIdAuthenticate();
+  }
+
   render() {
     return (
       <KeyboardAvoidingView behavior="padding" enabled={Platform.OS === "ios"}>
@@ -133,6 +137,7 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       authenticate: actions.authenticate,
+      faceIdAuthenticate: actions.faceIdAuthenticate,
       resetAuthError: actions.resetAuthError,
     },
     dispatch

@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
@@ -11,7 +10,7 @@ import styles from "./styles";
 
 import { type Props } from "./types";
 import Layout from "../../constants/Layout";
-import IcoMoon from '../../components/Icons';
+import IcoMoon from "../../components/Icons";
 
 class Settings extends Component<Props, *> {
   static navigationOptions = () => ({

@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import Button from "apsl-react-native-button";

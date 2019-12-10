@@ -1,12 +1,17 @@
 import * as constants from "./constants";
 
+export const faceIdAuthenticate = payload => ({
+  type: constants.FACE_ID_AUTHENTICATE,
+  payload,
+});
+
 export const authenticate = payload => ({
   type: constants.AUTHENTICATE,
   payload,
 });
 
 export const resetAllData = () => ({
-  type: constants.RESETALLDATA,
+  type: constants.RESET_ALL_DATA,
 });
 
 export const authenticationPending = () => ({
