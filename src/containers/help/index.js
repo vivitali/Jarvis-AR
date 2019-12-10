@@ -33,7 +33,7 @@ export default class Help extends Component<Props, *> {
                 navigation.goBack();
               }}
             >
-              <IcoMoon name='Arrow' style={styles.backButton} />
+              <IcoMoon name='close' style={styles.backButton} />
             </TouchableOpacity>
             <Text style={styles.settingTitle}>Help</Text>
           </View>
