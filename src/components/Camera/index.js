@@ -45,7 +45,9 @@ class Camera extends React.Component {
         >
           <View style={styles.actionWrapper}>
             <TouchableOpacity style={styles.snap} onPress={this.snap}>
-              <IcoMoon name="photo" size={50} color="#ccc" style={{paddingBottom: 30}} />
+              <View style={styles.snapBorder}>
+                <IcoMoon name="photo" size={50} color="rgba(255, 255, 255, 0.6)"/>
+              </View>
             </TouchableOpacity>
           </View>
         </RNCamera>

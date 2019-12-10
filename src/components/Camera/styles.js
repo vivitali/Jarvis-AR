@@ -25,6 +25,17 @@ const styles = StyleSheet.create({
   },
   flipText: { fontSize: 18, marginBottom: 10, color: "white" },
   snapText: { fontSize: 18, marginBottom: 20, color: "white" },
+  snapBorder: {
+    backgroundColor: "rgba(196, 196, 196, 0.6)",
+    display: "flex",
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 70,
+    height: 70,
+    position: "absolute",
+    bottom: 20,
+  },
 });
 
 export default styles;
