@@ -2,10 +2,16 @@
 
 import { type ScannerData } from "./redux/types";
 
+export type OwnProps = {|
+
+|};
+
 export type Props = {|
-  navigation: any,
+  ...OwnProps,
   loading: boolean,
-  data: ScannerData,
   processScanData: (data: any) => void,
-  resetScanData: () => void,
+|};
+
+export type State = {|
+    search: string,
 |};

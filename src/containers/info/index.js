@@ -1,10 +1,12 @@
+// @flow
+
 import React, { Component } from "react";
 import { ImageBackground, Text, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 import Layout from "../../constants/Layout";
 import IcoMoon from "../../components/Icons";
 
-export default class Info extends Component<Props, *> {
+export default class Info extends Component<*> {
   static navigationOptions = () => ({
     header: null,
   });

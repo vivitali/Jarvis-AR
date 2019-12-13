@@ -1,20 +1,22 @@
+// @flow
+
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { View } from "react-native";
 import { actions, selectors } from "./redux";
 
-import { type Props } from "./types";
+import { type Props, type OwnProps } from "./types";
 
 import styles from "./styles";
 import { Camera } from "../../components";
 
-class Scanner extends Component<Props, *> {
+class Scanner extends Component<Props> {
   static navigationOptions = {
     header: null,
   };
 
-  snap = data => {
+  snap /* : * */ = data => {
     this.props.processScanData(data);
   };
 
@@ -39,4 +41,4 @@ const mapDispatchToProps = dispatch =>
     dispatch
   );
 
-export default connect(mapStateToProps, mapDispatchToProps)(Scanner);
+export default connect<Props, OwnProps, _, _, _, _>(mapStateToProps, mapDispatchToProps)(Scanner);
