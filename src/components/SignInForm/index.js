@@ -67,7 +67,7 @@ export default class SignIn extends Component {
               />
             ) : (
               <IcoMoon
-                name="eye-on"
+                name="eye"
                 size={20}
                 style={{ color: Colors.contrastColor }}
               />

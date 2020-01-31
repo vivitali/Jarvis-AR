@@ -24,7 +24,7 @@ export default class Info extends Component<Props, *> {
                 navigation.goBack();
               }}
             >
-              <IcoMoon name="Arrow" style={styles.backButton} />
+              <IcoMoon name="Arrow1" style={styles.backButton} />
             </TouchableOpacity>
 
             <Text style={styles.settingTitle}>Info</Text>
