@@ -21,6 +21,9 @@
 		B642C556F5564EFB9267F530 /* icomoon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 0DB1DB6790A84A44BC2B1740 /* icomoon.svg */; };
 		FF76CFF4915D429D9C48524F /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 01A0649D48DB438AA8A630B6 /* icomoon.ttf */; };
 		12A2948A3B4B4A0FBA25B470 /* icomoon.woff in Resources */ = {isa = PBXBuildFile; fileRef = 7F64203C505748049BA8C85E /* icomoon.woff */; };
+		FA0322C7050D4B60A9B91A35 /* jarvis-icons.svg in Resources */ = {isa = PBXBuildFile; fileRef = 204A4037EADE4BA5891E9FEA /* jarvis-icons.svg */; };
+		DFBC0ABAFEB74D658A02EE21 /* jarvis-icons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1E3BBB0DC5AA417AA1B47D20 /* jarvis-icons.ttf */; };
+		766E18F499C24223A1096AA0 /* jarvis-icons.woff in Resources */ = {isa = PBXBuildFile; fileRef = 9AFFF656E1E2497C93D047BE /* jarvis-icons.woff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +78,9 @@
 		0DB1DB6790A84A44BC2B1740 /* icomoon.svg */ = {isa = PBXFileReference; name = "icomoon.svg"; path = "../src/assets/fonts/icomoon.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		01A0649D48DB438AA8A630B6 /* icomoon.ttf */ = {isa = PBXFileReference; name = "icomoon.ttf"; path = "../src/assets/fonts/icomoon.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7F64203C505748049BA8C85E /* icomoon.woff */ = {isa = PBXFileReference; name = "icomoon.woff"; path = "../src/assets/fonts/icomoon.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		204A4037EADE4BA5891E9FEA /* jarvis-icons.svg */ = {isa = PBXFileReference; name = "jarvis-icons.svg"; path = "../src/assets/fonts/jarvis-icons.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1E3BBB0DC5AA417AA1B47D20 /* jarvis-icons.ttf */ = {isa = PBXFileReference; name = "jarvis-icons.ttf"; path = "../src/assets/fonts/jarvis-icons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9AFFF656E1E2497C93D047BE /* jarvis-icons.woff */ = {isa = PBXFileReference; name = "jarvis-icons.woff"; path = "../src/assets/fonts/jarvis-icons.woff"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,9 @@
 				0DB1DB6790A84A44BC2B1740 /* icomoon.svg */,
 				01A0649D48DB438AA8A630B6 /* icomoon.ttf */,
 				7F64203C505748049BA8C85E /* icomoon.woff */,
+				204A4037EADE4BA5891E9FEA /* jarvis-icons.svg */,
+				1E3BBB0DC5AA417AA1B47D20 /* jarvis-icons.ttf */,
+				9AFFF656E1E2497C93D047BE /* jarvis-icons.woff */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -287,6 +296,9 @@
 				B642C556F5564EFB9267F530 /* icomoon.svg in Resources */,
 				FF76CFF4915D429D9C48524F /* icomoon.ttf in Resources */,
 				12A2948A3B4B4A0FBA25B470 /* icomoon.woff in Resources */,
+				FA0322C7050D4B60A9B91A35 /* jarvis-icons.svg in Resources */,
+				DFBC0ABAFEB74D658A02EE21 /* jarvis-icons.ttf in Resources */,
+				766E18F499C24223A1096AA0 /* jarvis-icons.woff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

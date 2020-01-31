@@ -4,6 +4,6 @@ import Fonts from "../../constants/Fonts";
 
 export default createIconSetFromIcoMoon(
   icoMoonConfig,
-  "icomoon",
+  "jarvis-icons",
   Fonts.icomoon
 );
