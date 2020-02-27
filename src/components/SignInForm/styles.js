@@ -7,6 +7,9 @@ const styles = StyleSheet.create({
     color: Colors.secondaryColor,
     alignItems: "center",
   },
+	textInputContainer: {
+		marginBottom: 40,
+	},
   textInputWrapper: {
     width: 270,
     borderWidth: 1,
@@ -14,7 +17,6 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     backgroundColor: "rgba(196, 196, 196, 0.5)",
     borderRadius: 20,
-    marginBottom: 40,
     alignSelf: "center",
   },
   textInput: {
@@ -23,11 +25,14 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     fontFamily: Fonts.base,
     textAlign: "center",
-    color: "rgba(255, 255, 255, 0.3)",
+	  color: Colors.contrastColor,
     padding: 10,
   },
+	textErrorInput: {
+		borderColor: Colors.errorBorderColor,
+		backgroundColor: Colors.errorBackgroundColor,
+	},
   passwordWrapper: {
-    marginBottom: 43,
     flexDirection: "row",
     justifyContent: "space-between",
   },
@@ -71,8 +76,8 @@ const styles = StyleSheet.create({
   errorMsg: {
     textAlign: "center",
     fontFamily: Fonts.base,
-    color: Colors.errorColor,
-    marginTop: 20,
+    color: Colors.errorTextColor,
+    // marginTop: 20,
   },
 });
 

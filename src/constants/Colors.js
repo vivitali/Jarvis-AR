@@ -11,6 +11,9 @@ const warningText: "#666804" = "#666804";
 const noticeText: "#fff" = "#fff";
 const bottomBarBg: "#3A1831" = "#3A1831";
 const errorColor: "#DDA720" = "#DDA720";
+const errorTextColor: "#FAFF00" = "#FAFF00";
+const errorBorderColor: "rgba(250, 255, 0, 0.9)" = "rgba(250, 255, 0, 0.9)";
+const errorBackgroundColor: "rgba(250, 255, 0, 0.2)" = "rgba(250, 255, 0, 0.2)";
 const pressButton: "#DDA720" = "#DDA720";
 const searchResult: "#5C5C5C" = "#5C5C5C";
 
@@ -34,6 +37,9 @@ export default {
   contrastColor,
   bottomBarBg,
   errorColor,
+	errorTextColor,
+	errorBorderColor,
+	errorBackgroundColor,
   pressButton,
   searchResult,
 };
