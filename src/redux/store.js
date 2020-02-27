@@ -19,6 +19,7 @@ const persistConfig = {
   key: "root",
   storage: AsyncStorage,
   stateReconciler: autoMergeLevel2, // see "Merge Process" section for details.
+  blacklist: ['scanner'],
 };
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

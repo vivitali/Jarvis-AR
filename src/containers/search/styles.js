@@ -66,6 +66,28 @@ const styles = StyleSheet.create({
     textDecorationColor: Colors.searchResult,
     textDecorationLine: "underline",
   },
+  noSearchResult: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: '100%'
+  },
+  noSearchResultImg: {
+    marginBottom: 45,
+  },
+  noSearchResultTitle: {
+    marginBottom: 15,
+    fontSize: 20,
+    lineHeight: 24,
+    color: Colors.noSearchResultTitle,
+    fontFamily: Fonts.bold,
+  },
+  noSearchResultText: {
+    fontSize: 17,
+    lineHeight: 21,
+    fontFamily: Fonts.base,
+    color: Colors.noSearchResultTitle,
+  }
 });
 
 export default styles;

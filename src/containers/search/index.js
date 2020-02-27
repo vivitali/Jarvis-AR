@@ -2,16 +2,18 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import Button from "apsl-react-native-button";
 import { connect } from "react-redux";
+import { BlurView } from "@react-native-community/blur";
 import {
   ImageBackground,
   TextInput,
   View,
   Text,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import { actions } from "../scanner/redux";
 import { actions as actionsProfile } from "../profile/redux";
-import { getProfile, isLoading } from "../scanner/redux/selectors";
+import { getProfile, isLoading, isLoaded } from "../scanner/redux/selectors";
 
 import styles from "./styles";
 
@@ -20,6 +22,7 @@ import Layout from "../../constants/Layout";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 import Loader from "../../components/Loader";
+import smile from "../../assets/images/smile.png";
 
 class Search extends Component<Props, State> {
   state = {
@@ -40,13 +43,26 @@ class Search extends Component<Props, State> {
 
   render() {
     const { search } = this.state;
-    const { proceedAction, users, isSearching } = this.props;
+    const { proceedAction, users, isSearching, isLoaded } = this.props;
 
     return (
       <ImageBackground
         source={Layout.bgImage}
         style={{ width: "100%", height: "100%" }}
       >
+        {isLoaded && !users.length &&
+          <BlurView
+            blurType="dark"
+            blurAmount={100}
+            style={{ position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, height: '100%', width: '100%' }}
+          >
+            <View style={styles.noSearchResult}>
+              <Image source={smile} style={styles.noSearchResultImg} />
+              <Text style={styles.noSearchResultTitle} >No results found</Text>
+              <Text style={styles.noSearchResultText}>We can’t find any item matching your search</Text>
+            </View>
+          </BlurView>
+        }
         <View style={styles.container}>
           <View style={styles.searchInputWrapper}>
             <TextInput
@@ -101,6 +117,7 @@ class Search extends Component<Props, State> {
 const mapStateToProps = state => ({
   users: getProfile(state),
   isSearching: isLoading(state),
+  isLoaded: isLoaded(state),
 });
 
 const mapDispatchToProps = dispatch =>

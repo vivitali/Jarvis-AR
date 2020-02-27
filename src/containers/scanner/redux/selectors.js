@@ -20,6 +20,15 @@ export const isLoading = createSelector(
 );
 
 /**
+ * Selector for loaded state
+ * @return {*}
+ */
+export const isLoaded = createSelector(
+  getScannerReducer,
+  scanner => scanner.loaded
+);
+
+/**
  * Selector for getting errors
  * @return {*}
  */
