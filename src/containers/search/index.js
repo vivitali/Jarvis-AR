@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import Button from "apsl-react-native-button";
 import { connect } from "react-redux";
-import { BlurView } from "@react-native-community/blur";
 import {
   ImageBackground,
   TextInput,
@@ -51,17 +50,11 @@ class Search extends Component<Props, State> {
         style={{ width: "100%", height: "100%" }}
       >
         {isLoaded && !users.length &&
-          <BlurView
-            blurType="dark"
-            blurAmount={100}
-            style={{ position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, height: '100%', width: '100%' }}
-          >
             <View style={styles.noSearchResult}>
               <Image source={smile} style={styles.noSearchResultImg} />
               <Text style={styles.noSearchResultTitle} >No results found</Text>
               <Text style={styles.noSearchResultText}>We can’t find any item matching your search</Text>
             </View>
-          </BlurView>
         }
         <View style={styles.container}>
           <View style={styles.searchInputWrapper}>

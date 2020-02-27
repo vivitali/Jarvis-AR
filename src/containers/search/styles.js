@@ -70,7 +70,13 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    height: '100%'
+    height: '100%',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    width: '100%'
   },
   noSearchResultImg: {
     marginBottom: 45,
