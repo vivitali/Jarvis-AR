@@ -28,6 +28,8 @@ class SignIn extends Component {
   state = {
     email: null,
     password: null,
+		emailError: null,
+		passwordError: null,
   };
 
   constructor(props) {
@@ -53,6 +55,15 @@ class SignIn extends Component {
     this.keyboardWillShowSub.remove();
     this.keyboardWillHideSub.remove();
   }
+
+	componentDidUpdate(prevProps): void {
+		if(prevProps.error !== this.props.error) {
+			this.setState({
+				emailError: this.props.error ? 'Wrong username' : null,
+				passwordError: this.props.error ? 'Wrong password' : null,
+			})
+		}
+	}
 
   keyboardWillShow = event => {
     Animated.parallel([
@@ -88,7 +99,14 @@ class SignIn extends Component {
 
   handleSignIn = async () => {
     const { password, email: username } = this.state;
-    this.props.authenticate({ username, password });
+    if (password && password.length && username && username.length) {
+			this.props.authenticate({ username, password });
+		} else {
+    	this.setState({
+				emailError: username && username.length ? null : 'Email is required',
+				passwordError: password && password.length ? null : 'Password is required',
+			})
+		}
   };
 
   componentDidMount(): void {

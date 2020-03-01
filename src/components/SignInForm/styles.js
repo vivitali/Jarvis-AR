@@ -55,6 +55,18 @@ const styles = StyleSheet.create({
     width: 217,
     justifyContent: "center",
   },
+	buttonActive: {
+		backgroundColor: Colors.tabIconSelected,
+		borderColor: Colors.tabIconSelected,
+		height: 40,
+		width: 217,
+		borderRadius: 20,
+		justifyContent: "center",
+		shadowColor: "#000",
+		shadowOffset: { width: 4, height: 4 },
+		shadowOpacity: 0.7,
+		shadowRadius: 6,
+	},
   buttonPress: {
     borderColor: Colors.pressButton,
     height: 40,

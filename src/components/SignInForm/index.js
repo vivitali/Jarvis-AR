@@ -31,13 +31,21 @@ export default class SignIn extends Component {
 
 	setStyles = (errorExist, styleList) => errorExist ? [...styleList, styles.textErrorInput] : styleList;
 
+	setSignInButton = () => {
+		const { email, passwordError, emailError, password } = this.props;
+		const isValidForm = email && email.length && password && password.length && passwordError && emailError;
+		const buttonStyles = isValidForm ? styles.buttonActive : styles.button;
+
+		return this.state.pressStatus ? styles.buttonPress : buttonStyles
+	};
+
   render() {
-    const { email, password, error, onInputChange, onSignIn } = this.props;
+    const { email, passwordError, emailError, password, error, onInputChange, onSignIn } = this.props;
 
     return (
       <View style={styles.formContainer}>
 				<View style={styles.textInputContainer}>
-					<View style={this.setStyles(error, [styles.textInputWrapper])}>
+					<View style={this.setStyles(emailError, [styles.textInputWrapper])}>
 						<TextInput
 							autoCompleteType="email"
 							keyboardType="email-address"
@@ -49,10 +57,10 @@ export default class SignIn extends Component {
 							onSubmitEditing={onSignIn}
 						/>
 					</View>
-					<Text style={styles.errorMsg}>{error}</Text>
+					<Text style={styles.errorMsg}>{emailError}</Text>
 				</View>
 				<View style={styles.textInputContainer}>
-					<View style={this.setStyles(error, [styles.textInputWrapper, styles.passwordWrapper])}>
+					<View style={this.setStyles(passwordError, [styles.textInputWrapper, styles.passwordWrapper])}>
 						<TextInput
 							style={[styles.inputPassword, styles.textInput]}
 							value={password}
@@ -82,11 +90,11 @@ export default class SignIn extends Component {
 							)}
 						</TouchableOpacity>
 					</View>
-					<Text style={styles.errorMsg}>{error}</Text>
+					<Text style={styles.errorMsg}>{passwordError}</Text>
 				</View>
         <TouchableHighlight
           underlayColor="#DDA720"
-          style={this.state.pressStatus ? styles.buttonPress : styles.button}
+          style={this.setSignInButton()}
           onPress={onSignIn}
           onHideUnderlay={() => this.onHideUnderlay()}
           onShowUnderlay={() => this.onShowUnderlay()}
