@@ -1,5 +1,5 @@
-import profileReducer from "./reducer";
-import { actions } from "./index";
+import { reducer as profileReducer } from "./reducer";
+import { actions } from "./actions";
 import profileSaga from "./saga";
 
 export const getProfileModule = () => ({
@@ -7,6 +7,6 @@ export const getProfileModule = () => ({
   reducerMap: {
     profile: profileReducer,
   },
-  initialActions: [actions()],
+  initialActions: [actions],
   sagas: [profileSaga],
 });

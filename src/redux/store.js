@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, compose, combineReducers } from "redux";
+import { applyMiddleware, compose, combineReducers } from "redux";
 
 import { persistStore, persistReducer } from "redux-persist";
 import AsyncStorage from "@react-native-community/async-storage";
@@ -9,20 +9,26 @@ import saga from "./saga";
 import { logger } from "./middleware";
 import reducers from "./reducers";
 
-const sagaMiddleware = createSagaMiddleware();
+import { createStore } from "redux-dynamic-modules-core";
+import { getSagaExtension } from "redux-dynamic-modules-saga";
+
+import { getPersistModule } from "./module";
+// import { getSignInModule } from "../containers/signin/redux/module";
+
+// const sagaMiddleware = createSagaMiddleware();
 
 /* REDUCERS */
-const rootReducer = combineReducers(reducers);
+// const rootReducer = combineReducers(reducers);
 
 /* REDUX PERSIST */
-const persistConfig = {
-  key: "root",
-  storage: AsyncStorage,
-  stateReconciler: autoMergeLevel2, // see "Merge Process" section for details.
-};
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+// const persistConfig = {
+//   key: "root",
+//   storage: AsyncStorage,
+//   stateReconciler: autoMergeLevel2, // see "Merge Process" section for details.
+// };
+// const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const middleware = [logger, sagaMiddleware];
+const middleware = [logger];
 
 /* CONFIGURE STORE */
 const configureStore = () => {
@@ -35,24 +41,24 @@ const configureStore = () => {
         })
       : compose;
     // Create the redux store.
-    return createStore(
-      persistedReducer,
-      {},
-      composeEnhancers(applyMiddleware(...middleware))
-    );
+    return createStore({
+      extensions: [getSagaExtension()],
+      enhancements: composeEnhancers(applyMiddleware(...middleware))
+    },
+      getPersistModule());
   } else {
     // Production mode.
-    return createStore(
-      persistedReducer,
-      {},
-      compose(applyMiddleware(...middleware))
-    );
+    return createStore({
+      extensions: [getSagaExtension()],
+      enhancements: compose(applyMiddleware(...middleware))
+    },
+      getPersistModule());
   }
 };
 
 /* EXPORTS */
 const store = configureStore();
-sagaMiddleware.run(saga);
+// sagaMiddleware.run(saga);
 
 export default store;
 export const persistor = persistStore(store);
