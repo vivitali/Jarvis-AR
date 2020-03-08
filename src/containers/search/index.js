@@ -31,7 +31,9 @@ class Search extends Component<Props, State> {
   };
 
   onSearch = () => {
-    this.props.searchNumber(this.state.search);
+    if (this.state.search.length > 2) {
+      this.props.searchNumber(this.state.search);
+    }
   };
 
   onProfileOpen = item => {
@@ -60,38 +62,38 @@ class Search extends Component<Props, State> {
               onSubmitEditing={this.onSearch}
             />
             <Button onPress={this.onSearch} style={styles.searchBtn}>
-              <Icon name="search" size={22} color="#fff" />
+              <Icon name="search" size={22} color="#fff"/>
             </Button>
           </View>
           {isSearching && <Loader></Loader>}
           {!isSearching &&
-            users &&
-            users.map(user => (
-              <Button
-                key={user.users_id}
-                onPress={() => this.onProfileOpen(user)}
-                style={styles.userCard}
+          users &&
+          users.map(user => (
+            <Button
+              key={user.users_id}
+              onPress={() => this.onProfileOpen(user)}
+              style={styles.userCard}
+            >
+              <View>
+                {!!user.carNumber && (
+                  <Text style={[styles.userDetails, styles.textUnderline]}>
+                    {user.carNumber}
+                  </Text>
+                )}
+                {!!user.name && (
+                  <Text style={styles.userDetails}>{user.name}</Text>
+                )}
+              </View>
+              <TouchableOpacity
+                style={styles.mobileBtn}
+                onPress={() => proceedAction({ type: "phone", user })}
               >
-                <View>
-                  {!!user.carNumber && (
-                    <Text style={[styles.userDetails, styles.textUnderline]}>
-                      {user.carNumber}
-                    </Text>
-                  )}
-                  {!!user.name && (
-                    <Text style={styles.userDetails}>{user.name}</Text>
-                  )}
+                <View style={styles.optionIconContainer}>
+                  <Icon name="mobile" color="#fff" size={35}/>
                 </View>
-                <TouchableOpacity
-                  style={styles.mobileBtn}
-                  onPress={() => proceedAction({ type: "phone", user })}
-                >
-                  <View style={styles.optionIconContainer}>
-                    <Icon name="mobile" color="#fff" size={35} />
-                  </View>
-                </TouchableOpacity>
-              </Button>
-            ))}
+              </TouchableOpacity>
+            </Button>
+          ))}
         </View>
       </ImageBackground>
     );
@@ -110,7 +112,7 @@ const mapDispatchToProps = dispatch =>
       navigateProfile: actions.navigateProfile,
       proceedAction: actionsProfile.proceedAction,
     },
-    dispatch
+    dispatch,
   );
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);
