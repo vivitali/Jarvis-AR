@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity, View, Text } from "react-native";
 import { RNCamera } from "react-native-camera";
-import { withNavigationFocus } from "react-navigation";
+import { withNavigationFocus } from "@react-navigation/compat";
 import IcoMoon from "../../components/Icons";
 
 import styles from "./styles";

@@ -1,6 +1,6 @@
 import React from "react";
-import { createSwitchNavigator, createAppContainer } from "react-navigation";
-
+import { createSwitchNavigator } from "@react-navigation/compat";
+import { NavigationContainer } from "@react-navigation/native";
 import MainTabNavigator from "./MainTabNavigator";
 import AuthLoadingScreen from "../screens/AuthLoadingScreen";
 import { AuthStack } from "./AuthStack";
@@ -16,4 +16,10 @@ const AppNavigator = createSwitchNavigator(
   }
 );
 
-export default createAppContainer(AppNavigator);
+export default function() {
+  return (
+    <NavigationContainer>
+      <AppNavigator></AppNavigator>
+    </NavigationContainer>
+  );
+}

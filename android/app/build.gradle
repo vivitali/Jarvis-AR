@@ -135,6 +135,7 @@ android {
         versionCode 176
         versionName "1.1"
         missingDimensionStrategy 'react-native-camera', 'mlkit'
+        multiDexEnabled true
     }
      signingConfigs {
             release {

@@ -1,9 +1,11 @@
-import { NavigationActions } from "react-navigation";
+import { NavigationActions } from "@react-navigation/compat";
+import { CommonActions } from "@react-navigation/native";
 
 const config = {};
 
 export const setNavigator = nav => {
   if (nav) {
+    console.log(nav, "][][][][[");
     config.navigator = nav;
   }
 };
@@ -17,7 +19,7 @@ export const navigate = (routeName, params) => {
 
 export const goBack = () => {
   if (config.navigator) {
-    const action = NavigationActions.back({});
+    const action = CommonActions.goBack();
     config.navigator.dispatch(action);
   }
 };

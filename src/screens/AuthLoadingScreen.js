@@ -15,6 +15,7 @@ class AuthLoadingScreen extends React.Component {
       const user = accessToken
         ? await auth0.auth.userInfo({ token: accessToken })
         : null;
+      console.log(this.props.navigation);
       // This will switch to the App screen or Auth screen and this loading
       // screen will be unmounted and thrown away.
       this.props.navigation.navigate(user ? "Main" : "Auth");
