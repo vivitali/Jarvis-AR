@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component } from "react";
 import {
   ImageBackground,
@@ -11,7 +13,7 @@ import styles from "./styles";
 import Layout from "../../constants/Layout";
 import IcoMoon from "../../components/Icons";
 
-export default class Help extends Component<Props, *> {
+export default class Help extends Component<*> {
   static navigationOptions = () => ({
     header: null,
   });
